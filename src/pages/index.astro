@@ -1,9 +1,16 @@
 ---
 import Layout from '../layouts/layout.astro';
-import Header from '../components/header.svelte';
+import Hero from '../components/hero.svelte';
+import Features from '../components/Features.svelte';
+import Services from '../components/Services.svelte';
+import Pricing from '../components/Pricing.svelte';
+import Contact from '../components/Contact.svelte';
 ---
 
-<Layout>
-	<Header />
-	<h1>Home</h1>
+<Layout title="SBA Interactive | Premium Website Solutions">
+	<Hero client:load />
+	<Features client:visible />
+	<Services client:visible />
+	<Pricing client:visible />
+	<Contact client:visible />
 </Layout>
