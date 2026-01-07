@@ -1,0 +1,14 @@
+---
+import "../styles/global.css";
+const { title } = Astro.props;
+---
+<html lang="en" data-theme="modern">
+  <head>
+    <meta charset="utf-8" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <main><slot /></main>
+    <footer>©{new Date().getFullYear()} My Site</footer>
+  </body>
+</html>
