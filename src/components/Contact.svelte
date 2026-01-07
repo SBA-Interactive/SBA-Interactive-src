@@ -23,6 +23,13 @@
 			ease: "power4.out"
 		});
 	});
+
+	function handleSubmit(e: Event) {
+		e.preventDefault();
+		// In a real app, this would send data to an API
+		alert('Message sent! We will get back to you shortly.');
+		(e.target as HTMLFormElement).reset();
+	}
 </script>
 
 <section id="contact" bind:this={section} class="section-padding bg-slate-50 dark:bg-surface-950 transition-colors duration-500">
@@ -43,14 +50,14 @@
 						
 						<div class="space-y-10">
 							<div class="flex items-center gap-6">
-								<div class="w-14 h-14 rounded-3xl bg-white/10 flex items-center justify-center text-2xl backdrop-blur-md">📍</div>
+								<div class="w-14 h-14 rounded-3xl bg-white/10 flex items-center justify-center text-2xl backdrop-blur-md" aria-hidden="true">📍</div>
 								<div>
 									<div class="font-black text-lg">Our Office</div>
 									<div class="text-primary-100/70 font-medium">123 Digital Ave, Tech City</div>
 								</div>
 							</div>
 							<div class="flex items-center gap-6">
-								<div class="w-14 h-14 rounded-3xl bg-white/10 flex items-center justify-center text-2xl backdrop-blur-md">✉️</div>
+								<div class="w-14 h-14 rounded-3xl bg-white/10 flex items-center justify-center text-2xl backdrop-blur-md" aria-hidden="true">✉️</div>
 								<div>
 									<div class="font-black text-lg">Email Us</div>
 									<div class="text-primary-100/70 font-medium">hello@sbainteractive.com</div>
@@ -62,7 +69,7 @@
 
 				<!-- Form -->
 				<div class="p-16 md:p-24 bg-white dark:bg-surface-900">
-					<form class="space-y-8">
+					<form class="space-y-8" onsubmit={handleSubmit}>
 						<div class="grid md:grid-cols-2 gap-8">
 							<div class="space-y-3">
 								<label for="name" class="text-sm font-black text-slate-500 uppercase tracking-widest px-2">Name</label>

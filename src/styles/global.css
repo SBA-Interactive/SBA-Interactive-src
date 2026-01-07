@@ -4,6 +4,9 @@
 @import '@skeletonlabs/skeleton/themes/modern';
 /* @import '@skeletonlabs/skeleton-svelte';  */
 
+@variant dark (&:where(.dark, .dark *));
+
+
 @theme {
     /* Nordic Midnight (Complete Palette) */
     --color-surface-50: #ffffff;   /* Pure white bg for light theme */
