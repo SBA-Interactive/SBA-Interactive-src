@@ -8,61 +8,62 @@
 	import IconCarbonMobile from 'virtual:icons/carbon/mobile';
 	import IconCarbonAnalytics from 'virtual:icons/carbon/analytics';
 	import IconCarbonBrushFreehand from 'virtual:icons/carbon/brush-freehand';
+	import { i18n } from '../i18n/store';
 
 	let section: HTMLElement;
 	let header: HTMLElement;
 	let serviceCards: HTMLElement[] = $state([]);
 
-	const services = [
+	const services = $derived([
 		{
 			id: 'wordpress',
 			icon: IconCarbonSettings,
-			title: 'WordPress Solutions',
-			description: 'Scalable, SEO-friendly, and easy-to-manage WordPress sites tailored to your brand identity.',
+			title: i18n.t('services.card_wp_title'),
+			description: i18n.t('services.card_wp_desc'),
 			color: 'text-blue-500',
 			bg: 'bg-blue-50 dark:bg-blue-900/20'
 		},
 		{
 			id: 'custom',
 			icon: IconCarbonCode,
-			title: 'Custom Web Dev',
-			description: 'Hand-crafted websites using modern stacks like Astro, Svelte, and React for ultimate speed.',
+			title: i18n.t('services.card_custom_title'),
+			description: i18n.t('services.card_custom_desc'),
 			color: 'text-emerald-500',
 			bg: 'bg-emerald-50 dark:bg-emerald-900/20'
 		},
 		{
 			id: 'advanced',
 			icon: IconCarbonDevelopment,
-			title: 'Digital Products',
-			description: 'Complex web applications, SaaS platforms, and interactive dashboards built for scale.',
+			title: i18n.t('services.card_digital_title'),
+			description: i18n.t('services.card_digital_desc'),
 			color: 'text-indigo-500',
 			bg: 'bg-indigo-50 dark:bg-indigo-900/20'
 		},
 		{
 			id: 'mobile',
 			icon: IconCarbonMobile,
-			title: 'Responsive Design',
-			description: 'Websites that look and perform flawlessly on every device, from mobile to desktop.',
+			title: i18n.t('services.card_mobile_title'),
+			description: i18n.t('services.card_mobile_desc'),
 			color: 'text-amber-500',
 			bg: 'bg-amber-50 dark:bg-amber-900/20'
 		},
 		{
 			id: 'seo',
 			icon: IconCarbonAnalytics,
-			title: 'SEO & Performance',
-			description: 'Optimizing every line of code to ensure top rankings and lightning-fast load times.',
+			title: i18n.t('services.card_seo_title'),
+			description: i18n.t('services.card_seo_desc'),
 			color: 'text-rose-500',
 			bg: 'bg-rose-50 dark:bg-rose-900/20'
 		},
 		{
 			id: 'design',
 			icon: IconCarbonBrushFreehand,
-			title: 'UI/UX Design',
-			description: 'Intuitive and engaging user interfaces that convert visitors into loyal customers.',
+			title: i18n.t('services.card_ui_title'),
+			description: i18n.t('services.card_ui_desc'),
 			color: 'text-purple-500',
 			bg: 'bg-purple-50 dark:bg-purple-900/20'
 		}
-	];
+	]);
 
 	onMount(() => {
 		gsap.registerPlugin(ScrollTrigger);
@@ -123,19 +124,19 @@
 	<div class="container mx-auto px-4 relative z-10">
 		<div bind:this={header} class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-12 mb-24">
 			<div class="max-w-3xl">
-				<div class="text-primary-600 font-black uppercase tracking-[0.4em] text-sm mb-6">Capabilities</div>
-				<h2 class="text-6xl md:text-8xl font-black mb-8 leading-[0.85] tracking-tight text-slate-950 dark:text-white">
-					Smarter <br/> 
-					<span class="bg-gradient-to-r from-primary-600 via-indigo-500 to-purple-600 bg-clip-text text-transparent italic">Solutions.</span>
+				<div class="text-primary-600 font-black uppercase tracking-[0.4em] text-sm mb-6">{$i18n.t('services.pill')}</div>
+				<h2 class="text-6xl md:text-8xl font-black mb-8 leading-[0.85] tracking-tight text-slate-900 dark:text-white">
+					{$i18n.t('services.title_1')} <br/> 
+					<span class="bg-gradient-to-r from-primary-600 via-indigo-500 to-purple-600 bg-clip-text text-transparent italic">{$i18n.t('services.title_2')}</span>
 				</h2>
 				<p class="text-2xl text-slate-500 dark:text-slate-400 leading-tight font-medium max-w-xl">
-					We specialize in technical excellence that other agencies find "too complex."
+					{$i18n.t('services.subtitle')}
 				</p>
 			</div>
 			<div class="flex gap-4">
 				<div class="w-16 h-[2px] bg-slate-200 dark:bg-surface-800 self-center"></div>
 				<a href="#contact" class="group flex items-center gap-4 text-xl font-black text-slate-900 dark:text-white">
-					Let's Build It
+					{$i18n.t('services.btn_build')}
 					<span class="w-12 h-12 rounded-full border-2 border-slate-200 dark:border-surface-800 flex items-center justify-center group-hover:bg-primary-600 group-hover:border-primary-600 group-hover:text-white transition-all">→</span>
 				</a>
 			</div>

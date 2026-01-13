@@ -2,34 +2,35 @@
 	import IconCarbonLogoGithub from 'virtual:icons/carbon/logo-github';
 	import IconCarbonLogoLinkedin from 'virtual:icons/carbon/logo-linkedin';
 	import IconCarbonLogoTwitter from 'virtual:icons/carbon/logo-twitter';
+	import { i18n } from '../i18n/store';
 
 	const currentYear = new Date().getFullYear();
 
-	const footerLinks = [
+	const footerLinks = $derived([
 		{
-			title: 'Services',
+			title: i18n.t('footer.col_services'),
 			links: [
-				{ label: 'WordPress', href: '#wordpress' },
-				{ label: 'Custom Web', href: '#custom' },
-				{ label: 'Advanced apps', href: '#advanced' }
+				{ label: i18n.t('header.nav_wp'), href: '/#wordpress' },
+				{ label: i18n.t('header.nav_custom'), href: '/#custom' },
+				{ label: i18n.t('header.nav_advanced'), href: '/#advanced' }
 			]
 		},
 		{
-			title: 'Company',
+			title: i18n.t('footer.col_company'),
 			links: [
-				{ label: 'About Us', href: '#services' },
-				{ label: 'Pricing', href: '#pricing' },
-				{ label: 'Contact', href: '#contact' }
+				{ label: i18n.t('footer.link_about'), href: '/#services' },
+				{ label: i18n.t('header.nav_pricing'), href: '/#pricing' },
+				{ label: i18n.t('header.nav_contact'), href: '/#contact' }
 			]
 		},
 		{
-			title: 'Legal',
+			title: i18n.t('footer.col_legal'),
 			links: [
-				{ label: 'Privacy', href: '/privacy' },
-				{ label: 'Terms', href: '/terms' }
+				{ label: i18n.t('footer.link_privacy'), href: '/privacy' },
+				{ label: i18n.t('footer.link_terms'), href: '/terms' }
 			]
 		}
-	];
+	]);
 </script>
 
 <footer class="w-full border-t border-surface-200 dark:border-surface-800 bg-surface-50 dark:bg-surface-900 transition-colors duration-300 py-12">
@@ -42,7 +43,7 @@
 					<span class="text-surface-900 dark:text-surface-100">Interactive</span>
 				</a>
 				<p class="text-surface-600 dark:text-surface-400 max-w-sm">
-					Building modern, interactive web experiences with Astro, Svelte, and the latest design trends.
+					{$i18n.t('footer.desc')}
 				</p>
 			</div>
 
@@ -65,7 +66,7 @@
 
 		<div class="flex flex-col md:flex-row justify-between items-center gap-4">
 			<p class="text-sm text-surface-500 dark:text-surface-400">
-				© {currentYear} SBA Interactive. All rights reserved.
+				{$i18n.t('footer.copyright').replace('{year}', currentYear.toString())}
 			</p>
 			
 			<div class="flex items-center gap-4">

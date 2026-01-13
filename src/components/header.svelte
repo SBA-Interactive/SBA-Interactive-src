@@ -4,17 +4,17 @@
 	import IconCarbonClose from 'virtual:icons/carbon/close';
 	import ThemeSwitcher from './ThemeSwitcher.svelte';
 	import LanguagePicker from './LanguagePicker.svelte';
+	import { i18n } from '../i18n/store';
 
-	const links = [
-		{ label: 'WordPress', href: '#wordpress' },
-		{ label: 'Custom Web', href: '#custom' },
-		{ label: 'Advanced', href: '#advanced' },
-		{ label: 'Pricing', href: '#pricing' },
-		{ label: 'Contact', href: '#contact' }
-	];
+	let links = $derived([
+		{ label: i18n.t('header.nav_wp'), href: '/#wordpress' },
+		{ label: i18n.t('header.nav_custom'), href: '/#custom' },
+		{ label: i18n.t('header.nav_advanced'), href: '/#advanced' },
+		{ label: i18n.t('header.nav_pricing'), href: '/#pricing' },
+		{ label: i18n.t('header.nav_contact'), href: '/#contact' }
+	]);
 
 	let isMobileMenuOpen = $state(false);
-	let currentLang = $state('en');
 
 	function toggleMobileMenu() {
 		isMobileMenuOpen = !isMobileMenuOpen;
@@ -32,7 +32,7 @@
 		<!-- Desktop Navigation -->
 		<nav class="hidden md:flex items-center gap-8">
 			{#each links as link}
-				<a href={link.href} class="text-sm font-medium text-surface-700 dark:text-surface-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors">
+				<a href={link.href} class="relative text-sm font-bold text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-300 after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-gradient-to-r after:from-primary-600 after:to-primary-400 after:transition-all after:duration-300 hover:after:w-full">
 					{link.label}
 				</a>
 			{/each}
@@ -41,19 +41,9 @@
 		<!-- Actions -->
 		<div class="flex items-center gap-3">
 			<div class="hidden sm:flex items-center gap-3">
-				<LanguagePicker bind:currentLang />
+				<LanguagePicker />
 				<ThemeSwitcher />
 			</div>
-
-			<!-- GitHub Link -->
-			<a 
-				href="https://github.com" 
-				target="_blank" 
-				class="p-2 hover:bg-surface-200 dark:hover:bg-surface-800 rounded-full transition-colors border border-surface-200 dark:border-surface-700 shadow-sm"
-				aria-label="GitHub"
-			>
-				<IconCarbonLogoGithub class="w-5 h-5 text-surface-700 dark:text-surface-300" />
-			</a>
 
 			<!-- Mobile Menu Button -->
 			<button 
@@ -86,7 +76,7 @@
 				<hr class="border-surface-200 dark:border-surface-800" />
 				
 				<div class="flex items-center justify-between px-2">
-					<LanguagePicker bind:currentLang />
+					<LanguagePicker />
 					<ThemeSwitcher />
 				</div>
 			</nav>
