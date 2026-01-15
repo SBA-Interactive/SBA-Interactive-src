@@ -3,7 +3,7 @@
 	import gsap from 'gsap';
 	import { ScrollTrigger } from 'gsap/ScrollTrigger';
 	import IconCarbonSend from 'virtual:icons/carbon/send';
-	import { i18n } from '../i18n/store';
+	import { i18n } from '../i18n/store.svelte.ts';
 
 	let section: HTMLElement;
 	let card: HTMLElement;
@@ -11,18 +11,25 @@
 	onMount(() => {
 		gsap.registerPlugin(ScrollTrigger);
 
-		gsap.from(card, {
-			scrollTrigger: {
-				trigger: section,
-				start: "top 80%",
-				toggleActions: "play none none reverse"
-			},
-			y: 100,
-			opacity: 0,
-			scale: 0.95,
-			duration: 1.2,
-			ease: "power4.out"
-		});
+		const ctx = gsap.context(() => {
+			if (card) {
+				gsap.from(card, {
+					scrollTrigger: {
+						trigger: card,
+						start: "top 95%",
+						toggleActions: "play none none reverse"
+					},
+					y: 30,
+					opacity: 0,
+					scale: 0.98,
+					duration: 0.8,
+					ease: "power2.out",
+					overwrite: 'auto'
+				});
+			}
+		}, section);
+
+		return () => ctx.revert();
 	});
 
 
@@ -32,9 +39,9 @@
 	<div class="container mx-auto px-4">
 		<div bind:this={card} class="glass-card rounded-[32px] md:rounded-[64px] overflow-hidden shadow-2xl shadow-black/10">
 			<div class="grid lg:grid-cols-2">
-				<!-- Content -->
+
 				<div class="p-10 md:p-24 bg-primary-600 text-white flex flex-col justify-center relative overflow-hidden">
-					<!-- Abstract background glow -->
+
 					<div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/10 to-transparent pointer-events-none"></div>
 					
 					<div class="relative z-10">
@@ -63,7 +70,7 @@
 					</div>
 				</div>
 
-				<!-- Direct Contact Actions (Formerly Form) -->
+
 				<div class="p-10 md:p-24 bg-white dark:bg-surface-900 flex flex-col justify-center">
 					<div class="space-y-12">
 						<div>

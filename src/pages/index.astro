@@ -1,14 +1,19 @@
 ---
 import Layout from '../layouts/layout.astro';
 import Hero from '../components/hero.svelte';
+import HelloTicker from '../components/HelloTicker.svelte';
 import Features from '../components/Features.svelte';
 import Services from '../components/Services.svelte';
 import Pricing from '../components/Pricing.svelte';
 import Contact from '../components/Contact.svelte';
 ---
 
-<Layout title="SBA Interactive | Premium Website Solutions">
+<Layout 
+	title="SBA Interactive | High-Performance Web Development & Premium WordPress Solutions"
+	description="Expert web engineering for startups. We build high-conversion landings, scalable SaaS platforms, and premium WordPress sites with 100/100 Lighthouse scores."
+>
 	<Hero client:load />
+	<HelloTicker />
 	<Features client:visible />
 	<Services client:visible />
 	<Pricing client:visible />

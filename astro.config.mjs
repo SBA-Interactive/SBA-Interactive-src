@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import svelte from '@astrojs/svelte';
+import sitemap from '@astrojs/sitemap';
 import tailwindcss from "@tailwindcss/vite";
 import Icons from 'unplugin-icons/vite';
 
@@ -10,7 +11,7 @@ export default defineConfig({
     base: '/sba-interactive',
     trailingSlash: 'always',
     output: 'static',
-    integrations: [svelte()],
+    integrations: [svelte(), sitemap()],
     vite: {
         plugins: [
             tailwindcss(),

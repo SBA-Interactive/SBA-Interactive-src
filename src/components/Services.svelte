@@ -8,7 +8,7 @@
 	import IconCarbonMobile from 'virtual:icons/carbon/mobile';
 	import IconCarbonAnalytics from 'virtual:icons/carbon/analytics';
 	import IconCarbonBrushFreehand from 'virtual:icons/carbon/brush-freehand';
-	import { i18n } from '../i18n/store';
+	import { i18n } from '../i18n/store.svelte.ts';
 
 	let section: HTMLElement;
 	let header: HTMLElement;
@@ -68,43 +68,49 @@
 	onMount(() => {
 		gsap.registerPlugin(ScrollTrigger);
 
-		// Header entrance - snappy
-		gsap.from(header, {
-			scrollTrigger: {
-				trigger: section,
-				start: "top 90%",
-				toggleActions: "play none none reverse"
-			},
-			y: 30,
-			opacity: 0,
-			duration: 0.8
-		});
+		const ctx = gsap.context(() => {
+			if (header) {
+				gsap.from(header, {
+					scrollTrigger: {
+						trigger: header,
+						start: "top 95%",
+						toggleActions: "play none none reverse"
+					},
+					y: 20,
+					opacity: 0,
+					duration: 0.6,
+					ease: "power2.out",
+					overwrite: 'auto'
+				});
+			}
 
-		// Card reveals - snappy
-		serviceCards.forEach((card, i) => {
-			gsap.from(card, {
-				scrollTrigger: {
-					trigger: card,
-					start: "top 95%",
-					toggleActions: "play none none reverse"
-				},
-				y: 40,
-				opacity: 0,
-				duration: 0.6,
-				delay: (i % 3) * 0.1,
-				ease: "power2.out"
+			serviceCards.filter(c => c !== null).forEach((card, i) => {
+				gsap.from(card, {
+					scrollTrigger: {
+						trigger: card,
+						start: "top 98%",
+						toggleActions: "play none none reverse"
+					},
+					y: 20,
+					opacity: 0,
+					duration: 0.4,
+					delay: Math.min((i % 3) * 0.05, 0.15),
+					ease: "power1.out",
+					overwrite: 'auto'
+				});
+				
+				gsap.to(card, {
+					scrollTrigger: {
+						trigger: card,
+						start: "top 50%",
+						end: "bottom 50%",
+						toggleClass: "focal-active"
+					}
+				});
 			});
-			
-			// Highlight focal point (Keep scroll active class for feel)
-			gsap.to(card, {
-				scrollTrigger: {
-					trigger: card,
-					start: "top 50%",
-					end: "bottom 50%",
-					toggleClass: "focal-active",
-				}
-			});
-		});
+		}, section);
+
+		return () => ctx.revert();
 	});
 </script>
 

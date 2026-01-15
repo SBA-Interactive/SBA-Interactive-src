@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { i18n } from '../i18n/store';
+	import { i18n } from '../i18n/store.svelte.ts';
 </script>
 
 <section class="section-padding">

@@ -64,6 +64,7 @@
     "subtitle": "L'ingegneria d'élite non dovrebbe essere un mistero. Scegli un piano che alimenti la tua prossima fase di crescita.",
     "most_popular": "Più Popolare",
     "base": "Base",
+    "individual": "Individuale",
     "btn_start": "Inizia",
     "plan_starter_name": "WordPress Starter",
     "plan_starter_desc": "Perfetto per piccole imprese e blog personali.",
@@ -87,7 +88,15 @@
     "plan_advanced_f3": "Dashboard Personalizzata",
     "plan_advanced_f4": "Integrazione Database",
     "plan_advanced_f5": "Autenticazione Utente",
-    "plan_advanced_f6": "Supporto Prioritario"
+    "plan_advanced_f6": "Supporto Prioritario",
+    "plan_custom_name": "Azienda su Misura",
+    "plan_custom_desc": "Ecosistemi digitali interamente personalizzati.",
+    "plan_custom_f1": "Integrazione multi-sistema",
+    "plan_custom_f2": "Ottimizzazione per carichi elevati",
+    "plan_custom_f3": "Audit di sicurezza avanzato",
+    "plan_custom_f4": "Project Manager dedicato",
+    "plan_custom_f5": "Sviluppo API personalizzate",
+    "plan_custom_f6": "SLA prioritario 24/7"
   },
   "contact": {
     "pill": "Contattaci",

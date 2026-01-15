@@ -8,12 +8,57 @@ const { title = "SBA Interactive", description = "Premium web development and di
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
     <meta name="description" content={description} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="robots" content="index, follow" />
+    
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL('/sba-interactive/og-image.png', Astro.url)} />
+
+
+    <link rel="alternate" hreflang="en" href="https://sba-interactive.github.io/sba-interactive/" />
+    <link rel="alternate" hreflang="de" href="https://sba-interactive.github.io/sba-interactive/" />
+    <link rel="alternate" hreflang="es" href="https://sba-interactive.github.io/sba-interactive/" />
+    <link rel="alternate" hreflang="fr" href="https://sba-interactive.github.io/sba-interactive/" />
+    <link rel="alternate" hreflang="it" href="https://sba-interactive.github.io/sba-interactive/" />
+    <link rel="alternate" hreflang="pl" href="https://sba-interactive.github.io/sba-interactive/" />
+    <link rel="alternate" hreflang="el" href="https://sba-interactive.github.io/sba-interactive/" />
+    <link rel="alternate" hreflang="zh-Hans" href="https://sba-interactive.github.io/sba-interactive/" />
+    <link rel="alternate" hreflang="zh-yue" href="https://sba-interactive.github.io/sba-interactive/" />
+    <link rel="alternate" hreflang="x-default" href="https://sba-interactive.github.io/sba-interactive/" />
+
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={Astro.url} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={new URL('/sba-interactive/og-image.png', Astro.url)} />
+
+    <link rel="canonical" href={Astro.url} />
+    <link rel="icon" type="image/svg+xml" href="/sba-interactive/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
-    <title>{title}</title>
+    
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SBA Interactive",
+        "url": "https://sba-interactive.github.io/sba-interactive/",
+        "logo": "https://sba-interactive.github.io/sba-interactive/og-image.png",
+        "sameAs": [
+          "https://github.com/SBA-Interactive"
+        ],
+        "description": "Premium web development and digital architecture services specializing in high-performance WordPress and custom React solutions."
+      }
+    </script>
+
     <script is:inline>
       const theme = localStorage.getItem('theme') || 
                    (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');

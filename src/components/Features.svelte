@@ -6,7 +6,7 @@
 	import IconCarbonRocket from 'virtual:icons/carbon/rocket';
 	import IconCarbonUserFavorite from 'virtual:icons/carbon/user-favorite';
 	import IconCarbonSecurity from 'virtual:icons/carbon/security';
-	import { i18n } from '../i18n/store';
+	import { i18n } from '../i18n/store.svelte.ts';
 
 	let section: HTMLElement;
 	let cards: HTMLElement[] = $state([]);
@@ -42,39 +42,45 @@
 	onMount(() => {
 		gsap.registerPlugin(ScrollTrigger);
 
-		// Header entrance - Fast and early
-		gsap.from(textContent, {
-			scrollTrigger: {
-				trigger: section,
-				start: "top 90%",
-				toggleActions: "play none none reverse"
-			},
-			y: 30,
-			opacity: 0,
-			duration: 0.8,
-			ease: "power2.out"
-		});
+		const ctx = gsap.context(() => {
+			if (textContent) {
+				gsap.from(textContent, {
+					scrollTrigger: {
+						trigger: textContent,
+						start: "top 95%",
+						toggleActions: "play none none reverse"
+					},
+					y: 20,
+					opacity: 0,
+					duration: 0.6,
+					ease: "power2.out",
+					overwrite: 'auto'
+				});
+			}
 
-		// Card Reveal - Fast and early
-		cards.forEach((card, i) => {
-			gsap.from(card, {
-				scrollTrigger: {
-					trigger: card,
-					start: "top 95%",
-					toggleActions: "play none none reverse"
-				},
-				y: 40,
-				opacity: 0,
-				duration: 0.6,
-				delay: i * 0.1,
-				ease: "power2.out"
+			cards.filter(c => c !== null).forEach((card, i) => {
+				gsap.from(card, {
+					scrollTrigger: {
+						trigger: card,
+						start: "top 98%",
+						toggleActions: "play none none reverse"
+					},
+					y: 20,
+					opacity: 0,
+					duration: 0.4,
+					delay: Math.min(i * 0.05, 0.2),
+					ease: "power1.out",
+					overwrite: 'auto'
+				});
 			});
-		});
+		}, section);
+
+		return () => ctx.revert();
 	});
 </script>
 
 <section id="why-us" bind:this={section} class="section-padding bg-surface-50 dark:bg-slate-950 text-slate-900 dark:text-white overflow-hidden relative transition-colors duration-500">
-	<!-- Decorative grid -->
+
 	<div class="feature-grid-bg absolute inset-0 opacity-20 pointer-events-none dark:hidden" style="background-image: radial-gradient(rgba(0,0,0,0.1) 1px, transparent 1px); background-size: 60px 60px;"></div>
 	<div class="feature-grid-bg absolute inset-0 opacity-20 pointer-events-none hidden dark:block" style="background-image: radial-gradient(rgba(255,255,255,0.1) 1px, transparent 1px); background-size: 60px 60px;"></div>
 

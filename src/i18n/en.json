@@ -64,6 +64,7 @@
     "subtitle": "Elite engineering shouldn't be a mystery. Choose a plan that fuels your next phase of growth.",
     "most_popular": "Most Popular",
     "base": "Base",
+    "individual": "Individual",
     "btn_start": "Get Started",
     "plan_starter_name": "WordPress Starter",
     "plan_starter_desc": "Perfect for small businesses and personal blogs.",
@@ -87,7 +88,15 @@
     "plan_advanced_f3": "Custom Dashboard",
     "plan_advanced_f4": "Database Integration",
     "plan_advanced_f5": "User Authentication",
-    "plan_advanced_f6": "Priority Support"
+    "plan_advanced_f6": "Priority Support",
+    "plan_custom_name": "Bespoke Enterprise",
+    "plan_custom_desc": "Fully custom-built digital ecosystems.",
+    "plan_custom_f1": "Multi-system Integration",
+    "plan_custom_f2": "High-load Optimization",
+    "plan_custom_f3": "Advanced Security Audit",
+    "plan_custom_f4": "Dedicated Project Manager",
+    "plan_custom_f5": "Custom API Development",
+    "plan_custom_f6": "24/7 Priority SLA"
   },
   "contact": {
     "pill": "Contact Us",

@@ -3,11 +3,11 @@
 	import gsap from 'gsap';
 	import { ScrollTrigger } from 'gsap/ScrollTrigger';
 	import IconCarbonCheckmarkFilled from 'virtual:icons/carbon/checkmark-filled';
-	import { i18n } from '../i18n/store';
+	import { i18n } from '../i18n/store.svelte.ts';
 
 	let section: HTMLElement;
 	let header: HTMLElement;
-	let cards: HTMLElement[] = $state([]);
+
 
 	const plans = $derived([
 		{
@@ -25,7 +25,7 @@
 			isPopular: false
 		},
 		{
-			id: 'custom',
+			id: 'custom_web',
 			name: i18n.t('pricing.plan_pro_name'),
 			price: '2499',
 			description: i18n.t('pricing.plan_pro_desc'),
@@ -53,36 +53,79 @@
 				i18n.t('pricing.plan_advanced_f6')
 			],
 			isPopular: false
+		},
+		{
+			id: 'bespoke',
+			name: i18n.t('pricing.plan_custom_name'),
+			price: '9999',
+			description: i18n.t('pricing.plan_custom_desc'),
+			features: [
+				i18n.t('pricing.plan_custom_f1'),
+				i18n.t('pricing.plan_custom_f2'),
+				i18n.t('pricing.plan_custom_f3'),
+				i18n.t('pricing.plan_custom_f4'),
+				i18n.t('pricing.plan_custom_f5'),
+				i18n.t('pricing.plan_custom_f6')
+			],
+			isPopular: false
 		}
 	]);
+
+	function fadeIn(node: HTMLElement, delay = 0) {
+		const st = ScrollTrigger.create({
+			trigger: node,
+			start: "top 98%",
+			onEnter: () => {
+				gsap.fromTo(node, 
+					{ y: 20, opacity: 0 },
+					{ 
+						y: 0, 
+						opacity: 1, 
+						duration: 0.4, 
+						delay: ScrollTrigger.isInViewport(node) ? 0 : delay,
+						ease: "power2.out",
+						overwrite: 'auto'
+					}
+				);
+			},
+			onEnterBack: () => {
+				gsap.to(node, { y: 0, opacity: 1, duration: 0.3, ease: "power2.out" });
+			},
+			onLeaveBack: () => {
+				gsap.to(node, { y: 20, opacity: 0, duration: 0.3, ease: "power2.out" });
+			}
+		});
+
+		return {
+			destroy() {
+				st.kill();
+			}
+		};
+	}
 
 	onMount(() => {
 		gsap.registerPlugin(ScrollTrigger);
 
-		gsap.from(header, {
-			scrollTrigger: {
-				trigger: section,
-				start: "top 85%",
-				toggleActions: "play none none reverse"
-			},
-			y: 40,
-			opacity: 0.8,
-			duration: 0.8,
-			ease: "power2.out"
-		});
+		const ctx = gsap.context(() => {
+			if (header) {
+				gsap.from(header, {
+					scrollTrigger: {
+						trigger: header,
+						start: "top 95%",
+						toggleActions: "play none none reverse"
+					},
+					y: 20,
+					opacity: 0,
+					duration: 0.4,
+					ease: "power2.out",
+					overwrite: 'auto'
+				});
+			}
+		}, section);
 
-		gsap.from(cards, {
-			scrollTrigger: {
-				trigger: section,
-				start: "top 150%",
-				toggleActions: "play none none reverse"
-			},
-			y: 60,
-			opacity: 1.0,
-			duration: 0.2,
-			stagger: 0.15,
-			ease: "power2.out"
-		});
+		ScrollTrigger.refresh();
+
+		return () => ctx.revert();
 	});
 </script>
 
@@ -96,15 +139,15 @@
 			</p>
 		</div>
 
-		<div class="grid md:grid-cols-3 gap-10">
-			{#each plans as plan, i}
-				<div bind:this={cards[i]} class="glass-card p-10 rounded-[56px] flex flex-col relative transition-all duration-500 hover:shadow-2xl hover:shadow-primary-500/10 {plan.isPopular ? 'border-primary-500 shadow-xl shadow-primary-500/5 lg:-translate-y-6' : 'hover:-translate-y-2'}">
+		<div class="grid md:grid-cols-3 gap-8 mb-8">
+			{#each plans.slice(0, 3) as plan, i}
+				<div use:fadeIn={i * 0.05} class="bg-white dark:bg-surface-900 p-10 rounded-[56px] flex flex-col relative transition-all duration-500 shadow-xl hover:shadow-2xl hover:shadow-primary-500/10 {plan.isPopular ? 'border-2 border-primary-500 shadow-primary-500/5 lg:-translate-y-6' : 'border border-slate-200 dark:border-white/5 hover:-translate-y-2'}">
 					{#if plan.isPopular}
 						<span class="absolute -top-5 left-1/2 -translate-x-1/2 bg-primary-600 text-white text-xs font-black px-6 py-2 rounded-full uppercase tracking-widest shadow-lg shadow-primary-600/30">{@html $i18n.t('pricing.most_popular').replace(' ', '&nbsp;')}</span>
 					{/if}
 
 					<div class="mb-10">
-						<h3 class="text-3xl font-black mb-3 tracking-tight">{plan.name}</h3>
+						<h3 class="text-3xl font-black mb-3 tracking-tight text-slate-900 dark:text-white">{plan.name}</h3>
 						<p class="text-slate-500 dark:text-slate-400 text-lg leading-relaxed font-medium">{plan.description}</p>
 					</div>
 
@@ -135,6 +178,41 @@
 					</a>
 				</div>
 			{/each}
+		</div>
+
+
+		<div use:fadeIn class="bg-white dark:bg-surface-900 p-10 lg:p-12 rounded-[56px] shadow-2xl flex flex-col lg:flex-row items-center gap-12 relative transition-all duration-500 hover:shadow-primary-500/10 hover:-translate-y-2 border-2 border-indigo-500/50 dark:border-indigo-400/30">
+			<div class="flex-1 lg:border-r border-slate-100 dark:border-surface-800 lg:pr-12 text-slate-900 dark:text-white">
+				<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 text-xs font-black uppercase tracking-widest mb-6">
+					Enterprise Solution
+				</div>
+				<h3 class="text-4xl lg:text-5xl font-black mb-4 tracking-tight">{plans[3].name}</h3>
+				<p class="text-slate-500 dark:text-slate-400 text-xl leading-relaxed font-medium max-w-xl">{plans[3].description}</p>
+				
+				<div class="mt-10 flex items-baseline gap-2">
+					<span class="text-6xl lg:text-7xl font-black text-slate-950 dark:text-white tracking-tighter">{$i18n.t('pricing.individual').toUpperCase()}</span>
+				</div>
+			</div>
+
+			<div class="flex-1 w-full text-slate-700 dark:text-slate-300">
+				<ul class="grid sm:grid-cols-2 gap-x-12 gap-y-6 mb-10">
+					{#each plans[3].features as feature}
+						<li class="flex items-start gap-4 text-slate-700 dark:text-slate-300">
+							<div class="w-6 h-6 rounded-full bg-indigo-500/10 flex items-center justify-center shrink-0 mt-0.5">
+								<IconCarbonCheckmarkFilled class="w-4 h-4 text-indigo-500" />
+							</div>
+							<span class="text-base font-bold leading-tight">{feature}</span>
+						</li>
+					{/each}
+				</ul>
+
+				<a 
+					href="#contact" 
+					class="inline-block px-12 py-6 text-center text-xl font-black rounded-[32px] transition-all bg-slate-900 dark:bg-white text-white dark:text-slate-900 hover:scale-105 active:scale-95 shadow-2xl"
+				>
+					Contact for Custom Quote
+				</a>
+			</div>
 		</div>
 	</div>
 </section>

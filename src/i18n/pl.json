@@ -64,6 +64,7 @@
     "subtitle": "Elitarna inżynieria nie powinna być tajemnicą. Wybierz plan, który napędzi kolejną fazę Twojego wzrostu.",
     "most_popular": "Najpopularniejszy",
     "base": "Baza",
+    "individual": "Indywidualnie",
     "btn_start": "Rozpocznij",
     "plan_starter_name": "WordPress Starter",
     "plan_starter_desc": "Idealny dla małych firm i blogów osobistych.",
@@ -87,7 +88,15 @@
     "plan_advanced_f3": "Dedykowany Dashboard",
     "plan_advanced_f4": "Integracja z Bazą Danych",
     "plan_advanced_f5": "Uwierzytelnianie Użytkowników",
-    "plan_advanced_f6": "Priorytetowe Wsparcie"
+    "plan_advanced_f6": "Priorytetowe Wsparcie",
+    "plan_custom_name": "Rozwiązanie dla Firm",
+    "plan_custom_desc": "W pełni spersonalizowane ekosystemy cyfrowe.",
+    "plan_custom_f1": "Integracja wielu systemów",
+    "plan_custom_f2": "Optymalizacja pod wysokie obciążenia",
+    "plan_custom_f3": "Zaawansowany audyt bezpieczeństwa",
+    "plan_custom_f4": "Dedykowany kierownik projektu",
+    "plan_custom_f5": "Tworzenie niestandardowych API",
+    "plan_custom_f6": "Priorytetowe SLA 24/7"
   },
   "contact": {
     "pill": "Skontaktuj się",

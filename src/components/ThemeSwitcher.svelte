@@ -32,12 +32,12 @@
 
 <button 
 	onclick={toggleTheme}
-	class="p-2 hover:bg-surface-200 dark:hover:bg-surface-800 rounded-full transition-all duration-300 transform hover:scale-110 active:scale-90 shadow-sm border border-surface-200 dark:border-surface-700"
+	class="p-3 md:p-2 hover:bg-surface-200 dark:hover:bg-surface-800 rounded-full transition-all duration-300 transform hover:scale-110 active:scale-90 shadow-sm border border-surface-200 dark:border-surface-700"
 	aria-label="Toggle Theme"
 >
 	{#if isDark}
-		<IconCarbonSun class="w-5 h-5 text-amber-400" />
+		<IconCarbonSun class="w-6 h-6 md:w-5 md:h-5 text-amber-400" />
 	{:else}
-		<IconCarbonMoon class="w-5 h-5 text-blue-600" />
+		<IconCarbonMoon class="w-6 h-6 md:w-5 md:h-5 text-blue-600" />
 	{/if}
 </button>

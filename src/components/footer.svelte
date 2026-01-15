@@ -2,7 +2,7 @@
 	import IconCarbonLogoGithub from 'virtual:icons/carbon/logo-github';
 	import IconCarbonLogoLinkedin from 'virtual:icons/carbon/logo-linkedin';
 	import IconCarbonLogoTwitter from 'virtual:icons/carbon/logo-twitter';
-	import { i18n } from '../i18n/store';
+	import { i18n } from '../i18n/store.svelte.ts';
 
 	const currentYear = new Date().getFullYear();
 
@@ -36,7 +36,7 @@
 <footer class="w-full border-t border-surface-200 dark:border-surface-800 bg-surface-50 dark:bg-surface-900 transition-colors duration-300 py-12">
 	<div class="container mx-auto px-4">
 		<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-12">
-			<!-- Branding -->
+
 			<div class="col-span-2 lg:col-span-2">
 				<a href="/" class="flex items-center gap-2 text-2xl font-bold tracking-tight mb-4">
 					<span class="bg-gradient-to-r from-primary-700 to-primary-500 dark:from-primary-500 dark:to-primary-300 bg-clip-text text-transparent">SBA</span>
@@ -47,7 +47,7 @@
 				</p>
 			</div>
 
-			<!-- Dynamic Links -->
+
 			{#each footerLinks as section}
 				<div class="flex flex-col gap-4">
 					<h3 class="font-bold text-surface-900 dark:text-surface-100">{section.title}</h3>
