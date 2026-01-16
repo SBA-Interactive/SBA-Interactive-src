@@ -36,7 +36,9 @@
     "card_support_title": "Eksperckie Wsparcie",
     "card_support_desc": "Pomoc techniczna na żądanie i utrzymanie po wdrożeniu.",
     "card_security_title": "Bezpieczeństwo Przede Wszystkim",
-    "card_security_desc": "Integracja WAF i praktyki bezpiecznego kodowania w każdym projekcie."
+    "card_security_desc": "Integracja WAF i praktyki bezpiecznego kodowania w każdym projekcie.",
+    "tech_pill": "Nowoczesny Ekosystem",
+    "tech_desc": "Wykorzystujemy najbardziej zaawansowane technologie na świecie, aby budować Twoją cyfrową przyszłość."
   },
   "services": {
     "pill": "Możliwości",

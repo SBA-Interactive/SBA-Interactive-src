@@ -8,6 +8,7 @@ import PortfolioShowcase from '../components/PortfolioShowcase.svelte';
 import Pricing from '../components/Pricing.svelte';
 import Support from '../components/Support.svelte';
 import Contact from '../components/Contact.svelte';
+import SectionDivider from '../components/SectionDivider.svelte';
 ---
 
 <Layout 
@@ -16,10 +17,22 @@ import Contact from '../components/Contact.svelte';
 >
 	<Hero client:load />
 	<HelloTicker client:visible />
+	
+	<SectionDivider color="blue" />
 	<Features client:visible />
+	
+	<SectionDivider color="purple" />
 	<Services client:visible />
+	
+	<SectionDivider color="pink" />
 	<PortfolioShowcase client:visible />
+	
+	<SectionDivider color="cyan" />
 	<Pricing client:visible />
+	
+	<SectionDivider color="green" />
 	<Support client:visible />
+	
+	<SectionDivider color="orange" />
 	<Contact client:visible />
 </Layout>

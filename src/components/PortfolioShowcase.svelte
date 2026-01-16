@@ -72,7 +72,7 @@
 <section id="showcase" bind:this={section} class="section-padding bg-white dark:bg-surface-950 transition-colors duration-500 overflow-hidden">
 	<div class="container mx-auto px-4">
 		<div bind:this={header} class="max-w-4xl mb-24">
-			<div class="text-primary-600 font-black uppercase tracking-[0.4em] text-sm mb-6">{$i18n.t('showcase.pill')}</div>
+			<!-- <div class="text-primary-600 font-black uppercase tracking-[0.4em] text-sm mb-6">{$i18n.t('showcase.pill')}</div> -->
 			<h2 class="text-6xl md:text-9xl font-black mb-10 leading-[0.8] tracking-tighter text-slate-900 dark:text-white">
 				{$i18n.t('showcase.title_1')} <br/>
 				<span class="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent">{$i18n.t('showcase.title_2')}</span>

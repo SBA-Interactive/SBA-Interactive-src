@@ -107,9 +107,9 @@
 			</p>
 		</div>
 
-		<div class="grid md:grid-cols-3 gap-8 mb-8">
+		<div class="grid md:grid-cols-2 xl:grid-cols-3 gap-8 mb-8">
 			{#each plans.slice(0, 3) as plan, i}
-				<div use:fadeIn={i * 0.05} class="bg-white dark:bg-surface-900 p-10 rounded-[56px] flex flex-col relative transition-all duration-500 shadow-xl hover:shadow-2xl hover:shadow-primary-500/10 {plan.isPopular ? 'border-2 border-primary-500 shadow-primary-500/5 lg:-translate-y-6' : 'border border-slate-200 dark:border-white/5 hover:-translate-y-2'}">
+				<div use:fadeIn={i * 0.1} class="bg-white dark:bg-surface-900 p-10 rounded-[56px] flex flex-col relative transition-all duration-500 shadow-xl hover:shadow-2xl hover:shadow-primary-500/10 {plan.isPopular ? 'border-2 border-primary-500 shadow-primary-500/5 lg:-translate-y-6 hover:-translate-y-16' : 'border border-slate-200 dark:border-white/5 hover:-translate-y-2'}">
 					{#if plan.isPopular}
 						<span class="absolute -top-5 left-1/2 -translate-x-1/2 bg-primary-600 text-white text-xs font-black px-6 py-2 rounded-full uppercase tracking-widest shadow-lg shadow-primary-600/30">{@html $i18n.t('pricing.most_popular').replace(' ', '&nbsp;')}</span>
 					{/if}
@@ -121,7 +121,7 @@
 
 					<div class="mb-10 pb-10 border-b border-slate-100 dark:border-surface-800">
 						<div class="flex items-baseline gap-2">
-							<span class="text-1xl font-bold text-slate-400">$</span>
+							<span class="text-1xl fornt-bold text-slate-400">$</span>
 							<span class="text-6xl font-black text-slate-950 dark:text-white tracking-tighter">{plan.price}</span>
 							<span class="text-slate-500 dark:text-slate-400 font-black uppercase text-xs tracking-widest">{$i18n.t('pricing.base')}</span>
 						</div>
@@ -131,7 +131,7 @@
 						{#each plan.features as feature}
 							<li class="flex items-start gap-4 text-slate-700 dark:text-slate-300">
 								<div class="w-6 h-6 rounded-full bg-primary-500/10 flex items-center justify-center shrink-0 mt-0.5">
-									<IconCarbonCheckmarkFilled class="w-4 h-4 text-primary-500" />
+									<IconCarbonCheckmarkFilled class="w-4 h-4 scale-175 text-violet-500" />
 								</div>
 								<span class="text-base font-bold leading-tight">{feature}</span>
 							</li>
@@ -167,7 +167,7 @@
 					{#each plans[3].features as feature}
 						<li class="flex items-start gap-4 text-slate-700 dark:text-slate-300">
 							<div class="w-6 h-6 rounded-full bg-indigo-500/10 flex items-center justify-center shrink-0 mt-0.5">
-								<IconCarbonCheckmarkFilled class="w-4 h-4 text-indigo-500" />
+								<IconCarbonCheckmarkFilled class="w-4 h-4 scale-175 text-violet-500" />
 							</div>
 							<span class="text-base font-bold leading-tight">{feature}</span>
 						</li>

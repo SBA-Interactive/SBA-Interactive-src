@@ -19,48 +19,48 @@
 			icon: IconCarbonSettings,
 			title: i18n.t('services.card_wp_title'),
 			description: i18n.t('services.card_wp_desc'),
-			color: 'text-blue-500',
-			bg: 'bg-blue-50 dark:bg-blue-900/20'
+			color: 'text-blue-800 dark:text-blue-100',
+			bg: 'bg-[var(--color-pastel-blue)] dark:bg-[var(--color-pastel-blue-dark)]'
 		},
 		{
 			id: 'custom',
 			icon: IconCarbonCode,
 			title: i18n.t('services.card_custom_title'),
 			description: i18n.t('services.card_custom_desc'),
-			color: 'text-emerald-500',
-			bg: 'bg-emerald-50 dark:bg-emerald-900/20'
+			color: 'text-emerald-800 dark:text-emerald-100',
+			bg: 'bg-[var(--color-pastel-green)] dark:bg-[var(--color-pastel-green-dark)]'
 		},
 		{
 			id: 'advanced',
 			icon: IconCarbonDevelopment,
 			title: i18n.t('services.card_digital_title'),
 			description: i18n.t('services.card_digital_desc'),
-			color: 'text-indigo-500',
-			bg: 'bg-indigo-50 dark:bg-indigo-900/20'
+			color: 'text-purple-800 dark:text-purple-100',
+			bg: 'bg-[var(--color-pastel-purple)] dark:bg-[var(--color-pastel-purple-dark)]'
 		},
 		{
 			id: 'mobile',
 			icon: IconCarbonMobile,
 			title: i18n.t('services.card_mobile_title'),
 			description: i18n.t('services.card_mobile_desc'),
-			color: 'text-amber-500',
-			bg: 'bg-amber-50 dark:bg-amber-900/20'
+			color: 'text-orange-800 dark:text-orange-100',
+			bg: 'bg-[var(--color-pastel-orange)] dark:bg-[var(--color-pastel-orange-dark)]'
 		},
 		{
 			id: 'seo',
 			icon: IconCarbonAnalytics,
 			title: i18n.t('services.card_seo_title'),
 			description: i18n.t('services.card_seo_desc'),
-			color: 'text-rose-500',
-			bg: 'bg-rose-50 dark:bg-rose-900/20'
+			color: 'text-rose-800 dark:text-rose-100',
+			bg: 'bg-[var(--color-pastel-rose)] dark:bg-[var(--color-pastel-rose-dark)]'
 		},
 		{
 			id: 'design',
 			icon: IconCarbonBrushFreehand,
 			title: i18n.t('services.card_ui_title'),
 			description: i18n.t('services.card_ui_desc'),
-			color: 'text-purple-500',
-			bg: 'bg-purple-50 dark:bg-purple-900/20'
+			color: 'text-pink-800 dark:text-pink-100',
+			bg: 'bg-[var(--color-pastel-pink)] dark:bg-[var(--color-pastel-pink-dark)]'
 		}
 	]);
 

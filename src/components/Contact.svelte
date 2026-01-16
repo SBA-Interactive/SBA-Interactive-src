@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 	import { animate, inView } from 'motion';
 	import IconCarbonSend from 'virtual:icons/carbon/send';
-	import IconCarbonLogoDiscord from 'virtual:icons/carbon/logo-discord';
+	import IconCarbonPhone from 'virtual:icons/carbon/phone';
 	import { i18n } from '../i18n/store.svelte.ts';
 
 	let section: HTMLElement;
@@ -79,14 +79,14 @@
 								</div>
 								<div class="text-lg md:text-base 2xl:text-lg font-bold text-slate-900 dark:text-white break-all">help@sbainteractive.com</div>
 							</div>
-							<a href="https://discord.gg" target="_blank" rel="noopener noreferrer" class="p-8 md:px-6 xl:px-8 2xl:px-10 rounded-[24px] md:rounded-[32px] bg-slate-50 dark:bg-surface-800/50 border border-slate-100 dark:border-white/5 hover:border-emerald-500/30 hover:bg-emerald-50/50 dark:hover:bg-emerald-900/10 transition-all group">
+							<a href="tel:+48213742067" target="_blank" rel="noopener noreferrer" class="p-8 md:px-6 xl:px-8 2xl:px-10 rounded-[24px] md:rounded-[32px] bg-slate-50 dark:bg-surface-800/50 border border-slate-100 dark:border-white/5 hover:border-emerald-500/30 hover:bg-emerald-50/50 dark:hover:bg-emerald-900/10 transition-all group">
 								<div class="flex items-center gap-3 mb-4">
 									<div class="w-2.5 h-2.5 rounded-full bg-emerald-500"></div>
-									<div class="text-xs font-black text-slate-400 group-hover:text-emerald-500 uppercase tracking-widest transition-colors">DISCORD</div>
+									<div class="text-xs font-black text-slate-400 group-hover:text-emerald-500 uppercase tracking-widest transition-colors">{$i18n.t('contact.call_label')}</div>
 								</div>
 								<div class="flex items-center gap-3 text-lg md:text-base 2xl:text-lg font-bold text-slate-900 dark:text-white">
-									<IconCarbonLogoDiscord class="w-7 h-7 text-[#5865F2]" />
-									<span>Join Our Server</span>
+									<IconCarbonPhone class="w-7 h-7 text-[#5865F2]" />
+									<span>+48 213 742 067</span>
 								</div>
 							</a>
 						</div>

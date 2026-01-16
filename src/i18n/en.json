@@ -17,7 +17,7 @@
   "header": {
     "nav_wp": "WordPress",
     "nav_custom": "Custom Web",
-    "nav_advanced": "Advanced",
+    "nav_showcase": "Showcase",
     "nav_pricing": "Pricing",
     "nav_contact": "Contact"
   },
@@ -36,7 +36,9 @@
     "card_support_title": "Expert Support",
     "card_support_desc": "On-demand technical assistance and post-launch maintenance.",
     "card_security_title": "Security First",
-    "card_security_desc": "WAF integration and secure coding practices for every project."
+    "card_security_desc": "WAF integration and secure coding practices for every project.",
+    "tech_pill": "Modern Ecosystem",
+    "tech_desc": "We utilize the world's most advanced technologies to build your digital future."
   },
   "services": {
     "pill": "Capabilities",
@@ -91,12 +93,12 @@
     "plan_advanced_f6": "Priority Support",
     "plan_custom_name": "Bespoke Enterprise",
     "plan_custom_desc": "Fully custom-built digital ecosystems.",
-    "plan_custom_f1": "Multi-system Integration",
-    "plan_custom_f2": "High-load Optimization",
-    "plan_custom_f3": "Advanced Security Audit",
-    "plan_custom_f4": "Dedicated Project Manager",
-    "plan_custom_f5": "Custom API Development",
-    "plan_custom_f6": "24/7 Priority SLA"
+    "plan_custom_f1": "Custom Architecture & Features",
+    "plan_custom_f2": "High-load Optimization & Seamless Scaling",
+    "plan_custom_f3": "Advanced Security & Compliance Audit",
+    "plan_custom_f4": "Your favorite System Integrations",
+    "plan_custom_f5": "Complete Product Marketing",
+    "plan_custom_f6": "Dedicated Management & Priority Support"
   },
   "contact": {
     "pill": "Contact Us",

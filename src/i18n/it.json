@@ -36,7 +36,9 @@
     "card_support_title": "Supporto Esperto",
     "card_support_desc": "Assistenza tecnica su richiesta e manutenzione post-lancio.",
     "card_security_title": "Sicurezza Prima di Tutto",
-    "card_security_desc": "Integrazione WAF e pratiche di codifica sicura per ogni progetto."
+    "card_security_desc": "Integrazione WAF e pratiche di codifica sicura per ogni progetto.",
+    "tech_pill": "Ecosistema Moderno",
+    "tech_desc": "Utilizziamo le tecnologie più avanzate al mondo per costruire il tuo futuro digitale."
   },
   "services": {
     "pill": "Capacità",

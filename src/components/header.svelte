@@ -9,7 +9,7 @@
 	let links = $derived([
 		{ label: i18n.t('header.nav_wp'), href: '/sba-interactive/#wordpress' },
 		{ label: i18n.t('header.nav_custom'), href: '/sba-interactive/#custom' },
-		{ label: i18n.t('header.nav_advanced'), href: '/sba-interactive/#advanced' },
+		{ label: i18n.t('header.nav_showcase'), href: '/sba-interactive/#showcase' },
 		{ label: i18n.t('header.nav_pricing'), href: '/sba-interactive/#pricing' },
 		{ label: i18n.t('header.nav_contact'), href: '/sba-interactive/#contact' }
 	]);

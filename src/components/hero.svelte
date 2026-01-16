@@ -25,6 +25,9 @@
             class="absolute inset-0 w-full h-full bg-cover bg-center opacity-20 dark:opacity-60 pointer-events-none z-0" 
             style="background-image: url({typeof heroBg === 'string' ? heroBg : heroBg.src});"
         ></div>
+        
+        <!-- Pastel gradient overlay -->
+        <div class="absolute inset-0 pastel-gradient"></div>
 
 		<div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_-20%,#0ea5e915,transparent_50%)]"></div>
 		<div class="bg-blob absolute top-1/4 left-1/4 w-[800px] h-[800px] bg-primary-500/10 rounded-full blur-[150px]"></div>

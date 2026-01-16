@@ -58,6 +58,16 @@
 				);
 			}, { margin: "-10% 0px -10% 0px" });
 		}
+
+		// Animate tech stack
+		if (techStack) {
+			inView(techStack, () => {
+				animate(techStack, 
+					{ y: [30, 0], opacity: [0, 1] }, 
+					{ duration: 0.8, delay: 0.4, easing: "ease-out" }
+				);
+			}, { margin: "-10% 0px -10% 0px" });
+		}
 	});
 </script>
 
@@ -105,5 +115,46 @@
 				{/each}
 			</div>
 		</div>
+
+		<!-- Tech Stack Marquee -->
+		<div class="mt-32 pt-16 border-t border-slate-200/50 dark:border-white/5">
+			<div class="flex flex-col md:flex-row items-center justify-between gap-12">
+				<div class="max-w-xs text-center md:text-left">
+					<h4 class="text-xs font-black uppercase tracking-[0.4em] text-slate-400 dark:text-slate-500 mb-4">{$i18n.t('features.tech_pill') || 'Our Ecosystem'}</h4>
+					<p class="text-slate-600 dark:text-slate-400 font-medium">{$i18n.t('features.tech_desc') || 'We utilize the world\'s most advanced technologies to build your digital future.'}</p>
+				</div>
+				
+				<div class="flex-1 w-full overflow-hidden relative">
+					<div class="flex gap-16 animate-marquee whitespace-nowrap items-center">
+						{#each Array(2) as _}
+							<div class="flex gap-16 items-center">
+								<span class="text-2xl font-black text-slate-300 dark:text-white/10 hover:text-primary-500 transition-colors uppercase italic scroll-m-20">WordPress</span>
+								<span class="text-2xl font-black text-slate-300 dark:text-white/10 hover:text-orange-500 transition-colors uppercase italic">Bootstrap</span>
+								<span class="text-2xl font-black text-slate-300 dark:text-white/10 hover:text-blue-500 transition-colors uppercase italic">React</span>
+								<span class="text-2xl font-black text-slate-300 dark:text-white/10 hover:text-cyan-400 transition-colors uppercase italic">Tailwind</span>
+								<span class="text-2xl font-black text-slate-300 dark:text-white/10 hover:text-orange-600 transition-colors uppercase italic">PHP</span>
+								<span class="text-2xl font-black text-slate-300 dark:text-white/10 hover:text-blue-600 transition-colors uppercase italic">Javascript</span>
+							</div>
+						{/each}
+					</div>
+					
+					<div class="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-surface-50 dark:from-slate-950 to-transparent z-10"></div>
+					<div class="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-surface-50 dark:from-slate-950 to-transparent z-10"></div>
+				</div>
+			</div>
+		</div>
 	</div>
 </section>
+
+<style>
+	@keyframes marquee {
+		0% { transform: translateX(0); }
+		100% { transform: translateX(-50%); }
+	}
+	.animate-marquee {
+		animation: marquee 30s linear infinite;
+	}
+	.animate-marquee:hover {
+		animation-play-state: paused;
+	}
+</style>

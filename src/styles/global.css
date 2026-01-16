@@ -34,6 +34,25 @@
     --color-accent-emerald: #10b981; 
     --color-accent-green: #22c55e;
 
+    /* Pastel Accents */
+    --color-pastel-pink: #fce7f3;
+    --color-pastel-purple: #f3e8ff;
+    --color-pastel-blue: #dbeafe;
+    --color-pastel-cyan: #cffafe;
+    --color-pastel-green: #d1fae5;
+    --color-pastel-yellow: #fef3c7;
+    --color-pastel-orange: #fed7aa;
+    --color-pastel-rose: #ffe4e6;
+    
+    /* Pastel Dark Mode */
+    --color-pastel-pink-dark: #831843;
+    --color-pastel-purple-dark: #581c87;
+    --color-pastel-blue-dark: #1e3a8a;
+    --color-pastel-cyan-dark: #155e75;
+    --color-pastel-green-dark: #065f46;
+    --color-pastel-yellow-dark: #78350f;
+    --color-pastel-orange-dark: #7c2d12;
+    --color-pastel-rose-dark: #881337;
 
     --font-heading: 'Outfit', system-ui, sans-serif;
     --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
@@ -67,5 +86,20 @@
     
     .section-padding {
         @apply py-20 md:py-32;
+    }
+    
+    .pastel-gradient {
+        background: linear-gradient(135deg, 
+            var(--color-pastel-blue) 0%,
+            var(--color-pastel-purple) 25%,
+            var(--color-pastel-pink) 50%,
+            var(--color-pastel-orange) 75%,
+            var(--color-pastel-yellow) 100%
+        );
+        opacity: 0.05;
+    }
+    
+    .dark .pastel-gradient {
+        opacity: 0.03;
     }
 }
