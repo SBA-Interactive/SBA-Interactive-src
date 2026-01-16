@@ -96,14 +96,20 @@
 </script>
 
 <style>
-	:global(.focal-active) {
+	:global(.focal-active),
+	.service-card:hover {
 		transform: scale(1.02) translateY(-5px) !important;
 		border-color: var(--color-primary-500) !important;
 		box-shadow: 0 40px 80px -20px rgba(0,0,0,0.1) !important;
 		background: white !important;
 	}
-	:global(.dark .focal-active) {
+	:global(.dark .focal-active),
+	:global(.dark) .service-card:hover {
 		background: var(--color-surface-800) !important;
+	}
+	
+	.service-card:hover :global(.progress-bar) {
+		width: 100% !important;
 	}
 </style>
 
@@ -134,7 +140,7 @@
 				<div 
 					bind:this={serviceCards[i]} 
 					id={service.id} 
-					class="glass-card p-10 rounded-[48px] border-2 border-transparent transition-all duration-500 relative group cursor-default"
+					class="service-card glass-card p-10 rounded-[48px] border-2 border-transparent transition-all duration-500 relative group cursor-default"
 				>
 					<div class="w-20 h-20 rounded-[32px] {service.bg} flex items-center justify-center {service.color} mb-12 shadow-xl shadow-black/[0.02] group-hover:scale-110 transition-transform duration-500">
 						<service.icon class="w-10 h-10" />
@@ -146,7 +152,7 @@
 					</p>
 
 					<div class="mt-12 w-full h-1 bg-slate-100 dark:bg-surface-800 rounded-full overflow-hidden">
-						<div class="h-full bg-primary-500 w-0 group-[.focal-active]:w-full transition-all duration-1000"></div>
+						<div class="progress-bar h-full bg-primary-500 w-0 group-[.focal-active]:w-full transition-all duration-1000"></div>
 					</div>
 				</div>
 			{/each}
