@@ -30,6 +30,10 @@ export const i18n = {
         currentLang = lang;
         listeners.forEach(cb => cb(lang));
 
+        if (typeof document !== 'undefined') {
+            document.documentElement.lang = lang;
+        }
+
         if (typeof localStorage !== 'undefined') {
             localStorage.setItem('sba_lang', lang);
         }
@@ -53,4 +57,9 @@ if (typeof localStorage !== 'undefined') {
     if (saved && saved in translationsMap) {
         currentLang = saved as any;
     }
+}
+
+// Set initial lang attribute - updates are handled by setLang function
+if (typeof document !== 'undefined') {
+    document.documentElement.lang = currentLang;
 }

@@ -2,7 +2,11 @@
 import "../styles/global.css";
 import Header from "../components/header.svelte";
 import Footer from "../components/footer.svelte";
-const { title = "SBA Interactive", description = "Premium web development and digital architecture services specializing in high-performance WordPress and custom React solutions." } = Astro.props;
+const { 
+  title = "SBA Interactive", 
+  description = "Premium web development and digital architecture services specializing in high-performance WordPress and custom React solutions.",
+  ogType = "website"
+} = Astro.props;
 ---
 <html lang="en">
   <head>
@@ -18,16 +22,44 @@ const { title = "SBA Interactive", description = "Premium web development and di
     <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)" />
     <meta name="generator" content={Astro.generator} />
 
-    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="SBA Interactive" />
+    <meta property="og:type" content={ogType} />
     <meta property="og:url" content={Astro.url} />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
+    <meta property="og:title" content="SBA Interactive - Elite Digital Engineering" />
+    <meta property="og:description" content="We engineer digital dominance. From high-converting landing pages to complex SaaS platforms. Delivering tailored WordPress & Custom solutions for startups demanding perfection." />
     <link rel="preload" as="image" href="/sba-interactive/images/hero.webp" />
     <meta property="og:image" content={new URL('/sba-interactive/images/hero.webp', Astro.site)} />
-    <meta property="og:image:alt" content="SBA Interactive - Premium Digital Solutions" />
-    <meta property="og:site_name" content="SBA Interactive" />
-    <meta property="og:locale" content="en_US" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="SBA Interactive - Elite Digital Engineering" />
+    
 
+    <!-- Twitter/X Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@SBAInteractive" />
+    <meta name="twitter:title" content="SBA Interactive - Elite Digital Engineering" />
+    <meta name="twitter:description" content="We engineer digital dominance. From high-converting landing pages to complex SaaS platforms." />
+    <meta property="twitter:url" content={Astro.url} />
+    <meta name="twitter:image" content={new URL('/sba-interactive/images/hero.webp', Astro.site)} />
+    <meta name="twitter:image:alt" content="SBA Interactive - Elite Digital Engineering" />
+    
+    <!-- Pinterest Rich Pins -->
+    <meta property="og:rich_attachment" content="true" />
+    <meta name="pinterest-rich-pin" content="true" />
+    {ogType === 'product' ? (
+      <>
+        <meta property="product:price:amount" content="1500" />
+        <meta property="product:price:currency" content="USD" />
+        <meta property="product:availability" content="in stock" />
+        <meta property="product:condition" content="new" />
+        <meta property="product:retailer_item_id" content="sba-web-services" />
+      </>
+    ) : (
+      <>
+        <meta property="article:author" content="SBA Interactive" />
+        <meta property="article:publisher" content="SBA Interactive" />
+      </>
+    )}
     <link rel="alternate" hreflang="en" href="https://sba-interactive.github.io/sba-interactive/" />
     <link rel="alternate" hreflang="de" href="https://sba-interactive.github.io/sba-interactive/" />
     <link rel="alternate" hreflang="es" href="https://sba-interactive.github.io/sba-interactive/" />
@@ -98,6 +130,11 @@ const { title = "SBA Interactive", description = "Premium web development and di
                    (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
       if (theme === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
         document.documentElement.classList.add('dark');
+      }
+
+      const savedLang = localStorage.getItem('sba_lang');
+      if (savedLang) {
+        document.documentElement.lang = savedLang;
       }
     </script>
   </head>

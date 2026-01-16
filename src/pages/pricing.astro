@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/layout.astro';
+---
+
+<Layout 
+  title="SBA Interactive - Pricing" 
+  description="Transparent pricing for elite digital engineering. Choose a plan that fuels your next phase of growth."
+  ogType="product"
+>
+  <script>
+    // Redirect to main page pricing section
+    window.location.href = '/sba-interactive/#pricing';
+  </script>
+  
+  <noscript>
+    <meta http-equiv="refresh" content="0; url=/sba-interactive/#pricing" />
+  </noscript>
+  
+  <div class="min-h-screen flex items-center justify-center">
+    <div class="text-center">
+      <h1 class="text-2xl font-bold mb-4">Redirecting to Pricing...</h1>
+      <p>If you are not redirected automatically, <a href="/sba-interactive/#pricing" class="text-primary-600 hover:text-primary-700 underline">click here</a>.</p>
+    </div>
+  </div>
+</Layout>

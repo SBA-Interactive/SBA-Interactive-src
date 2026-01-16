@@ -11,6 +11,11 @@ export default defineConfig({
     base: '/sba-interactive',
     output: 'static',
     integrations: [svelte(), sitemap()],
+    redirects: {
+        '/robots.txt': '/sba-interactive/robots.txt',
+        '/sitemap.xml': '/sba-interactive/sitemap-index.xml',
+        '/sitemap-index.xml': '/sba-interactive/sitemap-index.xml'
+    },
     vite: {
         plugins: [
             tailwindcss(),
