@@ -7,11 +7,11 @@
 	import { i18n } from '../i18n/store.svelte.ts';
 
 	let links = $derived([
-		{ label: i18n.t('header.nav_wp'), href: '/#wordpress' },
-		{ label: i18n.t('header.nav_custom'), href: '/#custom' },
-		{ label: i18n.t('header.nav_advanced'), href: '/#advanced' },
-		{ label: i18n.t('header.nav_pricing'), href: '/#pricing' },
-		{ label: i18n.t('header.nav_contact'), href: '/#contact' }
+		{ label: i18n.t('header.nav_wp'), href: '/sba-interactive/#wordpress' },
+		{ label: i18n.t('header.nav_custom'), href: '/sba-interactive/#custom' },
+		{ label: i18n.t('header.nav_advanced'), href: '/sba-interactive/#advanced' },
+		{ label: i18n.t('header.nav_pricing'), href: '/sba-interactive/#pricing' },
+		{ label: i18n.t('header.nav_contact'), href: '/sba-interactive/#contact' }
 	]);
 
 	let isMobileMenuOpen = $state(false);
@@ -24,7 +24,7 @@
 <header class="sticky top-0 z-50 w-full border-b border-surface-200/50 bg-surface-50/80 backdrop-blur-md dark:border-surface-800/50 dark:bg-surface-900/80 transition-colors duration-300">
 	<div class="container mx-auto px-4 h-16 flex items-center justify-between">
 
-		<a href="/" class="flex items-center gap-2 text-xl font-bold tracking-tight">
+		<a href="/sba-interactive/" class="flex items-center gap-2 text-xl font-bold tracking-tight">
 			<span class="bg-gradient-to-r from-primary-700 to-primary-500 dark:from-primary-500 dark:to-primary-300 bg-clip-text text-transparent">SBA</span>
 			<span class="hidden sm:inline text-surface-900 dark:text-surface-100">Interactive</span>
 		</a>

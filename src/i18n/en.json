@@ -30,7 +30,7 @@
     "stat_retention": "Client Retention",
     "stat_load": "Load Time",
     "card_speed_title": "Lightning Speed",
-    "card_speed_desc": "Optimized for Core Web Vitals with 100/100 Lighthouse scores.",
+    "card_speed_desc": "Engineered for maximum performance and instant load times on any device.",
     "card_seo_title": "SEO Optimized",
     "card_seo_desc": "Built-in schema markup and semantic HTML for top rankings.",
     "card_support_title": "Expert Support",
@@ -105,11 +105,12 @@
     "title_3": "legendary",
     "subtitle": "Ready to crush your digital goals? We're ready when you are.",
     "office_label": "Our Office",
-    "office_val": "123 Digital Ave, Tech City",
+    "office_val": "Poland, Plock - Mazowieckie Technikum Innowacji",
     "email_label": "Email Us",
     "convo_title": "Start a Conversation",
     "convo_subtitle": "No forms, no automated replies. Reach out directly to our team and we'll get back to you within 24 hours.",
     "support_label": "Support",
+    "discord_label": "Discord",
     "call_label": "Call Us"
   },
   "footer": {
@@ -159,5 +160,34 @@
     "s5_text": "SBA Interactive shall not be liable for any indirect, incidental, special, or consequential damages resulting from the use or inability to use our services.",
     "contact_title": "Contact Us",
     "contact_text": "For any legal inquiries regarding our terms, please email:"
+  },
+  "showcase": {
+    "pill": "Our Portfolio",
+    "title_1": "Limitless",
+    "title_2": "Possibilities.",
+    "subtitle": "From gourmet pizza delivery to high-fashion blogs, we build every type of webpage with precision and style.",
+    "pizza_title": "Artisanal Pizza",
+    "pizza_desc": "Bright pastel aesthetics for modern food delivery.",
+    "blog_title": "Lifestyle Blog",
+    "blog_desc": "Clean, minimalist layouts for high-end content.",
+    "shop_title": "E-commerce Store",
+    "shop_desc": "High-conversion shop for premium fashion and tech.",
+    "saas_title": "SaaS Dashboard",
+    "saas_desc": "Glassmorphism and dark mode for high-tech data visualization.",
+    "npo_title": "Non-Profit Organization",
+    "npo_desc": "Bold, high-impact imagery with accessible, human-centric layouts.",
+    "hotel_title": "Luxury Hotel & Resort",
+    "hotel_desc": "Immersive video backgrounds and elegant, high-end booking UI."
+  },
+  "support": {
+    "pill": "Human Touch",
+    "title_1": "Support that",
+    "title_2": "Actually Smiles.",
+    "subtitle": "Our dedicated team of professionals is always here to ensure your digital success, with a smile.",
+    "benefit_1_title": "24/7 Availability",
+    "benefit_1_desc": "We're always here when you need us most.",
+    "benefit_2_title": "Expert Knowledge",
+    "benefit_2_desc": "Real humans, real expertise, real fast.",
+    "btn": "Meet the Team"
   }
 }

@@ -30,7 +30,7 @@
     "stat_retention": "Utrzymanie Klienta",
     "stat_load": "Czas Ładowania",
     "card_speed_title": "Błyskawiczna Prędkość",
-    "card_speed_desc": "Zoptymalizowane pod Core Web Vitals z wynikami 100/100 w Lighthouse.",
+    "card_speed_desc": "Zaprojektowane dla maksymalnej wydajności i natychmiastowego ładowania na każdym urządzeniu.",
     "card_seo_title": "Zoptymalizowane pod SEO",
     "card_seo_desc": "Wbudowane znaczniki schema i semantyczny HTML dla najwyższych pozycji.",
     "card_support_title": "Eksperckie Wsparcie",
@@ -105,7 +105,7 @@
     "title_3": "legendarnego",
     "subtitle": "Gotowy, by zmiażdżyć swoje cyfrowe cele? My jesteśmy gotowi, gdy Ty jesteś.",
     "office_label": "Nasze Biuro",
-    "office_val": "123 Digital Ave, Miasto Technologii",
+    "office_val": "Poland, Plock - Mazowieckie Technikum Innowacji",
     "email_label": "Napisz do nas",
     "convo_title": "Rozpocznij Rozmowę",
     "convo_subtitle": "Żadnych formularzy, żadnych automatycznych odpowiedzi. Skontaktuj się bezpośrednio z naszym zespołem, a odpowiemy w ciągu 24 godzin.",
@@ -159,5 +159,34 @@
     "s5_text": "SBA Interactive nie ponosi odpowiedzialności za jakiekolwiek szkody pośrednie, przypadkowe lub wynikowe wynikające z korzystania z naszych usług.",
     "contact_title": "Kontakt",
     "contact_text": "W sprawach prawnych dotyczących regulaminu prosimy o kontakt:"
+  },
+  "showcase": {
+    "pill": "Nasze Portfolio",
+    "title_1": "Nielimitowane",
+    "title_2": "Możliwości.",
+    "subtitle": "Od dostaw pizzy gourmet po blogi o wysokiej modzie, tworzymy każdy rodzaj strony internetowej z precyzją i stylem.",
+    "pizza_title": "Pizza Rzemieślnicza",
+    "pizza_desc": "Jasna estetyka pastelowa dla nowoczesnych dostaw jedzenia.",
+    "blog_title": "Blog Lifestyle",
+    "blog_desc": "Czyste, minimalistyczne układy dla treści wysokiej jakości.",
+    "shop_title": "Sklep E-commerce",
+    "shop_desc": "Sklep o wysokiej konwersji dla marek modowych i technologicznych premium.",
+    "saas_title": "Pulpit SaaS",
+    "saas_desc": "Glassmorphism i tryb ciemny do wizualizacji danych high-tech.",
+    "npo_title": "Organizacja Non-Profit",
+    "npo_desc": "Odważne, efektowne obrazy z dostępnymi, skoncentrowanymi na człowieku układami.",
+    "hotel_title": "Luksusowy Hotel i Kurort",
+    "hotel_desc": "Immersyjne tła wideo i elegancki interfejs rezerwacji wysokiej klasy."
+  },
+  "support": {
+    "pill": "Ludzkie Podejście",
+    "title_1": "Wsparcie, które",
+    "title_2": "Naprawdę się Uśmiecha.",
+    "subtitle": "Nasz oddany zespół profesjonalistów jest zawsze tutaj, aby zapewnić Twój cyfrowy sukces, z uśmiechem.",
+    "benefit_1_title": "Dostępność 24/7",
+    "benefit_1_desc": "Jesteśmy zawsze tutaj, kiedy najbardziej nas potrzebujesz.",
+    "benefit_2_title": "Wiedza Ekspercka",
+    "benefit_2_desc": "Prawdziwi ludzie, prawdziwa wiedza, naprawdę szybko.",
+    "btn": "Poznaj Zespół"
   }
 }

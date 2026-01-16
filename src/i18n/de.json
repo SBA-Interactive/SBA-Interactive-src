@@ -30,7 +30,7 @@
     "stat_retention": "Kundenbindung",
     "stat_load": "Ladezeit",
     "card_speed_title": "Blitzschnell",
-    "card_speed_desc": "Optimiert für Core Web Vitals mit 100/100 Lighthouse-Scores.",
+    "card_speed_desc": "Entwickelt für maximale Leistung und sofortige Ladezeiten auf jedem Gerät.",
     "card_seo_title": "SEO-optimiert",
     "card_seo_desc": "Eingebautes Schema-Markup und semantisches HTML für Top-Rankings.",
     "card_support_title": "Experten-Support",
@@ -105,11 +105,12 @@
     "title_3": "legendäres bauen",
     "subtitle": "Bereit, Ihre digitalen Ziele zu übertreffen? Wir sind bereit, wenn Sie es sind.",
     "office_label": "Unser Büro",
-    "office_val": "123 Digital Ave, Tech City",
+    "office_val": "Poland, Plock - Mazowieckie Technikum Innowacji",
     "email_label": "E-Mail schreiben",
     "convo_title": "Gespräch beginnen",
     "convo_subtitle": "Keine Formulare, keine automatischen Antworten. Wenden Sie sich direkt an unser Team, wir antworten innerhalb von 24 Stunden.",
     "support_label": "Support",
+    "discord_label": "Discord",
     "call_label": "Anrufen"
   },
   "footer": {
@@ -159,5 +160,34 @@
     "s5_text": "SBA Interactive shall not be liable for any indirect, incidental, special, or consequential damages resulting from the use or inability to use our services.",
     "contact_title": "Contact Us",
     "contact_text": "For any legal inquiries regarding our terms, please email:"
+  },
+  "showcase": {
+    "pill": "Unser Portfolio",
+    "title_1": "Grenzenlose",
+    "title_2": "Möglichkeiten.",
+    "subtitle": "Vom Gourmet-Pizza-Lieferservice bis zum High-Fashion-Blog erstellen wir jede Art von Webseite mit Präzision und Stil.",
+    "pizza_title": "Handgemachte Pizza",
+    "pizza_desc": "Helle Pastellästhetik für moderne Essenslieferungen.",
+    "blog_title": "Lifestyle-Blog",
+    "blog_desc": "Saubere, minimalistische Layouts für hochwertige Inhalte.",
+    "shop_title": "E-Commerce-Shop",
+    "shop_desc": "Hochkonvertierender Shop für Premium-Mode und Technik.",
+    "saas_title": "SaaS-Dashboard",
+    "saas_desc": "Glassmorphismus und Dunkelmodus für High-Tech-Datenvisualisierung.",
+    "npo_title": "Gemeinnützige Organisation",
+    "npo_desc": "Mutige, wirkungsvolle Bilder mit barrierefreien, menschenzentrierten Layouts.",
+    "hotel_title": "Luxushotel & Resort",
+    "hotel_desc": "Immersive Videohintergründe und elegante, hochwertige Buchungsoberfläche."
+  },
+  "support": {
+    "pill": "Menschliche Note",
+    "title_1": "Support, der",
+    "title_2": "Wirklich Lächelt.",
+    "subtitle": "Unser engagiertes Team von Fachleuten ist immer da, um Ihren digitalen Erfolg zu sichern – mit einem Lächeln.",
+    "benefit_1_title": "24/7 Verfügbarkeit",
+    "benefit_1_desc": "Wir sind immer da, wenn Sie uns am meisten brauchen.",
+    "benefit_2_title": "Expertenwissen",
+    "benefit_2_desc": "Echte Menschen, echtes Fachwissen, echt schnell.",
+    "btn": "Das Team treffen"
   }
 }

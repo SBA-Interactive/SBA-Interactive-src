@@ -30,7 +30,7 @@
     "stat_retention": "Διατήρηση Πελατών",
     "stat_load": "Χρόνος Φόρτωσης",
     "card_speed_title": "Αστραπιαία Ταχύτητα",
-    "card_speed_desc": "Βελτιστοποιημένο για Core Web Vitals με σκορ 100/100 στο Lighthouse.",
+    "card_speed_desc": "Σχεδιασμένο για μέγιστη απόδοση και άμεσους χρόνους φόρτωσης σε κάθε συσκευή.",
     "card_seo_title": "Βελτιστοποιημένο SEO",
     "card_seo_desc": "Ενσωματωμένο schema markup και σημασιολογική HTML για κορυφαίες κατατάξεις.",
     "card_support_title": "Εξειδικευμένη Υποστήριξη",
@@ -105,7 +105,7 @@
     "title_3": "θρυλικό",
     "subtitle": "Έτοιμοι να ξεπεράσετε τους ψηφιακούς σας στόχους; Είμαστε έτοιμοι όταν είστε κι εσείς.",
     "office_label": "Το Γραφείο Μας",
-    "office_val": "123 Digital Ave, Tech City",
+    "office_val": "Poland, Plock - Mazowieckie Technikum Innowacji",
     "email_label": "Στείλτε μας email",
     "convo_title": "Έναρξη Συζήτησης",
     "convo_subtitle": "Χωρίς φόρμες, χωρίς αυτόματες απαντήσεις. Επικοινωνήστε απευθείας με την ομάδα μας και θα απαντήσουμε εντός 24 ωρών.",
@@ -159,5 +159,34 @@
     "s5_text": "SBA Interactive shall not be liable for any indirect, incidental, special, or consequential damages resulting from the use or inability to use our services.",
     "contact_title": "Contact Us",
     "contact_text": "For any legal inquiries regarding our terms, please email:"
+  },
+  "showcase": {
+    "pill": "Το Χαρτοφυλάκιό Μας",
+    "title_1": "Απεριόριστες",
+    "title_2": "Δυνατότητες.",
+    "subtitle": "Από παράδοση γκουρμέ πίτσας μέχρι blogs υψηλής μόδας, κατασκευάζουμε κάθε τύπο ιστοσελίδας με ακρίβεια και στυλ.",
+    "pizza_title": "Χειροποίητη Πίτσα",
+    "pizza_desc": "Φωτεινή παστέλ αισθητική για σύγχρονη παράδοση φαγητού.",
+    "blog_title": "Blog Lifestyle",
+    "blog_desc": "Καθαρά, μινιμαλιστικά layouts για περιεχόμενο υψηλής ποιότητας.",
+    "shop_title": "Κατάστημα E-commerce",
+    "shop_desc": "Κατάστημα υψηλής μετατροπής για premium μόδα και τεχνολογία.",
+    "saas_title": "Πίνακας Ελέγχου SaaS",
+    "saas_desc": "Glassmorphism και σκοτεινή λειτουργία για οπτικοποίηση δεδομένων υψηλής τεχνολογίας.",
+    "npo_title": "Μη Κερδοσκοπικός Οργανισμός",
+    "npo_desc": "Τολμηρές εικόνες υψηλής αντίκτυπου με προσβάσιμη, ανθρωποκεντρική διαρρύθμιση.",
+    "hotel_title": "Πολυτελές Ξενοδοχείο & Θέρετρο",
+    "hotel_desc": "Καθηλωτικά βίντεο φόντου και κομψό, υψηλής ποιότητας περιβάλλον κράτησης."
+  },
+  "support": {
+    "pill": "Ανθρώπινη Επαφή",
+    "title_1": "Υποστήριξη που",
+    "title_2": "Πραγματικά Χαμογελά.",
+    "subtitle": "Η αφοσιωμένη ομάδα επαγγελματιών μας είναι πάντα εδώ για να διασφαλίσει την ψηφιακή σας επιτυχία, με ένα χαμόγελο.",
+    "benefit_1_title": "Διαθεσιμότητα 24/7",
+    "benefit_1_desc": "Είμαστε πάντα εδώ όταν μας χρειάζεστε περισσότερο.",
+    "benefit_2_title": "Εξειδικευμένη Γνώση",
+    "benefit_2_desc": "Πραγματικοί άνθρωποι, πραγματική εμπειρία, πραγματικά γρήγορα.",
+    "btn": "Γνωρίστε την Ομάδα"
   }
 }

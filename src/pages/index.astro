@@ -4,7 +4,9 @@ import Hero from '../components/hero.svelte';
 import HelloTicker from '../components/HelloTicker.svelte';
 import Features from '../components/Features.svelte';
 import Services from '../components/Services.svelte';
+import PortfolioShowcase from '../components/PortfolioShowcase.svelte';
 import Pricing from '../components/Pricing.svelte';
+import Support from '../components/Support.svelte';
 import Contact from '../components/Contact.svelte';
 ---
 
@@ -16,6 +18,8 @@ import Contact from '../components/Contact.svelte';
 	<HelloTicker />
 	<Features client:visible />
 	<Services client:visible />
+	<PortfolioShowcase client:visible />
 	<Pricing client:visible />
+	<Support client:visible />
 	<Contact client:visible />
 </Layout>

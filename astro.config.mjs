@@ -9,7 +9,6 @@ import Icons from 'unplugin-icons/vite';
 export default defineConfig({
     site: 'https://sba-interactive.github.io',
     base: '/sba-interactive',
-    trailingSlash: 'always',
     output: 'static',
     integrations: [svelte(), sitemap()],
     vite: {

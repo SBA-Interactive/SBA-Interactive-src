@@ -1,6 +1,14 @@
 <script lang="ts">
-	const hellos = [
-		"Hello", "Hola", "Bonjour", "Hallo", "Ciao", "Cześć", "Γεια σας", "你好", "你好"
+	const items = [
+		{ word: "Hello", color: "text-rose-300 dark:text-rose-400", hover: "hover:text-rose-500 dark:hover:text-rose-200" },
+		{ word: "Hola", color: "text-orange-300 dark:text-orange-400", hover: "hover:text-orange-500 dark:hover:text-orange-200" },
+		{ word: "Bonjour", color: "text-sky-300 dark:text-sky-400", hover: "hover:text-sky-500 dark:hover:text-sky-200" },
+		{ word: "Hallo", color: "text-emerald-300 dark:text-emerald-400", hover: "hover:text-emerald-500 dark:hover:text-emerald-200" },
+		{ word: "Ciao", color: "text-red-300 dark:text-red-400", hover: "hover:text-red-500 dark:hover:text-red-200" },
+		{ word: "Cześć", color: "text-violet-300 dark:text-violet-400", hover: "hover:text-violet-500 dark:hover:text-violet-200" },
+		{ word: "Γεια σας", color: "text-cyan-300 dark:text-cyan-400", hover: "hover:text-cyan-500 dark:hover:text-cyan-200" },
+		{ word: "你好", color: "text-indigo-300 dark:text-indigo-400", hover: "hover:text-indigo-500 dark:hover:text-indigo-200" },
+		{ word: "你好", color: "text-fuchsia-300 dark:text-fuchsia-400", hover: "hover:text-fuchsia-500 dark:hover:text-fuchsia-200" }
 	];
 </script>
 
@@ -8,9 +16,9 @@
 	<div class="flex whitespace-nowrap">
 		<div class="flex animate-scroll hover:pause gap-12 py-2">
 			{#each [1, 2, 3, 4, 5, 6] as _}
-				{#each hellos as hello}
-					<span class="text-4xl md:text-6xl font-black uppercase tracking-normal text-slate-200 dark:text-white/10 hover:text-primary-500/40 transition-colors duration-500 cursor-default select-none">
-						{hello}
+				{#each items as item}
+					<span class="text-4xl md:text-6xl font-black uppercase tracking-normal {item.color} {item.hover} transition-colors duration-300 cursor-default select-none">
+						{item.word}
 					</span>
 				{/each}
 			{/each}
@@ -20,9 +28,12 @@
 	<div class="flex whitespace-nowrap">
 		<div class="flex animate-scroll-reverse hover:pause gap-12 py-2">
 			{#each [1, 2, 3, 4, 5, 6] as _}
-				{#each hellos as hello}
-					<span class="text-4xl md:text-6xl font-black uppercase tracking-normal text-slate-100 dark:text-white/[0.05] select-none hover:text-indigo-500/40 transition-colors duration-500 cursor-default" style="-webkit-text-stroke: 1.5px rgba(128, 128, 128, 0.3);">
-						{hello}
+				{#each items as item}
+					<span 
+						class="text-4xl md:text-6xl font-black uppercase tracking-normal {item.color} {item.hover} transition-colors duration-300 cursor-default select-none" 
+						style="-webkit-text-fill-color: transparent; -webkit-text-stroke: 2px currentColor;"
+					>
+						{item.word}
 					</span>
 				{/each}
 			{/each}

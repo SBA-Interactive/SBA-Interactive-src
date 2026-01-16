@@ -30,7 +30,7 @@
     "stat_retention": "Rétention Client",
     "stat_load": "Temps de Chargement",
     "card_speed_title": "Vitesse Éclair",
-    "card_speed_desc": "Optimisé pour Core Web Vitals avec des scores Lighthouse de 100/100.",
+    "card_speed_desc": "Conçu pour des performances maximales et des temps de chargement instantanés sur tout appareil.",
     "card_seo_title": "Optimisé SEO",
     "card_seo_desc": "Balisage schema intégré et HTML sémantique pour les meilleurs classements.",
     "card_support_title": "Support Expert",
@@ -105,11 +105,12 @@
     "title_3": "de légendaire",
     "subtitle": "Prêt à dépasser vos objectifs numériques ? Nous sommes prêts quand vous l'êtes.",
     "office_label": "Notre Bureau",
-    "office_val": "123 Avenue Numérique, Tech City",
+    "office_val": "Poland, Plock - Mazowieckie Technikum Innowacji",
     "email_label": "Envoyez-nous un email",
     "convo_title": "Démarrer une Conversation",
     "convo_subtitle": "Pas de formulaires, pas de réponses automatiques. Contactez directement notre équipe et nous vous répondrons sous 24h.",
     "support_label": "Support",
+    "discord_label": "Discord",
     "call_label": "Appeler"
   },
   "footer": {
@@ -159,5 +160,34 @@
     "s5_text": "SBA Interactive shall not be liable for any indirect, incidental, special, or consequential damages resulting from the use or inability to use our services.",
     "contact_title": "Contact Us",
     "contact_text": "For any legal inquiries regarding our terms, please email:"
+  },
+  "showcase": {
+    "pill": "Notre Portfolio",
+    "title_1": "Possibilités",
+    "title_2": "Illimitées.",
+    "subtitle": "De la livraison de pizzas gastronomiques aux blogs de haute couture, nous construisons chaque type de page web avec précision et style.",
+    "pizza_title": "Pizza Artisanale",
+    "pizza_desc": "Esthétique pastel lumineuse pour la livraison de repas moderne.",
+    "blog_title": "Blog Lifestyle",
+    "blog_desc": "Mises en page épurées et minimalistes pour un contenu haut de gamme.",
+    "shop_title": "Boutique E-commerce",
+    "shop_desc": "Boutique à forte conversion pour la mode et la technologie premium.",
+    "saas_title": "Tableau de Bord SaaS",
+    "saas_desc": "Glassmorphisme et mode sombre pour la visualisation de données high-tech.",
+    "npo_title": "Organisation à But Non Lucratif",
+    "npo_desc": "Imagerie audacieuse à fort impact avec des mises en page accessibles et centrées sur l'humain.",
+    "hotel_title": "Hôtel & Resort de Luxe",
+    "hotel_desc": "Arrière-plans vidéo immersifs et interface de réservation élégante et haut de gamme."
+  },
+  "support": {
+    "pill": "Touche Humaine",
+    "title_1": "Un support qui",
+    "title_2": "Sourit Vraiment.",
+    "subtitle": "Notre équipe dédiée de professionnels est toujours là pour assurer votre succès numérique, avec le sourire.",
+    "benefit_1_title": "Disponibilité 24/7",
+    "benefit_1_desc": "Nous sommes toujours là quand vous avez le plus besoin de nous.",
+    "benefit_2_title": "Expertise Technique",
+    "benefit_2_desc": "De vrais humains, une vraie expertise, vraiment rapide.",
+    "btn": "Rencontrer l'Équipe"
   }
 }

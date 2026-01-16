@@ -12,13 +12,20 @@ const { title = "SBA Interactive", description = "Premium web development and di
     <meta name="description" content={description} />
     <meta name="robots" content="index, follow" />
     
+    <meta name="keywords" content="web development, WordPress, custom React solutions, SaaS, Astro, Next.js, high-performance websites, SBA Interactive" />
+    <meta name="author" content="SBA Interactive" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)" />
+    <meta name="generator" content={Astro.generator} />
 
     <meta property="og:type" content="website" />
     <meta property="og:url" content={Astro.url} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={new URL('/sba-interactive/og-image.png', Astro.url)} />
-
+    <meta property="og:image" content={new URL('/sba-interactive/images/hero.png', Astro.url)} />
+    <meta property="og:image:alt" content="SBA Interactive - Premium Digital Solutions" />
+    <meta property="og:site_name" content="SBA Interactive" />
+    <meta property="og:locale" content="en_US" />
 
     <link rel="alternate" hreflang="en" href="https://sba-interactive.github.io/sba-interactive/" />
     <link rel="alternate" hreflang="de" href="https://sba-interactive.github.io/sba-interactive/" />
@@ -33,13 +40,17 @@ const { title = "SBA Interactive", description = "Premium web development and di
 
 
     <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:site" content="@SBAInteractive" />
+    <meta property="twitter:creator" content="@SBAInteractive" />
     <meta property="twitter:url" content={Astro.url} />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={new URL('/sba-interactive/og-image.png', Astro.url)} />
+    <meta property="twitter:image" content={new URL('/sba-interactive/images/hero.png', Astro.url)} />
+    <meta property="twitter:image:alt" content="SBA Interactive Banner" />
 
     <link rel="canonical" href={Astro.url} />
     <link rel="icon" type="image/svg+xml" href="/sba-interactive/favicon.svg" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
@@ -48,14 +59,35 @@ const { title = "SBA Interactive", description = "Premium web development and di
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Organization",
+        "@type": "ProfessionalService",
         "name": "SBA Interactive",
         "url": "https://sba-interactive.github.io/sba-interactive/",
-        "logo": "https://sba-interactive.github.io/sba-interactive/og-image.png",
+        "logo": "https://sba-interactive.github.io/sba-interactive/images/hero.png",
+        "image": "https://sba-interactive.github.io/sba-interactive/images/hero.png",
+        "description": "Premium web development and digital architecture services specializing in high-performance WordPress and custom React solutions.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Mazowieckie Technikum Innowacji",
+          "addressLocality": "Plock",
+          "addressCountry": "PL"
+        },
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "email": "hello@sbainteractive.com",
+            "contactType": "customer service",
+            "availableLanguage": ["English", "Polish", "German", "Spanish", "French", "Italian", "Greek", "Chinese"]
+          },
+          {
+            "@type": "ContactPoint",
+            "email": "help@sbainteractive.com",
+            "contactType": "technical support"
+          }
+        ],
         "sameAs": [
           "https://github.com/SBA-Interactive"
         ],
-        "description": "Premium web development and digital architecture services specializing in high-performance WordPress and custom React solutions."
+        "priceRange": "$$$"
       }
     </script>
 

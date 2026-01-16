@@ -10,24 +10,24 @@
 		{
 			title: i18n.t('footer.col_services'),
 			links: [
-				{ label: i18n.t('header.nav_wp'), href: '/#wordpress' },
-				{ label: i18n.t('header.nav_custom'), href: '/#custom' },
-				{ label: i18n.t('header.nav_advanced'), href: '/#advanced' }
+				{ label: i18n.t('header.nav_wp'), href: '/sba-interactive/#wordpress' },
+				{ label: i18n.t('header.nav_custom'), href: '/sba-interactive/#custom' },
+				{ label: i18n.t('header.nav_advanced'), href: '/sba-interactive/#advanced' }
 			]
 		},
 		{
 			title: i18n.t('footer.col_company'),
 			links: [
-				{ label: i18n.t('footer.link_about'), href: '/#services' },
-				{ label: i18n.t('header.nav_pricing'), href: '/#pricing' },
-				{ label: i18n.t('header.nav_contact'), href: '/#contact' }
+				{ label: i18n.t('footer.link_about'), href: '/sba-interactive/#services' },
+				{ label: i18n.t('header.nav_pricing'), href: '/sba-interactive/#pricing' },
+				{ label: i18n.t('header.nav_contact'), href: '/sba-interactive/#contact' }
 			]
 		},
 		{
 			title: i18n.t('footer.col_legal'),
 			links: [
-				{ label: i18n.t('footer.link_privacy'), href: '/privacy' },
-				{ label: i18n.t('footer.link_terms'), href: '/terms' }
+				{ label: i18n.t('footer.link_privacy'), href: '/sba-interactive/privacy' },
+				{ label: i18n.t('footer.link_terms'), href: '/sba-interactive/terms' }
 			]
 		}
 	]);
@@ -38,7 +38,7 @@
 		<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-12">
 
 			<div class="col-span-2 lg:col-span-2">
-				<a href="/" class="flex items-center gap-2 text-2xl font-bold tracking-tight mb-4">
+				<a href="/sba-interactive/" class="flex items-center gap-2 text-2xl font-bold tracking-tight mb-4">
 					<span class="bg-gradient-to-r from-primary-700 to-primary-500 dark:from-primary-500 dark:to-primary-300 bg-clip-text text-transparent">SBA</span>
 					<span class="text-surface-900 dark:text-surface-100">Interactive</span>
 				</a>

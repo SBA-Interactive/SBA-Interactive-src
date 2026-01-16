@@ -1,4 +1,4 @@
-{
+ {
   "hero": {
     "pill": "顶尖数字工程",
     "title_1": "我哋打造",
@@ -30,7 +30,7 @@
     "stat_retention": "客户留存",
     "stat_load": "加载时间",
     "card_speed_title": "闪电般速度",
-    "card_speed_desc": "针对 Core Web Vitals 优化，Lighthouse 得分 100/100。",
+    "card_speed_desc": "专为极致性能同埋瞬间加载而设计，适用于所有设备。",
     "card_seo_title": "SEO 优化",
     "card_seo_desc": "内置 schema 标记同埋语义化 HTML，助力顶级排名。",
     "card_support_title": "专家支持",
@@ -105,12 +105,13 @@
     "title_3": "传奇",
     "subtitle": "准备好击碎您嘅数字目标未？我哋随时待命。",
     "office_label": "办公室地址",
-    "office_val": "科技城数字大道123号",
+    "office_val": "Poland, Plock - Mazowieckie Technikum Innowacji",
     "email_label": "发送邮件",
     "convo_title": "开始对话",
     "convo_subtitle": "冇表单，冇自动回复。直接联系我哋嘅团队，我哋将在24小时内回复。",
-    "support_label": "技术支持",
-    "call_label": "拨打电话"
+    "support_label": "支援",
+    "discord_label": "Discord",
+    "call_label": "致电"
   },
   "footer": {
     "desc": "利用尖端技术同埋最新设计趋势，打造现代、交互式嘅 Web 体验。",
@@ -159,5 +160,34 @@
     "s5_text": "SBA Interactive 唔会对因使用或者无法使用我哋嘅服务而导致嘅任何间接、偶然、特殊或者后果性损害负责。",
     "contact_title": "联系我哋",
     "contact_text": "有关我哋条款嘅任何法律咨询，请发送电子邮件至："
+  },
+  "showcase": {
+    "pill": "作品案例",
+    "title_1": "无限",
+    "title_2": "可能。",
+    "subtitle": "由高级比萨外送网站到高端时尚博客，我哋以精准同埋风格打造每一种类型嘅网页。",
+    "pizza_title": "手工比萨",
+    "pizza_desc": "明亮嘅马卡龙色调，适合现代餐饮外送。",
+    "blog_title": "生活方式博客",
+    "blog_desc": "简洁、极简嘅布局，适合高端内容展示。",
+    "shop_title": "精品电商",
+    "shop_desc": "高转化率嘅时尚同埋科技精品店。",
+    "saas_title": "SaaS 仪表盘",
+    "saas_desc": "用于高科技数据可视化嘅玻璃拟态同埋暗黑模式。",
+    "npo_title": "非营利组织",
+    "npo_desc": "大胆、高冲击力嘅图像，配合无障碍、以人为本嘅布局。",
+    "hotel_title": "豪华酒店 & 度假村",
+    "hotel_desc": "沉浸式视频背景同埋优雅、高端嘅预订界面。"
+  },
+  "support": {
+    "pill": "人情味",
+    "title_1": "真正",
+    "title_2": "带笑容嘅支持。",
+    "subtitle": "我哋专业嘅团队随时准备为您嘅数字成功保驾护航，始终面带笑容。",
+    "benefit_1_title": "24/7 全天候",
+    "benefit_1_desc": "喺您最需要嘅时候，我哋一直喺度。",
+    "benefit_2_title": "专家经验",
+    "benefit_2_desc": "真人沟通，专业见解，快速响应。",
+    "btn": "会见团队"
   }
 }
