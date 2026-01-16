@@ -1,8 +1,9 @@
 <script lang="ts">
-  export let color: 'blue' | 'pink' | 'purple' | 'green' | 'orange' | 'cyan' | 'rose' = 'blue';
+  export let color: 'blue' | 'pink' | 'purple' | 'green' | 'orange' | 'cyan' | 'rose' | 'violet' | 'yellow' = 'blue';
+  export let bgClass: string = '';
 </script>
 
-<div class="divider-section">
+<div class="divider-section {bgClass}">
   <div class="glow-container">
     <div class="glow {color}"></div>
   </div>
@@ -20,7 +21,6 @@
     justify-content: center;
     position: relative;
     overflow: hidden;
-    background: transparent;
     pointer-events: none;
   }
 
@@ -101,6 +101,16 @@
   }
   .rose { 
     --glow-bg: var(--color-pastel-rose); 
+    --line-color: #fb7185; 
+  }
+
+  .violet { 
+    --glow-bg: var(--color-pastel-violet); 
+    --line-color: #fb7185; 
+  }
+
+  .yellow { 
+    --glow-bg: var(--color-pastel-yellow); 
     --line-color: #fb7185; 
   }
 

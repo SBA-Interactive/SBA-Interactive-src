@@ -105,7 +105,7 @@
     "title_3": "de légendaire",
     "subtitle": "Prêt à dépasser vos objectifs numériques ? Nous sommes prêts quand vous l'êtes.",
     "office_label": "Notre Bureau",
-    "office_val": "Poland, Plock - Mazowieckie Technikum Innowacji",
+    "office_val": "Pologne, Quelque part à Plock",
     "email_label": "Envoyez-nous un email",
     "convo_title": "Démarrer une Conversation",
     "convo_subtitle": "Pas de formulaires, pas de réponses automatiques. Contactez directement notre équipe et nous vous répondrons sous 24h.",
@@ -189,5 +189,20 @@
     "benefit_2_title": "Expertise Technique",
     "benefit_2_desc": "De vrais humains, une vraie expertise, vraiment rapide.",
     "btn": "Rencontrer l'Équipe"
+  },
+  "graphics": {
+    "pill": "Identité Visuelle",
+    "title_1": "Visuels Époustouflants,",
+    "title_2": "Engagement",
+    "title_3": "Infini.",
+    "subtitle": "Nous ne construisons pas seulement des sites - Nous curons des expériences visuelles. De la sélection de stock premium à la conception de logos sur mesure et à la retouche photo professionnelle.",
+    "stat_assets": "Actifs Premium",
+    "stat_conversion": "Conversion Plus Élevée",
+    "benefit_1_title": "Retouche Professionnelle",
+    "benefit_1_desc": "Chaque pixel poli. Nous améliorons vos photos existantes pour répondre aux normes d'élite.",
+    "benefit_2_title": "Branding Sur Mesure",
+    "benefit_2_desc": "Logos personnalisés et systèmes d'identité qui rendent votre marque incomparable.",
+    "benefit_3_title": "Curation Experte",
+    "benefit_3_desc": "Trouver les actifs de stock parfaits qui ne ressemblent pas à du stock."
   }
 }

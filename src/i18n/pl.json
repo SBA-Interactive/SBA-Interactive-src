@@ -107,7 +107,7 @@
     "title_3": "legendarnego",
     "subtitle": "Gotowy, by zmiażdżyć swoje cyfrowe cele? My jesteśmy gotowi, gdy Ty jesteś.",
     "office_label": "Nasze Biuro",
-    "office_val": "Poland, Plock - Mazowieckie Technikum Innowacji",
+    "office_val": "Polska, Gdzieś w Płocku",
     "email_label": "Napisz do nas",
     "convo_title": "Rozpocznij Rozmowę",
     "convo_subtitle": "Żadnych formularzy, żadnych automatycznych odpowiedzi. Skontaktuj się bezpośrednio z naszym zespołem, a odpowiemy w ciągu 24 godzin.",
@@ -191,5 +191,20 @@
     "benefit_2_title": "Wiedza Ekspercka",
     "benefit_2_desc": "Prawdziwi ludzie, prawdziwa wiedza, naprawdę szybko.",
     "btn": "Poznaj Zespół"
+  },
+  "graphics": {
+    "pill": "Tożsamość Wizualna",
+    "title_1": "Oszałamiająca Grafika,",
+    "title_2": "Nieskończone",
+    "title_3": "Zaangażowanie.",
+    "subtitle": "Nie tylko budujemy strony - projektujemy doświadczenia wizualne. Od selekcji materiałów premium po projektowanie logo i profesjonalny retusz zdjęć.",
+    "stat_assets": "Zasoby Premium",
+    "stat_conversion": "Wyższa Konwersja",
+    "benefit_1_title": "Profesjonalny Retusz",
+    "benefit_1_desc": "Dopracowany każdy piksel. Ulepszamy Twoje zdjęcia do standardów elity.",
+    "benefit_2_title": "Branding na Miarę",
+    "benefit_2_desc": "Niestandardowe logo i systemy identyfikacji, które wyróżnią Twoją markę.",
+    "benefit_3_title": "Ekspercka Selekcja",
+    "benefit_3_desc": "Znajdujemy idealne materiały stockowe, które wcale ich nie przypominają."
   }
 }

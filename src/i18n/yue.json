@@ -1,4 +1,4 @@
- {
+{
   "hero": {
     "pill": "顶尖数字工程",
     "title_1": "我哋打造",
@@ -105,7 +105,7 @@
     "title_3": "传奇",
     "subtitle": "准备好击碎您嘅数字目标未？我哋随时待命。",
     "office_label": "办公室地址",
-    "office_val": "Poland, Plock - Mazowieckie Technikum Innowacji",
+    "office_val": "波蘭，普沃克某處",
     "email_label": "发送邮件",
     "convo_title": "开始对话",
     "convo_subtitle": "冇表单，冇自动回复。直接联系我哋嘅团队，我哋将在24小时内回复。",
@@ -189,5 +189,20 @@
     "benefit_2_title": "专家经验",
     "benefit_2_desc": "真人沟通，专业见解，快速响应。",
     "btn": "会见团队"
+  },
+  "graphics": {
+    "pill": "視覺識別",
+    "title_1": "驚艷視覺，",
+    "title_2": "無限",
+    "title_3": "互動。",
+    "subtitle": "我哋唔單止整網站 - 我哋策劃視覺體驗。由精選圖片到定做 Logo 同專業修圖。",
+    "stat_assets": "優質素材",
+    "stat_conversion": "更高轉化",
+    "benefit_1_title": "專業修圖",
+    "benefit_1_desc": "每個像素都完美。我哋提升你現有嘅相片到精英標準。",
+    "benefit_2_title": "定做品牌",
+    "benefit_2_desc": "自訂 Logo 同識別系統，令你嘅品牌獨一無二。",
+    "benefit_3_title": "專家挑選",
+    "benefit_3_desc": "搵出完美嘅素材，完全唔似罐頭相。"
   }
 }

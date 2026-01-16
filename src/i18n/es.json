@@ -105,7 +105,7 @@
     "title_3": "legendario",
     "subtitle": "¿Listo para superar tus objetivos digitales? Estamos listos cuando tú lo estés.",
     "office_label": "Nuestra Oficina",
-    "office_val": "Poland, Plock - Mazowieckie Technikum Innowacji",
+    "office_val": "Polonia, En algún lugar de Plock",
     "email_label": "Envíanos un correo",
     "convo_title": "Iniciar Conversación",
     "convo_subtitle": "Sin formularios, sin respuestas automáticas. Contacta directamente con nuestro equipo y te responderemos en 24 horas.",
@@ -189,5 +189,20 @@
     "benefit_2_title": "Conocimiento Experto",
     "benefit_2_desc": "Humanos reales, experiencia real, realmente rápido.",
     "btn": "Conozca al Equipo"
+  },
+  "graphics": {
+    "pill": "Identidad Visual",
+    "title_1": "Visuales Impresionantes,",
+    "title_2": "Infinita",
+    "title_3": "Participación.",
+    "subtitle": "No solo construimos sitios - Curamos experiencias visuales. Desde la selección de stock premium hasta el diseño de logotipos a medida y el retoque fotográfico profesional.",
+    "stat_assets": "Activos Premium",
+    "stat_conversion": "Mayor Conversión",
+    "benefit_1_title": "Retoque Profesional",
+    "benefit_1_desc": "Cada píxel pulido. Mejoramos sus fotos existentes para cumplir con los estándares de élite.",
+    "benefit_2_title": "Branding a Medida",
+    "benefit_2_desc": "Logotipos personalizados y sistemas de identidad que hacen que su marca sea inconfundible.",
+    "benefit_3_title": "Curación Experta",
+    "benefit_3_desc": "Encontrar los activos de stock perfectos que no parecen stock."
   }
 }

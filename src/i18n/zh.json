@@ -105,7 +105,7 @@
     "title_3": "传奇",
     "subtitle": "准备好击碎您的数字目标了吗？我们随时待命。",
     "office_label": "办公室地址",
-    "office_val": "Poland, Plock - Mazowieckie Technikum Innowacji",
+    "office_val": "波兰，普沃克某处",
     "email_label": "发送邮件",
     "convo_title": "开始对话",
     "convo_subtitle": "没有表单，没有自动回复。直接联系我们的团队，我们将在24小时内回复。",
@@ -189,5 +189,20 @@
     "benefit_2_title": "专家经验",
     "benefit_2_desc": "真人沟通，专业见解，快速响应。",
     "btn": "会见团队"
+  },
+  "graphics": {
+    "pill": "视觉识别",
+    "title_1": "惊艳视觉，",
+    "title_2": "无限",
+    "title_3": "互动。",
+    "subtitle": "我们不仅仅是建立网站 - 我们策划视觉体验。从高级素材选择到定制 Logo 设计和专业照片修饰。",
+    "stat_assets": "优质素材",
+    "stat_conversion": "更高转化",
+    "benefit_1_title": "专业修饰",
+    "benefit_1_desc": "每个像素都经过打磨。我们将您现有的照片提升到精英标准。",
+    "benefit_2_title": "定制品牌",
+    "benefit_2_desc": "定制 Logo 和识别系统，让您的品牌独一无二。",
+    "benefit_3_title": "专家精选",
+    "benefit_3_desc": "寻找完美的库存素材，感觉完全不像库存。"
   }
 }

@@ -10,6 +10,7 @@
 	let section: HTMLElement;
 	let cards: HTMLElement[] = $state([]);
 	let textContent: HTMLElement;
+	let techStack: HTMLElement;
 
 	const features = $derived([
 		{
@@ -44,7 +45,7 @@
 			inView(textContent, () => {
 				animate(textContent, 
 					{ y: [30, 0], opacity: [0, 1] }, 
-					{ duration: 0.8, easing: [0.22, 1, 0.36, 1] }
+					{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }
 				);
 			}, { margin: "-10% 0px -10% 0px" });
 		}
@@ -54,7 +55,7 @@
 			inView(section, () => {
 				animate(cards, 
 					{ y: [30, 0], opacity: [0, 1] }, 
-					{ delay: stagger(0.1), duration: 0.6, easing: "ease-out" }
+					{ delay: stagger(0.1), duration: 0.6, ease: "ease-out" }
 				);
 			}, { margin: "-10% 0px -10% 0px" });
 		}
@@ -64,7 +65,7 @@
 			inView(techStack, () => {
 				animate(techStack, 
 					{ y: [30, 0], opacity: [0, 1] }, 
-					{ duration: 0.8, delay: 0.4, easing: "ease-out" }
+					{ duration: 0.8, delay: 0.4, ease: "ease-out" }
 				);
 			}, { margin: "-10% 0px -10% 0px" });
 		}
@@ -117,7 +118,7 @@
 		</div>
 
 		<!-- Tech Stack Marquee -->
-		<div class="mt-32 pt-16 border-t border-slate-200/50 dark:border-white/5">
+		<div bind:this={techStack} class="mt-32 pt-16 border-t border-slate-200/50 dark:border-white/5 opacity-0">
 			<div class="flex flex-col md:flex-row items-center justify-between gap-12">
 				<div class="max-w-xs text-center md:text-left">
 					<h4 class="text-xs font-black uppercase tracking-[0.4em] text-slate-400 dark:text-slate-500 mb-4">{$i18n.t('features.tech_pill') || 'Our Ecosystem'}</h4>
@@ -128,12 +129,12 @@
 					<div class="flex gap-16 animate-marquee whitespace-nowrap items-center">
 						{#each Array(2) as _}
 							<div class="flex gap-16 items-center">
-								<span class="text-2xl font-black text-slate-300 dark:text-white/10 hover:text-primary-500 transition-colors uppercase italic scroll-m-20">WordPress</span>
-								<span class="text-2xl font-black text-slate-300 dark:text-white/10 hover:text-orange-500 transition-colors uppercase italic">Bootstrap</span>
+								<span class="text-2xl font-black text-slate-300 dark:text-white/10 hover:text-blue-800 transition-colors uppercase italic scroll-m-20">WordPress</span>
+								<span class="text-2xl font-black text-slate-300 dark:text-white/10 hover:text-blue-300 transition-colors uppercase italic">Bootstrap</span>
 								<span class="text-2xl font-black text-slate-300 dark:text-white/10 hover:text-blue-500 transition-colors uppercase italic">React</span>
 								<span class="text-2xl font-black text-slate-300 dark:text-white/10 hover:text-cyan-400 transition-colors uppercase italic">Tailwind</span>
-								<span class="text-2xl font-black text-slate-300 dark:text-white/10 hover:text-orange-600 transition-colors uppercase italic">PHP</span>
-								<span class="text-2xl font-black text-slate-300 dark:text-white/10 hover:text-blue-600 transition-colors uppercase italic">Javascript</span>
+								<span class="text-2xl font-black text-slate-300 dark:text-white/10 hover:text-violet-600 transition-colors uppercase italic">PHP</span>
+								<span class="text-2xl font-black text-slate-300 dark:text-white/10 hover:text-yellow-600 transition-colors uppercase italic">Javascript</span>
 							</div>
 						{/each}
 					</div>
@@ -152,7 +153,7 @@
 		100% { transform: translateX(-50%); }
 	}
 	.animate-marquee {
-		animation: marquee 30s linear infinite;
+		animation: marquee 10s linear infinite;
 	}
 	.animate-marquee:hover {
 		animation-play-state: paused;

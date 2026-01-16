@@ -107,7 +107,7 @@
     "title_3": "legendary",
     "subtitle": "Ready to crush your digital goals? We're ready when you are.",
     "office_label": "Our Office",
-    "office_val": "Poland, Plock - Mazowieckie Technikum Innowacji",
+    "office_val": "Poland, Somewhere in Plock",
     "email_label": "Email Us",
     "convo_title": "Start a Conversation",
     "convo_subtitle": "No forms, no automated replies. Reach out directly to our team and we'll get back to you within 24 hours.",
@@ -191,5 +191,20 @@
     "benefit_2_title": "Expert Knowledge",
     "benefit_2_desc": "Real humans, real expertise, real fast.",
     "btn": "Meet the Team"
+  },
+  "graphics": {
+    "pill": "Visual Identity",
+    "title_1": "Stunning Visuals,",
+    "title_2": "Infinite",
+    "title_3": "Engagement.",
+    "subtitle": "We don't just build sites - We curate visual experiences. From premium stock selection to bespoke logo design and professional photo retouching.",
+    "stat_assets": "Premium Assets",
+    "stat_conversion": "Higher Conversion",
+    "benefit_1_title": "Professional Retouching",
+    "benefit_1_desc": "Every pixel polished. We enhance your existing photos to meet elite standards.",
+    "benefit_2_title": "Bespoke Branding",
+    "benefit_2_desc": "Custom logos and identity systems that make your brand unmistakable.",
+    "benefit_3_title": "Expert Curation",
+    "benefit_3_desc": "Finding the perfect stock assets that don't feel like stock."
   }
 }

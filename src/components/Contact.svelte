@@ -3,6 +3,7 @@
 	import { animate, inView } from 'motion';
 	import IconCarbonSend from 'virtual:icons/carbon/send';
 	import IconCarbonPhone from 'virtual:icons/carbon/phone';
+	import IconCarbonLocation from 'virtual:icons/carbon/location';
 	import { i18n } from '../i18n/store.svelte.ts';
 
 	let section: HTMLElement;
@@ -40,7 +41,9 @@
 						
 						<div class="space-y-8">
 							<div class="flex items-center gap-6">
-								<div class="w-12 h-12 md:w-14 md:h-14 rounded-2xl md:rounded-3xl bg-white/10 flex items-center justify-center text-xl md:text-2xl backdrop-blur-md shrink-0" aria-hidden="true">📍</div>
+								<div class="w-12 h-12 md:w-14 md:h-14 rounded-2xl md:rounded-3xl bg-white dark:bg-black/80 flex items-center justify-center text-xl md:text-2xl backdrop-blur-md shrink-0" aria-hidden="true">
+									<IconCarbonLocation class="text-red-500 dark:bg-text-300 w-fit h-fit" />
+								</div>
 								<div>
 									<div class="font-black text-base md:text-lg">{$i18n.t('contact.office_label')}</div>
 									<div class="text-primary-100/70 font-medium text-sm md:text-base">{$i18n.t('contact.office_val')}</div>
@@ -77,7 +80,7 @@
 									<div class="w-2.5 h-2.5 rounded-full bg-blue-500"></div>
 									<div class="text-xs font-black text-slate-400 group-hover:text-blue-500 uppercase tracking-widest transition-colors">{$i18n.t('contact.support_label')}</div>
 								</div>
-								<div class="text-lg md:text-base 2xl:text-lg font-bold text-slate-900 dark:text-white break-all">help@sbainteractive.com</div>
+								<div class="text-lg md:text-base 2xl:text-lg font-bold text-slate-900 dark:text-white break-all">support@sbainteractive.com</div>
 							</div>
 							<a href="tel:+48213742067" target="_blank" rel="noopener noreferrer" class="p-8 md:px-6 xl:px-8 2xl:px-10 rounded-[24px] md:rounded-[32px] bg-slate-50 dark:bg-surface-800/50 border border-slate-100 dark:border-white/5 hover:border-emerald-500/30 hover:bg-emerald-50/50 dark:hover:bg-emerald-900/10 transition-all group">
 								<div class="flex items-center gap-3 mb-4">

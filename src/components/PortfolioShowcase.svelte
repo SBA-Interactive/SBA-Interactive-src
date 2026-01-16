@@ -12,37 +12,37 @@
 			image: '/sba-interactive/images/pizza-template.webp',
 			title: i18n.t('showcase.pizza_title'),
 			desc: i18n.t('showcase.pizza_desc'),
-			color: 'bg-[#E6F4F1] dark:bg-surface-800' // Minty pastel -> Dark surface
+			color: 'bg-emerald-100 dark:bg-teal-950'
 		},
 		{
 			image: '/sba-interactive/images/blog-template.webp',
 			title: i18n.t('showcase.blog_title'),
 			desc: i18n.t('showcase.blog_desc'),
-			color: 'bg-[#F3E8FF] dark:bg-surface-800' // Lavender pastel -> Dark surface
+			color: 'bg-indigo-100 dark:bg-indigo-950'
 		},
 		{
 			image: '/sba-interactive/images/shop-template.webp',
 			title: i18n.t('showcase.shop_title'),
 			desc: i18n.t('showcase.shop_desc'),
-			color: 'bg-[#FDF2F8] dark:bg-surface-800' // Pink pastel -> Dark surface
+			color: 'bg-blue-100 dark:bg-slate-600'
 		},
 		{
-			image: '/sba-interactive/images/saas-dashboard.webp', // Placeholder due to quota
+			image: '/sba-interactive/images/saas-dashboard.webp',
 			title: i18n.t('showcase.saas_title'),
 			desc: i18n.t('showcase.saas_desc'),
-			color: 'bg-[#F0F9FF] dark:bg-surface-800' // Sky pastel -> Dark surface
+			color: 'bg-blue-200 dark:bg-slate-950'
 		},
 		{
-			image: '/sba-interactive/images/nonprofit-organisation.webp', // Placeholder due to quota
+			image: '/sba-interactive/images/nonprofit-organisation.webp',
 			title: i18n.t('showcase.npo_title'),
 			desc: i18n.t('showcase.npo_desc'),
-			color: 'bg-[#FFF7ED] dark:bg-surface-800' // Peach pastel -> Dark surface
+			color: 'bg-lime-100 dark:bg-green-950'
 		},
 		{
-			image: '/sba-interactive/images/luxury-hotel.webp', // Placeholder due to quota
+			image: '/sba-interactive/images/luxury-hotel.webp',
 			title: i18n.t('showcase.hotel_title'),
 			desc: i18n.t('showcase.hotel_desc'),
-			color: 'bg-[#F5F3FF] dark:bg-surface-800' // Violet pastel -> Dark surface
+			color: 'bg-slate-300 dark:bg-slate-900'
 		}
 	]);
 
@@ -86,13 +86,13 @@
 			{#each items as item, i}
 				<div 
 					bind:this={showcaseCards[i]}
-					class="group relative aspect-[4/6.5] rounded-[64px] overflow-hidden shadow-xl shadow-black/[0.02]"
+					class="group relative aspect-[4/6.5] rounded-[32px] overflow-hidden shadow-xl shadow-black/[0.02]"
 				>
 					<!-- Card Background -->
 					<div class="absolute inset-0 {item.color} transition-all duration-700 group-hover:scale-105 border border-transparent dark:border-surface-700/50"></div>
 					
 					<!-- Image Container -->
-					<div class="aspect-[4/5] absolute inset-x-8 top-8 bottom-32 rounded-[10px] overflow-hidden shadow-2xl transition-transform duration-700 group-hover:-translate-y-4 border border-white/20">
+					<div class="aspect-[4/5] absolute inset-x-8 top-8 bottom-32 rounded-[24px] overflow-hidden shadow-2xl transition-transform duration-700 group-hover:-translate-y-4 border border-white/20">
 						<img 
 							src={item.image} 
 							alt={item.title} 
