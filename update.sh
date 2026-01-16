@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+bun run build &&
 cp -r ./dist/* ../sba-interactive/ &&
 cd ../sba-interactive &&
 git add . &&

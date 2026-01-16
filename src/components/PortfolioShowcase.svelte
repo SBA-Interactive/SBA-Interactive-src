@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import gsap from 'gsap';
-	import { ScrollTrigger } from 'gsap/ScrollTrigger';
+	import { animate, inView, stagger } from 'motion';
 	import { i18n } from '../i18n/store.svelte.ts';
 
 	let section: HTMLElement;
@@ -10,37 +9,37 @@
 
 	const items = $derived([
 		{
-			image: '/sba-interactive/images/pizza-template.png',
+			image: '/sba-interactive/images/pizza-template.webp',
 			title: i18n.t('showcase.pizza_title'),
 			desc: i18n.t('showcase.pizza_desc'),
 			color: 'bg-[#E6F4F1] dark:bg-surface-800' // Minty pastel -> Dark surface
 		},
 		{
-			image: '/sba-interactive/images/blog-template.png',
+			image: '/sba-interactive/images/blog-template.webp',
 			title: i18n.t('showcase.blog_title'),
 			desc: i18n.t('showcase.blog_desc'),
 			color: 'bg-[#F3E8FF] dark:bg-surface-800' // Lavender pastel -> Dark surface
 		},
 		{
-			image: '/sba-interactive/images/shop-template.png',
+			image: '/sba-interactive/images/shop-template.webp',
 			title: i18n.t('showcase.shop_title'),
 			desc: i18n.t('showcase.shop_desc'),
 			color: 'bg-[#FDF2F8] dark:bg-surface-800' // Pink pastel -> Dark surface
 		},
 		{
-			image: '/sba-interactive/images/saas-dashboard.png', // Placeholder due to quota
+			image: '/sba-interactive/images/saas-dashboard.webp', // Placeholder due to quota
 			title: i18n.t('showcase.saas_title'),
 			desc: i18n.t('showcase.saas_desc'),
 			color: 'bg-[#F0F9FF] dark:bg-surface-800' // Sky pastel -> Dark surface
 		},
 		{
-			image: '/sba-interactive/images/nonprofit-organisation.png', // Placeholder due to quota
+			image: '/sba-interactive/images/nonprofit-organisation.webp', // Placeholder due to quota
 			title: i18n.t('showcase.npo_title'),
 			desc: i18n.t('showcase.npo_desc'),
 			color: 'bg-[#FFF7ED] dark:bg-surface-800' // Peach pastel -> Dark surface
 		},
 		{
-			image: '/sba-interactive/images/luxury-hotel.png', // Placeholder due to quota
+			image: '/sba-interactive/images/luxury-hotel.webp', // Placeholder due to quota
 			title: i18n.t('showcase.hotel_title'),
 			desc: i18n.t('showcase.hotel_desc'),
 			color: 'bg-[#F5F3FF] dark:bg-surface-800' // Violet pastel -> Dark surface
@@ -48,40 +47,25 @@
 	]);
 
 	onMount(() => {
-		gsap.registerPlugin(ScrollTrigger);
+		// Header animation
+		if (header) {
+			inView(header, () => {
+				animate(header, 
+					{ y: [30, 0], opacity: [0, 1] }, 
+					{ duration: 0.8, easing: "ease-out" }
+				);
+			}, { margin: "-10% 0px -10% 0px" });
+		}
 
-		const ctx = gsap.context(() => {
-			if (header) {
-				gsap.from(header, {
-					scrollTrigger: {
-						trigger: header,
-						start: "top 95%",
-						toggleActions: "play none none reverse"
-					},
-					y: 30,
-					opacity: 0,
-					duration: 0.8,
-					ease: "power3.out"
-				});
-			}
-
-			showcaseCards.filter(c => c !== null).forEach((card, i) => {
-				gsap.from(card, {
-					scrollTrigger: {
-						trigger: card,
-						start: "top 90%",
-						toggleActions: "play none none reverse"
-					},
-					y: 50,
-					opacity: 0,
-					duration: 0.8,
-					delay: (i % 3) * 0.1,
-					ease: "power3.out"
-				});
-			});
-		}, section);
-
-		return () => ctx.revert();
+		// Cards animation with stagger
+		if (section) {
+			inView(section, () => {
+				animate(showcaseCards, 
+					{ y: [50, 0], opacity: [0, 1] }, 
+					{ delay: stagger(0.1), duration: 0.8, easing: "ease-out" }
+				);
+			}, { margin: "-5% 0px -5% 0px" });
+		}
 	});
 </script>
 
@@ -102,7 +86,7 @@
 			{#each items as item, i}
 				<div 
 					bind:this={showcaseCards[i]}
-					class="group relative aspect-[4/6.5] rounded-[64px] overflow-hidden cursor-pointer shadow-xl shadow-black/[0.02]"
+					class="group relative aspect-[4/6.5] rounded-[64px] overflow-hidden shadow-xl shadow-black/[0.02]"
 				>
 					<!-- Card Background -->
 					<div class="absolute inset-0 {item.color} transition-all duration-700 group-hover:scale-105 border border-transparent dark:border-surface-700/50"></div>

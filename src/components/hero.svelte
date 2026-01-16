@@ -3,7 +3,7 @@
 	import IconCarbonSettings from 'virtual:icons/carbon/settings';
 	import IconCarbonCode from 'virtual:icons/carbon/code';
 	import IconCarbonDevelopment from 'virtual:icons/carbon/development';
-	import heroBg from '../assets/images/hero.png';
+	import heroBg from '../assets/images/hero.webp';
 	import { i18n } from '../i18n/store.svelte.ts';
 
 	let scrollY = $state(0);
@@ -22,7 +22,7 @@
 	<div class="absolute inset-0 -z-10 bg-white dark:bg-surface-950 overflow-hidden">
 
         <div 
-            class="absolute inset-0 w-full h-full bg-cover bg-center opacity-20 backdrop-blur-xl dark:opacity-60 blur-[10px] -sepia-150 grayscale pointer-events-none z-0" 
+            class="absolute inset-0 w-full h-full bg-cover bg-center opacity-20 dark:opacity-60 pointer-events-none z-0" 
             style="background-image: url({typeof heroBg === 'string' ? heroBg : heroBg.src});"
         ></div>
 

@@ -22,7 +22,8 @@ const { title = "SBA Interactive", description = "Premium web development and di
     <meta property="og:url" content={Astro.url} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={new URL('/sba-interactive/images/hero.png', Astro.url)} />
+    <link rel="preload" as="image" href="/sba-interactive/images/hero.webp" />
+    <meta property="og:image" content={new URL('/sba-interactive/images/hero.webp', Astro.site)} />
     <meta property="og:image:alt" content="SBA Interactive - Premium Digital Solutions" />
     <meta property="og:site_name" content="SBA Interactive" />
     <meta property="og:locale" content="en_US" />
@@ -45,11 +46,12 @@ const { title = "SBA Interactive", description = "Premium web development and di
     <meta property="twitter:url" content={Astro.url} />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={new URL('/sba-interactive/images/hero.png', Astro.url)} />
+    <meta property="twitter:image" content={new URL('/sba-interactive/images/hero.webp', Astro.site)} />
     <meta property="twitter:image:alt" content="SBA Interactive Banner" />
 
     <link rel="canonical" href={Astro.url} />
     <link rel="icon" type="image/svg+xml" href="/sba-interactive/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/sba-interactive/images/hero.webp" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -62,8 +64,8 @@ const { title = "SBA Interactive", description = "Premium web development and di
         "@type": "ProfessionalService",
         "name": "SBA Interactive",
         "url": "https://sba-interactive.github.io/sba-interactive/",
-        "logo": "https://sba-interactive.github.io/sba-interactive/images/hero.png",
-        "image": "https://sba-interactive.github.io/sba-interactive/images/hero.png",
+        "logo": "https://sba-interactive.github.io/sba-interactive/images/hero.webp",
+        "image": "https://sba-interactive.github.io/sba-interactive/images/hero.webp",
         "description": "Premium web development and digital architecture services specializing in high-performance WordPress and custom React solutions.",
         "address": {
           "@type": "PostalAddress",
@@ -101,9 +103,7 @@ const { title = "SBA Interactive", description = "Premium web development and di
   </head>
   <body class="min-h-screen flex flex-col">
     <Header client:load />
-    <main class="flex-grow">
-      <slot />
-    </main>
+    <main class="flex-grow"><slot /></main>
     <Footer client:visible />
   </body>
 </html>

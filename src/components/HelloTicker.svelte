@@ -15,7 +15,7 @@
 <section class="py-12 bg-white dark:bg-slate-950 overflow-hidden flex flex-col gap-8 border-y border-slate-100 dark:border-white/5 relative z-20">
 	<div class="flex whitespace-nowrap">
 		<div class="flex animate-scroll hover:pause gap-12 py-2">
-			{#each [1, 2, 3, 4, 5, 6] as _}
+			{#each Array.from({ length: 6 }) as _}
 				{#each items as item}
 					<span class="text-4xl md:text-6xl font-black uppercase tracking-normal {item.color} {item.hover} transition-colors duration-300 cursor-default select-none">
 						{item.word}
@@ -27,7 +27,7 @@
 
 	<div class="flex whitespace-nowrap">
 		<div class="flex animate-scroll-reverse hover:pause gap-12 py-2">
-			{#each [1, 2, 3, 4, 5, 6] as _}
+			{#each Array.from({ length: 6 }) as _}
 				{#each items as item}
 					<span 
 						class="text-4xl md:text-6xl font-black uppercase tracking-normal {item.color} {item.hover} transition-colors duration-300 cursor-default select-none" 
@@ -46,12 +46,14 @@
 		display: flex;
 		width: max-content;
 		animation: scroll 60s linear infinite;
+		will-change: transform;
 	}
 
 	.animate-scroll-reverse {
 		display: flex;
 		width: max-content;
 		animation: scroll-reverse 60s linear infinite;
+		will-change: transform;
 	}
 
 	.animate-scroll:hover,
@@ -60,19 +62,19 @@
 	}
 
 	@keyframes scroll {
-		0% {
+		from {
 			transform: translateX(0);
 		}
-		100% {
+		to {
 			transform: translateX(-50%);
 		}
 	}
 
 	@keyframes scroll-reverse {
-		0% {
+		from {
 			transform: translateX(-50%);
 		}
-		100% {
+		to {
 			transform: translateX(0);
 		}
 	}

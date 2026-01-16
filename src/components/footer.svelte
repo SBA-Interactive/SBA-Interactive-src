@@ -70,15 +70,6 @@
 			</p>
 			
 			<div class="flex items-center gap-4">
-				<a href="https://github.com" target="_blank" class="p-2 hover:bg-surface-200 dark:hover:bg-surface-800 rounded-full transition-colors text-surface-700 dark:text-surface-400" aria-label="Github">
-					<IconCarbonLogoGithub class="w-5 h-5" />
-				</a>
-				<a href="https://linkedin.com" target="_blank" class="p-2 hover:bg-surface-200 dark:hover:bg-surface-800 rounded-full transition-colors text-surface-700 dark:text-surface-400" aria-label="LinkedIn">
-					<IconCarbonLogoLinkedin class="w-5 h-5" />
-				</a>
-				<a href="https://twitter.com" target="_blank" class="p-2 hover:bg-surface-200 dark:hover:bg-surface-800 rounded-full transition-colors text-surface-700 dark:text-surface-400" aria-label="Twitter">
-					<IconCarbonLogoTwitter class="w-5 h-5" />
-				</a>
 			</div>
 		</div>
 	</div>

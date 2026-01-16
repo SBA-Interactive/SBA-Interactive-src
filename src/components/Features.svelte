@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import gsap from 'gsap';
-	import { ScrollTrigger } from 'gsap/ScrollTrigger';
+	import { animate, inView, stagger } from 'motion';
 	import IconCarbonCloudDownload from 'virtual:icons/carbon/cloud-download';
 	import IconCarbonRocket from 'virtual:icons/carbon/rocket';
 	import IconCarbonUserFavorite from 'virtual:icons/carbon/user-favorite';
@@ -40,42 +39,25 @@
 	]);
 
 	onMount(() => {
-		gsap.registerPlugin(ScrollTrigger);
+		// Animate text content
+		if (textContent) {
+			inView(textContent, () => {
+				animate(textContent, 
+					{ y: [30, 0], opacity: [0, 1] }, 
+					{ duration: 0.8, easing: [0.22, 1, 0.36, 1] }
+				);
+			}, { margin: "-10% 0px -10% 0px" });
+		}
 
-		const ctx = gsap.context(() => {
-			if (textContent) {
-				gsap.from(textContent, {
-					scrollTrigger: {
-						trigger: textContent,
-						start: "top 95%",
-						toggleActions: "play none none reverse"
-					},
-					y: 20,
-					opacity: 0,
-					duration: 0.6,
-					ease: "power2.out",
-					overwrite: 'auto'
-				});
-			}
-
-			cards.filter(c => c !== null).forEach((card, i) => {
-				gsap.from(card, {
-					scrollTrigger: {
-						trigger: card,
-						start: "top 98%",
-						toggleActions: "play none none reverse"
-					},
-					y: 20,
-					opacity: 0,
-					duration: 0.4,
-					delay: Math.min(i * 0.05, 0.2),
-					ease: "power1.out",
-					overwrite: 'auto'
-				});
-			});
-		}, section);
-
-		return () => ctx.revert();
+		// Animate cards with stagger
+		if (section) {
+			inView(section, () => {
+				animate(cards, 
+					{ y: [30, 0], opacity: [0, 1] }, 
+					{ delay: stagger(0.1), duration: 0.6, easing: "ease-out" }
+				);
+			}, { margin: "-10% 0px -10% 0px" });
+		}
 	});
 </script>
 

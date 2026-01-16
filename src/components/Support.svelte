@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import gsap from 'gsap';
-	import { ScrollTrigger } from 'gsap/ScrollTrigger';
+	import { animate, inView } from 'motion';
 	import { i18n } from '../i18n/store.svelte.ts';
 	import IconCarbonChat from 'virtual:icons/carbon/chat';
 	import IconCarbonEventSchedule from 'virtual:icons/carbon/event-schedule';
@@ -11,35 +10,18 @@
 	let imageContainer: HTMLElement;
 
 	onMount(() => {
-		gsap.registerPlugin(ScrollTrigger);
-
-		const ctx = gsap.context(() => {
-			gsap.from(content, {
-				scrollTrigger: {
-					trigger: section,
-					start: "top 80%",
-					toggleActions: "play none none reverse"
-				},
-				x: -50,
-				opacity: 0,
-				duration: 1,
-				ease: "power3.out"
-			});
-
-			gsap.from(imageContainer, {
-				scrollTrigger: {
-					trigger: section,
-					start: "top 80%",
-					toggleActions: "play none none reverse"
-				},
-				scale: 0.9,
-				opacity: 0,
-				duration: 1.2,
-				ease: "expo.out"
-			});
-		}, section);
-
-		return () => ctx.revert();
+		if (section && content && imageContainer) {
+			inView(section, () => {
+				animate(content, 
+					{ x: [-50, 0], opacity: [0, 1] }, 
+					{ duration: 1, easing: "ease-out" }
+				);
+				animate(imageContainer, 
+					{ scale: [0.9, 1], opacity: [0, 1] }, 
+					{ duration: 1.2, easing: [0.16, 1, 0.3, 1] }
+				);
+			}, { margin: "-20% 0px -20% 0px" });
+		}
 	});
 </script>
 
@@ -51,7 +33,7 @@
 				<div class="absolute -inset-4 bg-primary-200/50 dark:bg-primary-900/20 rounded-[64px] blur-3xl"></div>
 				<div class="relative rounded-[56px] overflow-hidden shadow-2xl border-8 border-white dark:border-surface-800 transition-transform duration-700 hover:scale-[1.02]">
 					<img 
-						src="/sba-interactive/images/support-team.png" 
+						src="/sba-interactive/images/support-team.webp" 
 						alt="Our Support Team" 
 						class="w-full h-full object-cover aspect-square md:aspect-video lg:aspect-square"
 					/>

@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import gsap from 'gsap';
-	import { ScrollTrigger } from 'gsap/ScrollTrigger';
+	import { animate, inView } from 'motion';
 	import IconCarbonCheckmarkFilled from 'virtual:icons/carbon/checkmark-filled';
 	import { i18n } from '../i18n/store.svelte.ts';
 
@@ -72,60 +71,29 @@
 	]);
 
 	function fadeIn(node: HTMLElement, delay = 0) {
-		const st = ScrollTrigger.create({
-			trigger: node,
-			start: "top 98%",
-			onEnter: () => {
-				gsap.fromTo(node, 
-					{ y: 20, opacity: 0 },
-					{ 
-						y: 0, 
-						opacity: 1, 
-						duration: 0.4, 
-						delay: ScrollTrigger.isInViewport(node) ? 0 : delay,
-						ease: "power2.out",
-						overwrite: 'auto'
-					}
-				);
-			},
-			onEnterBack: () => {
-				gsap.to(node, { y: 0, opacity: 1, duration: 0.3, ease: "power2.out" });
-			},
-			onLeaveBack: () => {
-				gsap.to(node, { y: 20, opacity: 0, duration: 0.3, ease: "power2.out" });
-			}
-		});
+		const stop = inView(node, () => {
+			animate(node, 
+				{ y: [20, 0], opacity: [0, 1] }, 
+				{ duration: 0.4, delay, easing: "ease-out" }
+			);
+		}, { margin: "0px 0px -2% 0px" });
 
 		return {
 			destroy() {
-				st.kill();
+				stop();
 			}
 		};
 	}
 
 	onMount(() => {
-		gsap.registerPlugin(ScrollTrigger);
-
-		const ctx = gsap.context(() => {
-			if (header) {
-				gsap.from(header, {
-					scrollTrigger: {
-						trigger: header,
-						start: "top 95%",
-						toggleActions: "play none none reverse"
-					},
-					y: 20,
-					opacity: 0,
-					duration: 0.4,
-					ease: "power2.out",
-					overwrite: 'auto'
-				});
-			}
-		}, section);
-
-		ScrollTrigger.refresh();
-
-		return () => ctx.revert();
+		if (header) {
+			inView(header, () => {
+				animate(header, 
+					{ y: [20, 0], opacity: [0, 1] }, 
+					{ duration: 0.4, easing: "ease-out" }
+				);
+			}, { margin: "-5% 0px -5% 0px" });
+		}
 	});
 </script>
 
