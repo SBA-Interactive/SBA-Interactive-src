@@ -17,7 +17,7 @@
   "header": {
     "nav_wp": "WordPress",
     "nav_custom": "Custom Web",
-    "nav_advanced": "Fortgeschritten",
+    "nav_showcase": "Portfolio",
     "nav_pricing": "Preise",
     "nav_contact": "Kontakt"
   },
@@ -36,7 +36,9 @@
     "card_support_title": "Experten-Support",
     "card_support_desc": "Technische Unterstützung auf Abruf und Wartung nach dem Start.",
     "card_security_title": "Sicherheit zuerst",
-    "card_security_desc": "WAF-Integration und sichere Codierungspraktiken für jedes Projekt."
+    "card_security_desc": "WAF-Integration und sichere Codierungspraktiken für jedes Projekt.",
+    "tech_pill": "Modernes Ökosystem",
+    "tech_desc": "Wir nutzen die fortschrittlichsten Technologien der Welt, um Ihre digitale Zukunft zu gestalten."
   },
   "services": {
     "pill": "Fähigkeiten",
@@ -91,12 +93,12 @@
     "plan_advanced_f6": "Prioritäts-Support",
     "plan_custom_name": "Maßgeschneidertes Unternehmen",
     "plan_custom_desc": "Vollständig individuell gestaltete digitale Ökosysteme.",
-    "plan_custom_f1": "Multi-System-Integration",
-    "plan_custom_f2": "Hochlast-Optimierung",
-    "plan_custom_f3": "Erweitertes Sicherheits-Audit",
-    "plan_custom_f4": "Dedizierter Projektleiter",
-    "plan_custom_f5": "Individuelle API-Entwicklung",
-    "plan_custom_f6": "24/7 Priority SLA"
+    "plan_custom_f1": "Maßgeschneiderte Architektur & Funktionen",
+    "plan_custom_f2": "Hochlast-Optimierung & Nahtlose Skalierung",
+    "plan_custom_f3": "Erweitertes Sicherheits- & Compliance-Audit",
+    "plan_custom_f4": "Ihre bevorzugten Systemintegrationen",
+    "plan_custom_f5": "Vollständiges Produktmarketing",
+    "plan_custom_f6": "Dediziertes Management & Priority Support"
   },
   "contact": {
     "pill": "Kontaktieren Sie uns",
@@ -203,6 +205,8 @@
     "benefit_2_title": "Maßgeschneidertes Branding",
     "benefit_2_desc": "Benutzerdefinierte Logos und Identitätssysteme, die Ihre Marke unverwechselbar machen.",
     "benefit_3_title": "Experten-Kuration",
-    "benefit_3_desc": "Finden der perfekten Stock-Assets, die sich nicht wie Stock anfühlen."
+    "benefit_3_desc": "Finden der perfekten Stock-Assets, die sich nicht wie Stock anfühlen.",
+    "card_title": "Qualitätsprodukt",
+    "card_subtitle": "Braucht Qualitäts-Showcase"
   }
 }

@@ -17,7 +17,7 @@
   "header": {
     "nav_wp": "WordPress",
     "nav_custom": "Web a Medida",
-    "nav_advanced": "Avanzado",
+    "nav_showcase": "Portafolio",
     "nav_pricing": "Precios",
     "nav_contact": "Contacto"
   },
@@ -36,7 +36,9 @@
     "card_support_title": "Soporte Experto",
     "card_support_desc": "Asistencia técnica a demanda y mantenimiento post-lanzamiento.",
     "card_security_title": "Seguridad ante Todo",
-    "card_security_desc": "Integración WAF y prácticas de codificación segura para cada proyecto."
+    "card_security_desc": "Integración WAF y prácticas de codificación segura para cada proyecto.",
+    "tech_pill": "Ecosistema Moderno",
+    "tech_desc": "Utilizamos las tecnologías más avanzadas del mundo para construir su futuro digital."
   },
   "services": {
     "pill": "Capacidades",
@@ -91,12 +93,12 @@
     "plan_advanced_f6": "Soporte Prioritario",
     "plan_custom_name": "Empresa a Medida",
     "plan_custom_desc": "Ecosistemas digitales totalmente personalizados.",
-    "plan_custom_f1": "Integración de múltiples sistemas",
-    "plan_custom_f2": "Optimización para alta carga",
-    "plan_custom_f3": "Auditoría de seguridad avanzada",
-    "plan_custom_f4": "Gerente de proyecto dedicado",
-    "plan_custom_f5": "Desarrollo de API a medida",
-    "plan_custom_f6": "SLA de prioridad 24/7"
+    "plan_custom_f1": "Arquitectura y Funcionalidades Personalizadas",
+    "plan_custom_f2": "Optimización de Alta Carga y Escalado Sin Fisuras",
+    "plan_custom_f3": "Auditoría Avanzada de Seguridad y Cumplimiento",
+    "plan_custom_f4": "Sus Integraciones de Sistema Favoritas",
+    "plan_custom_f5": "Marketing de Producto Completo",
+    "plan_custom_f6": "Gestión Dedicada y Soporte Prioritario"
   },
   "contact": {
     "pill": "Contáctanos",
@@ -203,6 +205,8 @@
     "benefit_2_title": "Branding a Medida",
     "benefit_2_desc": "Logotipos personalizados y sistemas de identidad que hacen que su marca sea inconfundible.",
     "benefit_3_title": "Curación Experta",
-    "benefit_3_desc": "Encontrar los activos de stock perfectos que no parecen stock."
+    "benefit_3_desc": "Encontrar los activos de stock perfectos que no parecen stock.",
+    "card_title": "Producto de Calidad",
+    "card_subtitle": "Merece una gran exhibición"
   }
 }

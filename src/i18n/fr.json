@@ -17,7 +17,7 @@
   "header": {
     "nav_wp": "WordPress",
     "nav_custom": "Web Sur Mesure",
-    "nav_advanced": "Avancé",
+    "nav_showcase": "Portfolio",
     "nav_pricing": "Tarifs",
     "nav_contact": "Contact"
   },
@@ -36,7 +36,9 @@
     "card_support_title": "Support Expert",
     "card_support_desc": "Assistance technique à la demande et maintenance après lancement.",
     "card_security_title": "Sécurité Avant Tout",
-    "card_security_desc": "Intégration WAF et pratiques de codage sécurisées pour chaque projet."
+    "card_security_desc": "Intégration WAF et pratiques de codage sécurisées pour chaque projet.",
+    "tech_pill": "Écosystème Moderne",
+    "tech_desc": "Nous utilisons les technologies les plus avancées au monde pour construire votre avenir numérique."
   },
   "services": {
     "pill": "Compétences",
@@ -91,12 +93,12 @@
     "plan_advanced_f6": "Support Prioritaire",
     "plan_custom_name": "Entreprise sur Mesure",
     "plan_custom_desc": "Écosystèmes numériques entièrement personnalisés.",
-    "plan_custom_f1": "Intégration multi-systèmes",
-    "plan_custom_f2": "Optimisation haute charge",
-    "plan_custom_f3": "Audit de sécurité avancé",
-    "plan_custom_f4": "Chef de projet dédié",
-    "plan_custom_f5": "Développement d'API personnalisées",
-    "plan_custom_f6": "SLA prioritaire 24/7"
+    "plan_custom_f1": "Architecture et Fonctionnalités Sur Mesure",
+    "plan_custom_f2": "Optimisation Haute Charge et Évolutivité Transparente",
+    "plan_custom_f3": "Audit de Sécurité Avancé et Conformité",
+    "plan_custom_f4": "Vos Intégrations Système Préférées",
+    "plan_custom_f5": "Marketing Produit Complet",
+    "plan_custom_f6": "Gestion Dédiée et Support Prioritaire"
   },
   "contact": {
     "pill": "Contactez-nous",
@@ -203,6 +205,8 @@
     "benefit_2_title": "Branding Sur Mesure",
     "benefit_2_desc": "Logos personnalisés et systèmes d'identité qui rendent votre marque incomparable.",
     "benefit_3_title": "Curation Experte",
-    "benefit_3_desc": "Trouver les actifs de stock parfaits qui ne ressemblent pas à du stock."
+    "benefit_3_desc": "Trouver les actifs de stock parfaits qui ne ressemblent pas à du stock.",
+    "card_title": "Produit de Qualité",
+    "card_subtitle": "Mérite une vitrine de qualité"
   }
 }

@@ -41,7 +41,16 @@ export const i18n = {
 
     t(key: string): string {
         const translations = translationsMap[currentLang] || en;
-        return getNestedValue(translations, key);
+        const value = getNestedValue(translations, key);
+        
+        if (!value || value === key) {
+            const fallbackValue = getNestedValue(en, key);
+            if (fallbackValue && fallbackValue !== key) {
+                return fallbackValue;
+            }
+        }
+        
+        return value;
     },
 
     subscribe(fn: (value: { lang: string, t: (key: string) => string }) => void) {

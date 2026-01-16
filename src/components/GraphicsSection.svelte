@@ -89,8 +89,8 @@
 								<IconCarbonCamera class="w-8 h-8 text-white" />
 							</div>
 							<div>
-								<div class="text-3xl font-black text-white">Quality Product</div>
-								<div class="text-xs font-bold text-white/70 uppercase tracking-widest">Needs quality showcase</div>
+								<div class="text-3xl font-black text-white">{$i18n.t('graphics.card_title')}</div>
+								<div class="text-xs font-bold text-white/70 uppercase tracking-widest">{$i18n.t('graphics.card_subtitle')}</div>
 							</div>
 						</div>
 					</div>

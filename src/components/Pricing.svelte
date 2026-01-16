@@ -73,7 +73,7 @@
 	function fadeIn(node: HTMLElement, delay = 0) {
 		const stop = inView(node, () => {
 			animate(node, 
-				{ y: [20, 0], opacity: [0, 1] }, 
+				{ transform: ['translateY(20px)', 'translateY(0px)'], opacity: [0, 1] }, 
 				{ duration: 0.4, delay, easing: "ease-out" }
 			);
 		}, { margin: "0px 0px -2% 0px" });
@@ -89,7 +89,7 @@
 		if (header) {
 			inView(header, () => {
 				animate(header, 
-					{ y: [20, 0], opacity: [0, 1] }, 
+					{ transform: ['translateY(20px)', 'translateY(0px)'], opacity: [0, 1] }, 
 					{ duration: 0.4, easing: "ease-out" }
 				);
 			}, { margin: "-5% 0px -5% 0px" });
@@ -107,9 +107,9 @@
 			</p>
 		</div>
 
-		<div class="grid md:grid-cols-2 xl:grid-cols-3 gap-8 mb-8">
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
 			{#each plans.slice(0, 3) as plan, i}
-				<div use:fadeIn={i * 0.1} class="bg-white dark:bg-surface-900 p-10 rounded-[56px] flex flex-col relative transition-all duration-500 shadow-xl hover:shadow-2xl hover:shadow-primary-500/10 {plan.isPopular ? 'border-2 border-primary-500 shadow-primary-500/5 lg:-translate-y-6 hover:-translate-y-16' : 'border border-slate-200 dark:border-white/5 hover:-translate-y-2'}">
+				<div use:fadeIn={i * 0.1} class="last:md:col-span-2 lg:last:col-span-1 bg-white dark:bg-surface-900 p-10 rounded-[56px] flex flex-col relative transition-all duration-500 shadow-xl hover:shadow-2xl hover:shadow-primary-500/10 {plan.isPopular ? 'border-2 border-primary-500 shadow-primary-500/5 lg:-translate-y-6 hover:-translate-y-16' : 'border border-slate-200 dark:border-white/5 hover:-translate-y-2'}">
 					{#if plan.isPopular}
 						<span class="absolute -top-5 left-1/2 -translate-x-1/2 bg-primary-600 text-white text-xs font-black px-6 py-2 rounded-full uppercase tracking-widest shadow-lg shadow-primary-600/30">{@html $i18n.t('pricing.most_popular').replace(' ', '&nbsp;')}</span>
 					{/if}

@@ -17,7 +17,7 @@
   "header": {
     "nav_wp": "WordPress",
     "nav_custom": "Web Custom",
-    "nav_advanced": "Avanzato",
+    "nav_showcase": "Portfolio",
     "nav_pricing": "Prezzi",
     "nav_contact": "Contatti"
   },
@@ -93,12 +93,12 @@
     "plan_advanced_f6": "Supporto Prioritario",
     "plan_custom_name": "Azienda su Misura",
     "plan_custom_desc": "Ecosistemi digitali interamente personalizzati.",
-    "plan_custom_f1": "Integrazione multi-sistema",
-    "plan_custom_f2": "Ottimizzazione per carichi elevati",
-    "plan_custom_f3": "Audit di sicurezza avanzato",
-    "plan_custom_f4": "Project Manager dedicato",
-    "plan_custom_f5": "Sviluppo API personalizzate",
-    "plan_custom_f6": "SLA prioritario 24/7"
+    "plan_custom_f1": "Architettura e Funzionalità Personalizzate",
+    "plan_custom_f2": "Ottimizzazione High-load e Scaling Senza Interruzioni",
+    "plan_custom_f3": "Audit Avanzato di Sicurezza e Conformità",
+    "plan_custom_f4": "Le Tue Integrazioni di Sistema Preferite",
+    "plan_custom_f5": "Marketing di Prodotto Completo",
+    "plan_custom_f6": "Gestione Dedicata e Supporto Prioritario"
   },
   "contact": {
     "pill": "Contattaci",
@@ -205,6 +205,8 @@
     "benefit_2_title": "Branding su Misura",
     "benefit_2_desc": "Loghi personalizzati e sistemi di identità che rendono il tuo brand inconfondibile.",
     "benefit_3_title": "Curatela Esperta",
-    "benefit_3_desc": "Trovare gli asset stock perfetti che non sembrano stock."
+    "benefit_3_desc": "Trovare gli asset stock perfetti che non sembrano stock.",
+    "card_title": "Prodotto di Qualità",
+    "card_subtitle": "Merita una vetrina di qualità"
   }
 }

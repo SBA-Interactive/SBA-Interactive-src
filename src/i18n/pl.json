@@ -17,7 +17,7 @@
   "header": {
     "nav_wp": "WordPress",
     "nav_custom": "Custom Web",
-    "nav_advanced": "Zaawansowane",
+    "nav_showcase": "Portfolio",
     "nav_pricing": "Cennik",
     "nav_contact": "Kontakt"
   },
@@ -93,12 +93,12 @@
     "plan_advanced_f6": "Priorytetowe Wsparcie",
     "plan_custom_name": "Rozwiązanie dla Firm",
     "plan_custom_desc": "W pełni spersonalizowane ekosystemy cyfrowe.",
-    "plan_custom_f1": "Integracja wielu systemów",
-    "plan_custom_f2": "Optymalizacja pod wysokie obciążenia",
-    "plan_custom_f3": "Zaawansowany audyt bezpieczeństwa",
-    "plan_custom_f4": "Dedykowany kierownik projektu",
-    "plan_custom_f5": "Tworzenie niestandardowych API",
-    "plan_custom_f6": "Priorytetowe SLA 24/7"
+    "plan_custom_f1": "Niestandardowa Architektura i Funkcje",
+    "plan_custom_f2": "Optymalizacja Pod Wysokie Obciążenia i Płynne Skalowanie",
+    "plan_custom_f3": "Zaawansowany Audyt Bezpieczeństwa i Zgodności",
+    "plan_custom_f4": "Twoje Ulubione Integracje Systemowe",
+    "plan_custom_f5": "Pełny Marketing Produktu",
+    "plan_custom_f6": "Dedykowane Zarządzanie i Priorytetowe Wsparcie"
   },
   "contact": {
     "pill": "Skontaktuj się",
@@ -205,6 +205,8 @@
     "benefit_2_title": "Branding na Miarę",
     "benefit_2_desc": "Niestandardowe logo i systemy identyfikacji, które wyróżnią Twoją markę.",
     "benefit_3_title": "Ekspercka Selekcja",
-    "benefit_3_desc": "Znajdujemy idealne materiały stockowe, które wcale ich nie przypominają."
+    "benefit_3_desc": "Znajdujemy idealne materiały stockowe, które wcale ich nie przypominają.",
+    "card_title": "Wysoka Jakość",
+    "card_subtitle": "Wymaga świetnej prezentacji"
   }
 }

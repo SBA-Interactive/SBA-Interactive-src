@@ -17,7 +17,7 @@
   "header": {
     "nav_wp": "WordPress",
     "nav_custom": "定制 Web",
-    "nav_advanced": "高级开发",
+    "nav_showcase": "作品案例",
     "nav_pricing": "价格",
     "nav_contact": "联系我哋"
   },
@@ -36,7 +36,9 @@
     "card_support_title": "专家支持",
     "card_support_desc": "按需技术协助同埋上线后维护。",
     "card_security_title": "安全第一",
-    "card_security_desc": "WAF 集成同埋每个项目嘅安全编码实践。"
+    "card_security_desc": "WAF 集成同埋每个项目嘅安全编码实践。",
+    "tech_pill": "現代生態系統",
+    "tech_desc": "我哋利用世界上最先進嘅技術嚟構建您嘅數字未來。"
   },
   "services": {
     "pill": "业务能力",
@@ -91,12 +93,12 @@
     "plan_advanced_f6": "优先技术支持",
     "plan_custom_name": "定制化企业级",
     "plan_custom_desc": "完全定制开发嘅数字生态系统。",
-    "plan_custom_f1": "多系统集成",
-    "plan_custom_f2": "高负载优化",
-    "plan_custom_f3": "深度安全审计",
-    "plan_custom_f4": "专属项目经理",
-    "plan_custom_f5": "定制 API 开发",
-    "plan_custom_f6": "24/7 优先响应 SLA"
+    "plan_custom_f1": "定制架构同埋功能",
+    "plan_custom_f2": "高负载优化同埋无缝扩展",
+    "plan_custom_f3": "高级安全同埋合规审计",
+    "plan_custom_f4": "您常用嘅系统集成",
+    "plan_custom_f5": "完整嘅产品营销",
+    "plan_custom_f6": "专属管理同埋优先支持"
   },
   "contact": {
     "pill": "联系我哋",
@@ -203,6 +205,8 @@
     "benefit_2_title": "定做品牌",
     "benefit_2_desc": "自訂 Logo 同識別系統，令你嘅品牌獨一無二。",
     "benefit_3_title": "專家挑選",
-    "benefit_3_desc": "搵出完美嘅素材，完全唔似罐頭相。"
+    "benefit_3_desc": "搵出完美嘅素材，完全唔似罐頭相。",
+    "card_title": "優質產品",
+    "card_subtitle": "需要優質展示"
   }
 }

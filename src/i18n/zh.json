@@ -17,7 +17,7 @@
   "header": {
     "nav_wp": "WordPress",
     "nav_custom": "定制 Web",
-    "nav_advanced": "高级开发",
+    "nav_showcase": "作品案例",
     "nav_pricing": "价格",
     "nav_contact": "联系我们"
   },
@@ -36,7 +36,9 @@
     "card_support_title": "专家支持",
     "card_support_desc": "按需技术协助及上线后维护。",
     "card_security_title": "安全第一",
-    "card_security_desc": "WAF 集成和每个项目的安全编码实践。"
+    "card_security_desc": "WAF 集成和每个项目的安全编码实践。",
+    "tech_pill": "现代生态系统",
+    "tech_desc": "我们利用世界上最先进的技术来构建您的数字未来。"
   },
   "services": {
     "pill": "业务能力",
@@ -91,12 +93,12 @@
     "plan_advanced_f6": "优先技术支持",
     "plan_custom_name": "定制化企业级",
     "plan_custom_desc": "完全定制开发的数字生态系统。",
-    "plan_custom_f1": "多系统集成",
-    "plan_custom_f2": "高负载优化",
-    "plan_custom_f3": "深度安全审计",
-    "plan_custom_f4": "专属项目经理",
-    "plan_custom_f5": "定制 API 开发",
-    "plan_custom_f6": "24/7 优先响应 SLA"
+    "plan_custom_f1": "定制架构与功能",
+    "plan_custom_f2": "高负载优化与无缝扩展",
+    "plan_custom_f3": "高级安全与合规审计",
+    "plan_custom_f4": "您常用的系统集成",
+    "plan_custom_f5": "完整的产品营销",
+    "plan_custom_f6": "专属管理与优先支持"
   },
   "contact": {
     "pill": "联系我们",
@@ -203,6 +205,8 @@
     "benefit_2_title": "定制品牌",
     "benefit_2_desc": "定制 Logo 和识别系统，让您的品牌独一无二。",
     "benefit_3_title": "专家精选",
-    "benefit_3_desc": "寻找完美的库存素材，感觉完全不像库存。"
+    "benefit_3_desc": "寻找完美的库存素材，感觉完全不像库存。",
+    "card_title": "优质产品",
+    "card_subtitle": "需要优质展示"
   }
 }
