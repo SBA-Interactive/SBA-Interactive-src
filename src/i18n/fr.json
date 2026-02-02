@@ -1,4 +1,5 @@
 {
+  "read_more": "Lire la suite",
   "hero": {
     "pill": "Ingénierie Numérique d'Élite",
     "title_1": "Nous Ingénions",
@@ -114,6 +115,29 @@
     "support_label": "Support",
     "discord_label": "Discord",
     "call_label": "Appeler"
+  },
+  "quick_contact": {
+    "pill": "Contact Rapide",
+    "title_1": "Contactez-nous",
+    "title_2": "Instantanément.",
+    "subtitle": "Vous avez un projet en tête ? Envoyez-nous un message et nous vous répondrons dans les 24 heures.",
+    "name_label": "Votre Nom",
+    "name_placeholder": "Jean Dupont",
+    "email_label": "Adresse Email",
+    "email_placeholder": "jean@exemple.fr",
+    "message_label": "Votre Message",
+    "message_placeholder": "Parlez-nous de votre projet...",
+    "submit": "Envoyer le Message",
+    "sending": "Envoi en cours...",
+    "success_title": "Message Envoyé !",
+    "success_message": "Merci de nous avoir contacté. Nous vous répondrons rapidement.",
+    "or": "Ou",
+    "brief_pill": "Plus d'Options",
+    "brief_title": "Préférez un Contact Direct ?",
+    "brief_description": "Contactez-nous via votre canal préféré. Nous sommes toujours ravis de discuter de votre prochaine grande idée.",
+    "response_time": "Heures de Réponse",
+    "brief_warning_label": "Besoin d'un Brief Détaillé ?",
+    "brief_warning_text": "Pour les projets complexes, nous recommandons de remplir notre brief complet. Cela nous aide à mieux comprendre votre vision et à fournir des devis précis."
   },
   "footer": {
     "desc": "Nous construisons des expériences web modernes et interactives avec des technologies de pointe et les dernières tendances du design.",

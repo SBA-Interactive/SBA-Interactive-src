@@ -1,4 +1,5 @@
 {
+  "read_more": "Mehr lesen",
   "hero": {
     "pill": "Elite Digitale Entwicklung",
     "title_1": "Wir entwerfen",
@@ -114,6 +115,29 @@
     "support_label": "Support",
     "discord_label": "Discord",
     "call_label": "Anrufen"
+  },
+  "quick_contact": {
+    "pill": "Schnellkontakt",
+    "title_1": "Kontaktieren Sie uns",
+    "title_2": "Sofort.",
+    "subtitle": "Haben Sie ein Projekt im Sinn? Schreiben Sie uns und wir melden uns innerhalb von 24 Stunden.",
+    "name_label": "Ihr Name",
+    "name_placeholder": "Max Mustermann",
+    "email_label": "E-Mail-Adresse",
+    "email_placeholder": "max@beispiel.de",
+    "message_label": "Ihre Nachricht",
+    "message_placeholder": "Erzählen Sie uns von Ihrem Projekt...",
+    "submit": "Nachricht Senden",
+    "sending": "Wird gesendet...",
+    "success_title": "Nachricht Gesendet!",
+    "success_message": "Vielen Dank für Ihre Nachricht. Wir melden uns in Kürze.",
+    "or": "Oder",
+    "brief_pill": "Weitere Optionen",
+    "brief_title": "Bevorzugen Sie Direktkontakt?",
+    "brief_description": "Kontaktieren Sie uns über Ihren bevorzugten Kanal. Wir freuen uns immer, über Ihre nächste große Idee zu sprechen.",
+    "response_time": "Stunden Antwortzeit",
+    "brief_warning_label": "Benötigen Sie ein Detailliertes Briefing?",
+    "brief_warning_text": "Für komplexe Projekte empfehlen wir, unser umfassendes Projektbriefing auszufüllen. Es hilft uns, Ihre Vision besser zu verstehen und genaue Angebote zu erstellen."
   },
   "footer": {
     "desc": "Wir bauen moderne, interaktive Web-Erlebnisse mit Spitzentechnologien und den neuesten Design-Trends.",

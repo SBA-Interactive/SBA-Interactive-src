@@ -1,4 +1,5 @@
 {
+  "read_more": "Leggi di più",
   "hero": {
     "pill": "Ingegneria Digitale d'Élite",
     "title_1": "Ingegnerizziamo",
@@ -114,6 +115,29 @@
     "support_label": "Supporto",
     "discord_label": "Discord",
     "call_label": "Chiama"
+  },
+  "quick_contact": {
+    "pill": "Contatto Rapido",
+    "title_1": "Contattaci",
+    "title_2": "Subito.",
+    "subtitle": "Hai un progetto in mente? Scrivici e ti risponderemo entro 24 ore.",
+    "name_label": "Il Tuo Nome",
+    "name_placeholder": "Mario Rossi",
+    "email_label": "Indirizzo Email",
+    "email_placeholder": "mario@example.com",
+    "message_label": "Il Tuo Messaggio",
+    "message_placeholder": "Raccontaci del tuo progetto...",
+    "submit": "Invia Messaggio",
+    "sending": "Invio in corso...",
+    "success_title": "Messaggio Inviato!",
+    "success_message": "Grazie per averci contattato. Ti risponderemo a breve.",
+    "or": "Oppure",
+    "brief_pill": "Altre Opzioni",
+    "brief_title": "Preferisci un Contatto Diretto?",
+    "brief_description": "Contattaci tramite il canale che preferisci. Siamo sempre felici di parlare della tua prossima grande idea.",
+    "response_time": "Ore di Risposta",
+    "brief_warning_label": "Hai Bisogno di un Brief Dettagliato?",
+    "brief_warning_text": "Per progetti complessi, ti consigliamo di compilare il nostro brief completo. Ci aiuta a capire meglio la tua visione e fornire preventivi accurati."
   },
   "footer": {
     "desc": "Costruiamo esperienze web moderne e interattive con tecnologie all'avanguardia e le ultime tendenze del design.",

@@ -1,4 +1,5 @@
 {
+  "read_more": "閱讀更多",
   "hero": {
     "pill": "顶尖数字工程",
     "title_1": "我哋打造",
@@ -114,6 +115,29 @@
     "support_label": "支援",
     "discord_label": "Discord",
     "call_label": "致电"
+  },
+  "quick_contact": {
+    "pill": "快速聯絡",
+    "title_1": "即刻",
+    "title_2": "聯絡我哋。",
+    "subtitle": "有項目諗法？Send個訊息畀我哋，我哋會喺24小時內回覆。",
+    "name_label": "你嘅名",
+    "name_placeholder": "陳大文",
+    "email_label": "電郵地址",
+    "email_placeholder": "chan@example.hk",
+    "message_label": "你嘅訊息",
+    "message_placeholder": "同我哋講下你嘅項目...",
+    "submit": "發送訊息",
+    "sending": "發送緊...",
+    "success_title": "訊息已發送！",
+    "success_message": "多謝你嘅聯絡。我哋會盡快回覆。",
+    "or": "或者",
+    "brief_pill": "更多選項",
+    "brief_title": "鍾意直接聯絡？",
+    "brief_description": "通過你鍾意嘅渠道聯絡我哋。我哋隨時樂意傾下你嘅下一個大計。",
+    "response_time": "小時回覆",
+    "brief_warning_label": "需要詳細Brief？",
+    "brief_warning_text": "對於複雜嘅項目，我哋建議填寫完整嘅項目需求表。呢樣可以幫我哋更好咁理解你嘅想法，提供準確嘅報價。"
   },
   "footer": {
     "desc": "利用尖端技术同埋最新设计趋势，打造现代、交互式嘅 Web 体验。",

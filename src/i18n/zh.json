@@ -1,4 +1,5 @@
 {
+  "read_more": "阅读更多",
   "hero": {
     "pill": "顶尖数字工程",
     "title_1": "我们工程化",
@@ -114,6 +115,29 @@
     "support_label": "支持",
     "discord_label": "Discord",
     "call_label": "致电"
+  },
+  "quick_contact": {
+    "pill": "快速联系",
+    "title_1": "立即",
+    "title_2": "联系我们。",
+    "subtitle": "有项目想法？发送消息，我们将在24小时内回复。",
+    "name_label": "您的姓名",
+    "name_placeholder": "张三",
+    "email_label": "电子邮箱",
+    "email_placeholder": "zhangsan@example.com",
+    "message_label": "您的留言",
+    "message_placeholder": "告诉我们您的项目需求...",
+    "submit": "发送消息",
+    "sending": "发送中...",
+    "success_title": "消息已发送！",
+    "success_message": "感谢您的联系。我们会尽快回复。",
+    "or": "或者",
+    "brief_pill": "更多选项",
+    "brief_title": "更喜欢直接联系？",
+    "brief_description": "通过您喜欢的渠道联系我们。我们随时乐意讨论您的下一个大创意。",
+    "response_time": "小时响应",
+    "brief_warning_label": "需要详细需求文档？",
+    "brief_warning_text": "对于复杂项目，我们建议填写完整的项目需求表。这有助于我们更好地理解您的愿景并提供准确的报价。"
   },
   "footer": {
     "desc": "利用尖端技术和最新设计趋势，打造现代、交互式的 Web 体验。",

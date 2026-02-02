@@ -1,4 +1,5 @@
 {
+  "read_more": "Daha Fazla Oku",
   "hero": {
     "pill": "Elit Dijital Mühendislik",
     "title_1": "Biz",
@@ -114,6 +115,29 @@
     "support_label": "Destek",
     "discord_label": "Discord",
     "call_label": "Bizi Ara"
+  },
+  "quick_contact": {
+    "pill": "Hızlı İletişim",
+    "title_1": "Hemen",
+    "title_2": "İletişime Geçin.",
+    "subtitle": "Aklınızda bir proje mi var? Bize mesaj gönderin, 24 saat içinde dönüş yapalım.",
+    "name_label": "Adınız",
+    "name_placeholder": "Ahmet Yılmaz",
+    "email_label": "E-posta Adresi",
+    "email_placeholder": "ahmet@ornek.com",
+    "message_label": "Mesajınız",
+    "message_placeholder": "Projenizden bahsedin...",
+    "submit": "Mesaj Gönder",
+    "sending": "Gönderiliyor...",
+    "success_title": "Mesaj Gönderildi!",
+    "success_message": "İletişime geçtiğiniz için teşekkürler. En kısa sürede dönüş yapacağız.",
+    "or": "Veya",
+    "brief_pill": "Diğer Seçenekler",
+    "brief_title": "Doğrudan İletişim mi Tercih Edersiniz?",
+    "brief_description": "Tercih ettiğiniz kanal üzerinden bize ulaşın. Bir sonraki büyük fikriniz hakkında konuşmaktan mutluluk duyarız.",
+    "response_time": "Saat İçinde Yanıt",
+    "brief_warning_label": "Detaylı Brief mi Gerekiyor?",
+    "brief_warning_text": "Karmaşık projeler için kapsamlı proje briefimizi doldurmanızı öneririz. Vizyonunuzu daha iyi anlamamıza ve doğru teklifler sunmamıza yardımcı olur."
   },
   "footer": {
     "desc": "En son teknolojiler ve modern tasarım trendleriyle etkileşimli web deneyimleri oluşturuyoruz.",

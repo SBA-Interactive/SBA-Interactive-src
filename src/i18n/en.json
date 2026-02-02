@@ -1,4 +1,5 @@
 {
+  "read_more": "Read More",
   "hero": {
     "pill": "Elite Digital Engineering",
     "title_1": "We Engineer",
@@ -115,6 +116,29 @@
     "discord_label": "Discord",
     "call_label": "Call Us"
   },
+  "quick_contact": {
+    "pill": "Quick Contact",
+    "title_1": "Get in Touch",
+    "title_2": "Instantly.",
+    "subtitle": "Have a project in mind? Drop us a message and we'll get back to you within 24 hours.",
+    "name_label": "Your Name",
+    "name_placeholder": "John Doe",
+    "email_label": "Email Address",
+    "email_placeholder": "john@example.com",
+    "message_label": "Your Message",
+    "message_placeholder": "Tell us about your project...",
+    "submit": "Send Message",
+    "sending": "Sending...",
+    "success_title": "Message Sent!",
+    "success_message": "Thank you for reaching out. We'll get back to you shortly.",
+    "or": "Or",
+    "brief_pill": "More Options",
+    "brief_title": "Prefer Direct Contact?",
+    "brief_description": "Reach out through your preferred channel. We're always happy to chat about your next big idea.",
+    "response_time": "Hour Response",
+    "brief_warning_label": "Need a Detailed Brief?",
+    "brief_warning_text": "For complex projects, we recommend filling out our comprehensive project brief. It helps us understand your vision better and provide accurate estimates."
+  },
   "footer": {
     "desc": "Building modern, interactive web experiences with cutting-edge technologies and the latest design trends.",
     "col_services": "Services",
@@ -208,5 +232,93 @@
     "benefit_3_desc": "Finding the perfect stock assets that don't feel like stock.",
     "card_title": "Quality Product",
     "card_subtitle": "Needs quality showcase"
+
+  },
+  "service_pages": {
+    "btn_read_more": "Read More",
+    "wordpress": {
+      "title": "Elite WordPress Development",
+      "subtitle": "Beyond templates. We engineer high-performance, secure, and scalable WordPress platforms tailored to your brand.",
+      "seo_title": "Custom WordPress Development Services - SBA Interactive",
+      "seo_desc": "Expert custom WordPress development. We build secure, high-speed, and scalable WordPress websites that drive growth.",
+      "content_intro": "Forget everything you know about bloated, slow WordPress sites. Our approach to WordPress development treats the CMS as a powerful application framework, not just a blogging tool. We strip away unnecessary plugins and build lean, custom themes that load instantly and rank higher.",
+      "content_benefit_title": "Why Choose Our WordPress Solutions?",
+      "benefit_1": "Custom Theme Development",
+      "benefit_1_desc": "Pixel-perfect implementation of your design, without relying on heavy page builders.",
+      "benefit_2": "Headless Architecture",
+      "benefit_2_desc": "Decouple the frontend for ultimate speed and security using Astro or Next.js.",
+      "benefit_3": "Performance Optimization",
+      "benefit_3_desc": "Achieve 90+ Core Web Vitals scores with our optimization techniques."
+    },
+    "custom": {
+      "title": "Bespoke Web Applications",
+      "subtitle": "Turning visionary concepts into robust, scalable digital reality.",
+      "seo_title": "Custom Web App Development Services - SBA Interactive",
+      "seo_desc": "Full-cycle custom web application development. React, Vue, Svelte solutions for complex business needs.",
+      "content_intro": "When off-the-shelf software falls short, we step in. Our custom web development service is designed for ambitious businesses that need unique functionality. We architect solutions from the ground up using modern frameworks like React, Svelte, and Astro to ensure your application is fast, secure, and future-proof.",
+      "content_benefit_title": "The Custom Advantage",
+      "benefit_1": "Scalable Architecture",
+      "benefit_1_desc": "Built to handle growth, from thousands to millions of users.",
+      "benefit_2": "Modern Tech Stack",
+      "benefit_2_desc": "Leveraging the latest technologies for superior performance and developer experience.",
+      "benefit_3": "Seamless Integrations",
+      "benefit_3_desc": "Connect with any third-party API or legacy system effortlessly."
+    },
+    "advanced": {
+      "title": "SaaS & Digital Products",
+      "subtitle": "From MVP to Enterprise Scale: We build software that means business.",
+      "seo_title": "SaaS & Digital Product Development - SBA Interactive",
+      "seo_desc": "End-to-end SaaS development services. We build rigorous, scalable, and user-centric digital products.",
+      "content_intro": "Launching a digital product requires more than just code; it requires a strategic partner. We specialize in building SaaS platforms that are secure, compliant, and user-friendly. From initial architecture to deployment and maintenance, we handle the entire product lifecycle with engineering precision.",
+      "content_benefit_title": "Product-Led Growth Engine",
+      "benefit_1": "Rapid Prototyping",
+      "benefit_1_desc": "Validate your ideas quickly with high-fidelity MVPs.",
+      "benefit_2": "Secure & Compliant",
+      "benefit_2_desc": "Enterprise-grade security standards built into the core.",
+      "benefit_3": "Data-Driven Analytics",
+      "benefit_3_desc": "Integrated dashboards to track user behavior and KPIs."
+    },
+    "mobile": {
+      "title": "Mobile-First Experiences",
+      "subtitle": "Flawless performance on every screen, every time.",
+      "seo_title": "Responsive Mobile Web Design Services - SBA Interactive",
+      "seo_desc": "Create engaging mobile experiences. Responsive design that adapts perfectly to smartphones, tablets, and desktops.",
+      "content_intro": "In a mobile-first world, your digital presence is only as good as its smallest screen. We don't just 'shrink' desktop sites; we re-imagine the user journey for touch interfaces. Our responsive designs ensure that navigation is intuitive, images are optimized, and interactions are fluid across all devices.",
+      "content_benefit_title": "Mobile Perfection",
+      "benefit_1": "Touch Optimization",
+      "benefit_1_desc": "Interfaces designed for thumbs, ensuring effortless navigation.",
+      "benefit_2": "Adaptive Layouts",
+      "benefit_2_desc": "Content that reflows intelligently based on screen real estate.",
+      "benefit_3": "Cross-Platform Consistency",
+      "benefit_3_desc": "A unified brand experience whether on iOS, Android, or desktop."
+    },
+    "seo": {
+      "title": "SEO & Performance Engineering",
+      "subtitle": "Dominate search rankings with technical superiority.",
+      "seo_title": "Technical SEO & Performance Optimization - SBA Interactive",
+      "seo_desc": "Boost your search rankings and site speed. Advanced technical SEO and Core Web Vitals optimization services.",
+      "content_intro": "Visibility isn't luck; it's engineering. Search engines today prioritize user experience, speed, and technical stability. Our SEO services dive deep into the code, optimizing server response times, structuring data with schema markup, and ensuring your site is crawlable and indexable by the latest algorithms.",
+      "content_benefit_title": "Rank Higher, Faster",
+      "benefit_1": "Technical Audits",
+      "benefit_1_desc": "Comprehensive analysis of your site's health and indexability.",
+      "benefit_2": "Speed Optimization",
+      "benefit_2_desc": "Code splitting, image compression, and caching strategies for instant loads.",
+      "benefit_3": "Semantic Structure",
+      "benefit_3_desc": "HTML5 semantic markup that helps search engines understand your content."
+    },
+    "design": {
+      "title": "UI/UX Design",
+      "subtitle": "Crafting digital experiences that captivate and convert.",
+      "seo_title": "UI/UX Design Services - SBA Interactive",
+      "seo_desc": "Award-winning UI/UX design. We create beautiful, intuitive interfaces that drive user engagement and conversion.",
+      "content_intro": "Design is the silent ambassador of your brand. We move beyond aesthetics to create user-centric interfaces that solve problems. value. Our process involves user research, wireframing, and interactive prototyping to ensure that every pixel serves a purpose and guides the user toward conversion.",
+      "content_benefit_title": "Design That Works",
+      "benefit_1": "User-Centric Approach",
+      "benefit_1_desc": "Decisions backed by user research and behavior analysis.",
+      "benefit_2": "Design Systems",
+      "benefit_2_desc": "Scalable component libraries for consistent branding.",
+      "benefit_3": "Interactive Prototypes",
+      "benefit_3_desc": "Experience the flow and feel of your product before writing a line of code."
+    }
   }
 }

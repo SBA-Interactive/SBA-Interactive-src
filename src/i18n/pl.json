@@ -1,4 +1,5 @@
 {
+  "read_more": "Czytaj więcej",
   "hero": {
     "pill": "Elitarna Inżynieria Cyfrowa",
     "title_1": "Inżynierujemy",
@@ -114,6 +115,29 @@
     "support_label": "Wsparcie",
     "discord_label": "Discord",
     "call_label": "Zadzwoń"
+  },
+  "quick_contact": {
+    "pill": "Szybki Kontakt",
+    "title_1": "Skontaktuj się",
+    "title_2": "Natychmiast.",
+    "subtitle": "Masz projekt w planach? Napisz do nas, odpowiemy w ciągu 24 godzin.",
+    "name_label": "Twoje Imię",
+    "name_placeholder": "Jan Kowalski",
+    "email_label": "Adres Email",
+    "email_placeholder": "jan@example.com",
+    "message_label": "Twoja Wiadomość",
+    "message_placeholder": "Opowiedz nam o swoim projekcie...",
+    "submit": "Wyślij Wiadomość",
+    "sending": "Wysyłanie...",
+    "success_title": "Wiadomość Wysłana!",
+    "success_message": "Dziękujemy za kontakt. Odpowiemy wkrótce.",
+    "or": "Lub",
+    "brief_pill": "Więcej Opcji",
+    "brief_title": "Wolisz Bezpośredni Kontakt?",
+    "brief_description": "Skontaktuj się przez preferowany kanał. Chętnie porozmawiamy o Twoim następnym wielkim pomyśle.",
+    "response_time": "Godzinna Odpowiedź",
+    "brief_warning_label": "Potrzebujesz Szczegółowego Briefu?",
+    "brief_warning_text": "Dla złożonych projektów zalecamy wypełnienie naszego kompleksowego briefu. Pomoże nam lepiej zrozumieć Twoją wizję i przygotować dokładną wycenę."
   },
   "footer": {
     "desc": "Budujemy nowoczesne, interaktywne doświadczenia webowe przy użyciu najnowszych technologii i trendów designu.",

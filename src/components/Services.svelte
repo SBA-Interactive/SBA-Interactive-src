@@ -9,6 +9,9 @@
 	import IconCarbonBrushFreehand from 'virtual:icons/carbon/brush-freehand';
 	import { i18n } from '../i18n/store.svelte.ts';
 
+	const baseUrl = import.meta.env.BASE_URL;
+	const readMoreText = $derived(i18n.t('read_more'));
+
 	let section: HTMLElement;
 	let header: HTMLElement;
 	let serviceCards: HTMLElement[] = $state([]);
@@ -16,6 +19,7 @@
 	const services = $derived([
 		{
 			id: 'wordpress',
+			slug: 'wordpress',
 			icon: IconCarbonSettings,
 			title: i18n.t('services.card_wp_title'),
 			description: i18n.t('services.card_wp_desc'),
@@ -24,6 +28,7 @@
 		},
 		{
 			id: 'custom',
+			slug: 'custom-solutions',
 			icon: IconCarbonCode,
 			title: i18n.t('services.card_custom_title'),
 			description: i18n.t('services.card_custom_desc'),
@@ -31,7 +36,8 @@
 			bg: 'bg-[var(--color-pastel-green)] dark:bg-[var(--color-pastel-green-dark)]'
 		},
 		{
-			id: 'advanced',
+			id: 'products',
+			slug: 'digital-products',
 			icon: IconCarbonDevelopment,
 			title: i18n.t('services.card_digital_title'),
 			description: i18n.t('services.card_digital_desc'),
@@ -40,6 +46,7 @@
 		},
 		{
 			id: 'mobile',
+			slug: 'mobile-apps',
 			icon: IconCarbonMobile,
 			title: i18n.t('services.card_mobile_title'),
 			description: i18n.t('services.card_mobile_desc'),
@@ -48,6 +55,7 @@
 		},
 		{
 			id: 'seo',
+			slug: 'seo-performance',
 			icon: IconCarbonAnalytics,
 			title: i18n.t('services.card_seo_title'),
 			description: i18n.t('services.card_seo_desc'),
@@ -56,6 +64,7 @@
 		},
 		{
 			id: 'design',
+			slug: 'ui-ux-design',
 			icon: IconCarbonBrushFreehand,
 			title: i18n.t('services.card_ui_title'),
 			description: i18n.t('services.card_ui_desc'),
@@ -151,8 +160,13 @@
 						{service.description}
 					</p>
 
-					<div class="mt-12 w-full h-1 bg-slate-100 dark:bg-surface-800 rounded-full overflow-hidden">
-						<div class="progress-bar h-full bg-primary-500 w-0 group-[.focal-active]:w-full transition-all duration-1000"></div>
+					<div class="mt-12 w-full flex items-center gap-4">
+						<div class="w-1/2 h-1 bg-slate-100 dark:bg-surface-800 rounded-full overflow-hidden">
+							<div class="progress-bar h-full bg-primary-500 w-0 group-[.focal-active]:w-full transition-all duration-400"></div>
+						</div>
+						<div class="w-1/2">
+							<a href={`${baseUrl}/services/${service.id}`} class="group font-semibold flex items-center gap-4 text-xl text-blue-500 dark:text-blue-400 hover:text-cyan-600 dark:hover:text-cyan-200 leading-relaxed tracking-widest">{$i18n.t('read_more')}</a>
+						</div>
 					</div>
 				</div>
 			{/each}

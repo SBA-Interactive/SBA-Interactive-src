@@ -1,4 +1,5 @@
 {
+  "read_more": "続きを読む",
   "hero": {
     "pill": "エリート・デジタルエンジニアリング",
     "title_1": "私たちは",
@@ -114,6 +115,29 @@
     "support_label": "サポート",
     "discord_label": "Discord",
     "call_label": "電話する"
+  },
+  "quick_contact": {
+    "pill": "クイックコンタクト",
+    "title_1": "今すぐ",
+    "title_2": "お問い合わせ。",
+    "subtitle": "プロジェクトのアイデアがありますか？メッセージをお送りください。24時間以内にご返信いたします。",
+    "name_label": "お名前",
+    "name_placeholder": "山田太郎",
+    "email_label": "メールアドレス",
+    "email_placeholder": "taro@example.jp",
+    "message_label": "メッセージ",
+    "message_placeholder": "プロジェクトについてお聞かせください...",
+    "submit": "メッセージを送信",
+    "sending": "送信中...",
+    "success_title": "メッセージ送信完了！",
+    "success_message": "お問い合わせありがとうございます。まもなくご連絡いたします。",
+    "or": "または",
+    "brief_pill": "その他のオプション",
+    "brief_title": "直接連絡がお好みですか？",
+    "brief_description": "ご希望のチャネルでお問い合わせください。次の大きなアイデアについてお話しできることを楽しみにしています。",
+    "response_time": "時間以内に返信",
+    "brief_warning_label": "詳細なブリーフが必要ですか？",
+    "brief_warning_text": "複雑なプロジェクトの場合は、包括的なプロジェクトブリーフのご記入をお勧めします。お客様のビジョンをより深く理解し、正確な見積もりをご提供できます。"
   },
   "footer": {
     "desc": "最先端技術と最新デザイントレンドで、モダンかつインタラクティブなWeb体験を構築。",
