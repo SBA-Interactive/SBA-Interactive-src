@@ -275,7 +275,6 @@
 									</span>
 								</button>
 
-								<!-- OR Divider -->
 								<div class="flex items-center gap-4 pt-2">
 									<div class="flex-1 h-px bg-linear-to-r from-transparent via-slate-300 dark:via-slate-700 to-slate-300 dark:to-slate-700"></div>
 									<div class="px-4 py-2 rounded-full bg-slate-100 dark:bg-surface-800 border border-slate-200 dark:border-white/10">
@@ -284,25 +283,24 @@
 									<div class="flex-1 h-px bg-linear-to-l from-transparent via-slate-300 dark:via-slate-700 to-slate-300 dark:to-slate-700"></div>
 								</div>
 
-								<!-- Yellow Warning - Link to Bigger Brief -->
 								<a 
 									href="/brief" 
-									class="group flex items-start gap-4 p-5 rounded-2xl bg-amber-50 dark:bg-amber-900/20 border-2 border-amber-300 dark:border-amber-500/30 hover:border-amber-400 dark:hover:border-amber-500/50 hover:bg-amber-100 dark:hover:bg-amber-900/30 transition-all"
+									class="group flex items-start gap-4 p-3 rounded-2xl bg-amber-100 dark:bg-amber-400/20 border-2 border-amber-300 dark:border-amber-500/30 hover:border-amber-400 dark:hover:border-amber-500/50 hover:bg-amber-100 dark:hover:bg-amber-900/30 transition-all"
 								>
-									<div class="w-12 h-12 rounded-xl bg-amber-400 dark:bg-amber-500 flex items-center justify-center shrink-0 shadow-lg shadow-amber-500/30">
-										<IconCarbonWarning class="w-6 h-6 text-amber-900" />
+									<div class="w-10 h-10 rounded-xl bg-amber-400 dark:bg-amber-500 flex items-center justify-center shrink-0 shadow-lg shadow-amber-500/30">
+										<IconCarbonWarning class="w-6 h-6 text-red-800" />
 									</div>
 									<div class="flex-1 min-w-0">
-										<div class="text-sm font-black text-amber-800 dark:text-amber-300 uppercase tracking-wider mb-1">
+										<div class="underline decoration-2 decoration-solid decoration-amber-700 text-xl font-black text-amber-900 dark:text-amber-300 text-center uppercase tracking-wider mb-1">
 											{$i18n.t('quick_contact.brief_warning_label')}
 										</div>
-										<div class="text-amber-700 dark:text-amber-200/80 font-medium text-sm leading-relaxed">
+										<div class="text-amber-700 dark:text-amber-200/80 font-medium text-md leading-relaxed">
 											{$i18n.t('quick_contact.brief_warning_text')}
 										</div>
 									</div>
 									<div class="flex items-center gap-2 shrink-0 self-center">
-										<IconCarbonDocument class="w-5 h-5 text-amber-600 dark:text-amber-400" />
-										<IconCarbonArrowRight class="w-5 h-5 text-amber-600 dark:text-amber-400 group-hover:translate-x-1 transition-transform" />
+										<IconCarbonDocument class="w-5 h-5 text-amber-700 dark:text-amber-400" />
+										<IconCarbonArrowRight class="w-5 h-5 text-amber-700 dark:text-amber-400 group-hover:translate-x-1 transition-transform" />
 									</div>
 								</a>
 
