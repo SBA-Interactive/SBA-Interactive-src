@@ -26,7 +26,7 @@
 		{
 			id: 'custom_web',
 			name: i18n.t('pricing.plan_pro_name'),
-			price: '2499',
+			price: "2499",
 			description: i18n.t('pricing.plan_pro_desc'),
 			features: [
 				i18n.t('pricing.plan_pro_f1'),
@@ -122,7 +122,7 @@
 					<div class="mb-10 pb-10 border-b border-slate-100 dark:border-surface-800">
 						<div class="flex items-baseline gap-2">
 							<span class="text-1xl fornt-bold text-slate-400">$</span>
-							<span class="text-6xl font-black text-slate-950 dark:text-white tracking-tighter">{plan.price}</span>
+							<span class="text-6xl font-black text-slate-950 dark:text-white tracking-tighter">{@html plan.price}</span>
 							<span class="text-slate-500 dark:text-slate-400 font-black uppercase text-xs tracking-widest">{$i18n.t('pricing.base')}</span>
 						</div>
 					</div>
