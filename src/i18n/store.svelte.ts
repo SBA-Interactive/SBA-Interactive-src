@@ -7,12 +7,13 @@ import it from './it.json';
 import gr from './gr.json';
 import zh from './zh.json';
 import yue from './yue.json';
+import ja from './ja.json';
+import uk from './uk.json';
+import tr from './tr.json';
 
 type TranslationSchema = typeof en;
 
-const translationsMap: Record<string, TranslationSchema> = {
-    en, pl, de, es, fr, it, gr, zh, yue
-};
+const translationsMap: Record<string, TranslationSchema> = { en, pl, de, es, fr, it, gr, zh, yue, ja, uk, tr };
 
 function getNestedValue(obj: any, path: string): string {
     return path.split('.').reduce((prev, curr) => prev && prev[curr], obj) || path;
@@ -22,21 +23,15 @@ let currentLang = $state('en');
 const listeners = new Set<(lang: string) => void>();
 
 export const i18n = {
-    get lang() {
-        return currentLang;
-    },
+    get lang() { return currentLang; },
     
-    setLang(lang: 'en' | 'pl' | 'de' | 'es' | 'fr' | 'it' | 'gr' | 'zh' | 'yue') {
+    setLang(lang: 'en' | 'pl' | 'de' | 'es' | 'fr' | 'it' | 'gr' | 'zh' | 'yue' | 'ja' | 'uk' | 'tr') {
         currentLang = lang;
         listeners.forEach(cb => cb(lang));
 
-        if (typeof document !== 'undefined') {
-            document.documentElement.lang = lang;
-        }
+        if (typeof document !== 'undefined') { document.documentElement.lang = lang; }
 
-        if (typeof localStorage !== 'undefined') {
-            localStorage.setItem('sba_lang', lang);
-        }
+        if (typeof localStorage !== 'undefined') { localStorage.setItem('sba_lang', lang); }
     },
 
     t(key: string): string {
@@ -45,9 +40,7 @@ export const i18n = {
         
         if (!value || value === key) {
             const fallbackValue = getNestedValue(en, key);
-            if (fallbackValue && fallbackValue !== key) {
-                return fallbackValue;
-            }
+            if (fallbackValue && fallbackValue !== key) { return fallbackValue; }
         }
         
         return value;
@@ -63,12 +56,7 @@ export const i18n = {
 
 if (typeof localStorage !== 'undefined') {
     const saved = localStorage.getItem('sba_lang');
-    if (saved && saved in translationsMap) {
-        currentLang = saved as any;
-    }
+    if (saved && saved in translationsMap) { currentLang = saved as any; }
 }
 
-// Set initial lang attribute - updates are handled by setLang function
-if (typeof document !== 'undefined') {
-    document.documentElement.lang = currentLang;
-}
+if (typeof document !== 'undefined') { document.documentElement.lang = currentLang; }

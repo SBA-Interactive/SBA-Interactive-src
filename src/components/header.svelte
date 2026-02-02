@@ -7,8 +7,8 @@
 	import { i18n } from '../i18n/store.svelte.ts';
 
 	let links = $derived([
-		{ label: i18n.t('header.nav_wp'), href: '/sba-interactive/#wordpress' },
-		{ label: i18n.t('header.nav_custom'), href: '/sba-interactive/#custom' },
+		{ label: i18n.t('header.nav_wp'), href: '/sba-interactive/#why-us' },
+		{ label: i18n.t('header.nav_custom'), href: '/sba-interactive/#services' },
 		{ label: i18n.t('header.nav_showcase'), href: '/sba-interactive/#showcase' },
 		{ label: i18n.t('header.nav_pricing'), href: '/sba-interactive/#pricing' },
 		{ label: i18n.t('header.nav_contact'), href: '/sba-interactive/#contact' }
@@ -16,9 +16,7 @@
 
 	let isMobileMenuOpen = $state(false);
 
-	function toggleMobileMenu() {
-		isMobileMenuOpen = !isMobileMenuOpen;
-	}
+	function toggleMobileMenu() { isMobileMenuOpen = !isMobileMenuOpen; }
 </script>
 
 <header class="sticky top-0 z-50 w-full border-b border-surface-200/50 bg-surface-50/80 backdrop-blur-md dark:border-surface-800/50 dark:bg-surface-900/80 transition-colors duration-300">

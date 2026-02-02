@@ -8,7 +8,10 @@
 		{ word: "Cześć", color: "text-violet-300 dark:text-violet-400", hover: "hover:text-violet-500 dark:hover:text-violet-200" },
 		{ word: "Γεια σας", color: "text-cyan-300 dark:text-cyan-400", hover: "hover:text-cyan-500 dark:hover:text-cyan-200" },
 		{ word: "你好", color: "text-indigo-300 dark:text-indigo-400", hover: "hover:text-indigo-500 dark:hover:text-indigo-200" },
-		{ word: "你好", color: "text-fuchsia-300 dark:text-fuchsia-400", hover: "hover:text-fuchsia-500 dark:hover:text-fuchsia-200" }
+		{ word: "你好", color: "text-fuchsia-300 dark:text-fuchsia-400", hover: "hover:text-fuchsia-500 dark:hover:text-fuchsia-200" },
+		{ word: "こんにちは", color: "text-lime-300 dark:text-lime-400", hover: "hover:text-lime-500 dark:hover:text-lime-200" },
+		{ word: "Merhaba", color: "text-blue-300 dark:text-blue-400", hover: "hover:text-blue-500 dark:hover:text-blue-200" },
+		{ word: "Здравствуйте", color: "text-rose-300 dark:text-rose-400", hover: "hover:text-rose-500 dark:hover:text-rose-200" },
 	];
 </script>
 

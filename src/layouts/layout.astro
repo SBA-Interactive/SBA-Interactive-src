@@ -2,22 +2,23 @@
 import "../styles/global.css";
 import Header from "../components/header.svelte";
 import Footer from "../components/footer.svelte";
+
 const { 
   title = "SBA Interactive", 
   description = "Premium web development and digital architecture services specializing in high-performance WordPress and custom React solutions.",
   ogType = "website",
-
+  ogPrice = "Contact"
 } = Astro.props;
 ---
 <html lang="en">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HL7XPCF8EJ"></script>
-    <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-HL7XPCF8EJ');</script>
-
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
+    <!-- Google tag (gtag.js) -->
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-HL7XPCF8EJ"></script>
+    <script is:inline>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-HL7XPCF8EJ');</script>
+    <meta name="google-site-verification" content="rmWHg9Fjfw_SjUJ77HLOw8mNXZRjyNHpmZvWViNUjME" />
     <meta name="description" content={description} />
     <meta name="robots" content="index, follow" />
     
@@ -25,7 +26,6 @@ const {
     <meta name="author" content="SBA Interactive" />
     <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)" />
-    <meta name="generator" content={Astro.generator} />
 
     <meta property="og:site_name" content="SBA Interactive" />
     <meta property="og:type" content={ogType} />
@@ -37,8 +37,6 @@ const {
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="SBA Interactive - Elite Digital Engineering" />
-    
-    <meta name="google-site-verification" content="rmWHg9Fjfw_SjUJ77HLOw8mNXZRjyNHpmZvWViNUjME" />
 
     <!-- Twitter/X Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -54,7 +52,7 @@ const {
     <meta name="pinterest-rich-pin" content="true" />
     {ogType === 'product' ? (
       <>
-        <meta property="product:price:amount" content="1500" />
+        <meta property="product:price:amount" content={ogPrice} />
         <meta property="product:price:currency" content="USD" />
         <meta property="product:availability" content="in stock" />
         <meta property="product:condition" content="new" />
@@ -66,17 +64,20 @@ const {
         <meta property="article:publisher" content="SBA Interactive" />
       </>
     )}
-    <link rel="alternate" hreflang="en" href="https://sba-interactive.github.io/sba-interactive/" />
-    <link rel="alternate" hreflang="de" href="https://sba-interactive.github.io/sba-interactive/" />
-    <link rel="alternate" hreflang="es" href="https://sba-interactive.github.io/sba-interactive/" />
-    <link rel="alternate" hreflang="fr" href="https://sba-interactive.github.io/sba-interactive/" />
-    <link rel="alternate" hreflang="it" href="https://sba-interactive.github.io/sba-interactive/" />
-    <link rel="alternate" hreflang="pl" href="https://sba-interactive.github.io/sba-interactive/" />
-    <link rel="alternate" hreflang="el" href="https://sba-interactive.github.io/sba-interactive/" />
-    <link rel="alternate" hreflang="zh-Hans" href="https://sba-interactive.github.io/sba-interactive/" />
-    <link rel="alternate" hreflang="zh-yue" href="https://sba-interactive.github.io/sba-interactive/" />
-    <link rel="alternate" hreflang="x-default" href="https://sba-interactive.github.io/sba-interactive/" />
-
+    <link rel="alternate" hreflang="en" href="https://sba-interactive.github.io/sba-interactive?lang=en" />
+    <link rel="alternate" hreflang="de" href="https://sba-interactive.github.io/sba-interactive?lang=de" />
+    <link rel="alternate" hreflang="es" href="https://sba-interactive.github.io/sba-interactive?lang=es" />
+    <link rel="alternate" hreflang="tr" href="https://sba-interactive.github.io/sba-interactive?lang=tr" />
+    <link rel="alternate" hreflang="uk" href="https://sba-interactive.github.io/sba-interactive?lang=uk" />
+    <link rel="alternate" hreflang="ja" href="https://sba-interactive.github.io/sba-interactive?lang=ja" />
+    <link rel="alternate" hreflang="fr" href="https://sba-interactive.github.io/sba-interactive?lang=fr" />
+    <link rel="alternate" hreflang="it" href="https://sba-interactive.github.io/sba-interactive?lang=it" />
+    <link rel="alternate" hreflang="pl" href="https://sba-interactive.github.io/sba-interactive?lang=pl" />
+    <link rel="alternate" hreflang="el" href="https://sba-interactive.github.io/sba-interactive?lang=el" />
+    <link rel="alternate" hreflang="zh-hans" href="https://sba-interactive.github.io/sba-interactive?lang=zh-hans" />
+    <link rel="alternate" hreflang="zh-yue" href="https://sba-interactive.github.io/sba-interactive?lang=zh-yue" />
+    <link rel="alternate" hreflang="zh" href="https://sba-interactive.github.io/sba-interactive?lang=zh" />
+    <link rel="alternate" hreflang="x-default" href="https://sba-interactive.github.io/sba-interactive?lang=en" />
 
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:site" content="@SBAInteractive" />
@@ -95,40 +96,8 @@ const {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
     
-
     <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        "name": "SBA Interactive",
-        "url": "https://sba-interactive.github.io/sba-interactive/",
-        "logo": "https://sba-interactive.github.io/sba-interactive/images/hero.webp",
-        "image": "https://sba-interactive.github.io/sba-interactive/images/hero.webp",
-        "description": "Premium web development and digital architecture services specializing in high-performance WordPress and custom React solutions.",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Mazowieckie Technikum Innowacji",
-          "addressLocality": "Plock",
-          "addressCountry": "PL"
-        },
-        "contactPoint": [
-          {
-            "@type": "ContactPoint",
-            "email": "hello@sbainteractive.com",
-            "contactType": "customer service",
-            "availableLanguage": ["English", "Polish", "German", "Spanish", "French", "Italian", "Greek", "Chinese"]
-          },
-          {
-            "@type": "ContactPoint",
-            "email": "help@sbainteractive.com",
-            "contactType": "technical support"
-          }
-        ],
-        "sameAs": [
-          "https://github.com/SBA-Interactive"
-        ],
-        "priceRange": "$$$"
-      }
+      {"@context":"https://schema.org","@type":"ProfessionalService","name":"SBA Interactive","url":"https://sba-interactive.github.io/sba-interactive/","logo":"https://sba-interactive.github.io/sba-interactive/images/hero.webp","image":"https://sba-interactive.github.io/sba-interactive/images/hero.webp","description":"Premium web development and digital architecture services specializing in high-performance WordPress and custom React solutions.","address":{"@type":"PostalAddress","streetAddress":"Mazowieckie Technikum Innowacji","addressLocality":"Plock","addressCountry":"PL"},"contactPoint":[{"@type":"ContactPoint","email":"hello@sbainteractive.com","contactType":"customer service","availableLanguage":["English","Polish","German","Spanish","French","Italian","Greek","Chinese"]},{"@type":"ContactPoint","email":"help@sbainteractive.com","contactType":"technical support"}],"sameAs":["https://github.com/SBA-Interactive"],"priceRange":"$$$"}
     </script>
 
     <script is:inline>
@@ -138,11 +107,26 @@ const {
         document.documentElement.classList.add('dark');
       }
 
-      const savedLang = localStorage.getItem('sba_lang');
-      if (savedLang) {
+      const savedLang = localStorage.getItem('sba_lang') || undefined;
+      if(savedLang) {
         document.documentElement.lang = savedLang;
+      } else {
+        const supportedLangs = ['en', 'pl', 'de', 'es', 'fr', 'it', 'gr', 'zh', 'yue', 'tr', 'uk', 'ja'];
+        const url = new URLSearchParams(window.location.search);
+        const lang = url.get('lang');
+        if(lang) {
+          if(supportedLangs.includes(lang)) {
+            localStorage.setItem('sba_lang', lang);
+            document.documentElement.lang = lang;
+          } else {
+            localStorage.setItem('sba_lang', 'en');
+            document.documentElement.lang = 'en';
+          }
+        }
       }
     </script>
+
+    <meta name="generator" content={Astro.generator} />
   </head>
   <body class="min-h-screen flex flex-col">
     <Header client:load />

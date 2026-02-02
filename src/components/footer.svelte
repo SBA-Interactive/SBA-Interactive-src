@@ -10,9 +10,9 @@
 		{
 			title: i18n.t('footer.col_services'),
 			links: [
-				{ label: i18n.t('header.nav_wp'), href: '/sba-interactive/#wordpress' },
-				{ label: i18n.t('header.nav_custom'), href: '/sba-interactive/#custom' },
-				{ label: i18n.t('header.nav_advanced'), href: '/sba-interactive/#advanced' }
+				{ label: i18n.t('header.nav_wp'), href: '/sba-interactive/#why-us' },
+				{ label: i18n.t('header.nav_custom'), href: '/sba-interactive/#services' },
+				{ label: i18n.t('header.nav_showcase'), href: '/sba-interactive/#showcase' }
 			]
 		},
 		{

@@ -83,14 +83,14 @@
 					/>
 					
 					<!-- Overlay Glass Card -->
-					<div class="absolute bottom-8 left-8 right-8 p-8 bg-white/10 dark:bg-black/20 backdrop-blur-2xl border border-white/20 rounded-[32px] shadow-2xl">
+					<div class="absolute bottom-8 left-8 right-8 p-2 md:px-4 lg:px-8 bg-white/10 dark:bg-black/20 backdrop-blur-2xl border border-white/20 rounded-[32px] shadow-2xl">
 						<div class="flex items-center gap-6">
 							<div class="p-4 bg-white/20 rounded-2xl">
 								<IconCarbonCamera class="w-8 h-8 text-white" />
 							</div>
 							<div>
-								<div class="text-3xl font-black text-white">{$i18n.t('graphics.card_title')}</div>
-								<div class="text-xs font-bold text-white/70 uppercase tracking-widest">{$i18n.t('graphics.card_subtitle')}</div>
+								<div class="text-xl md:text-2xl xl:text-4xl font-black text-white">{$i18n.t('graphics.card_title')}</div>
+								<div class="text-xs md:text-md xl:text-lg font-bold text-white/70 uppercase tracking-widest">{$i18n.t('graphics.card_subtitle')}</div>
 							</div>
 						</div>
 					</div>
@@ -154,10 +154,9 @@
 </section>
 
 <style>
-	/* Custom styles for the graphics section */
-	:global(.dark) #graphics {
-		background-image: 
-			radial-gradient(circle at 2px 2px, rgba(255,255,255,0.01) 1px, transparent 0);
-		background-size: 40px 40px;
-	}
+:global(.dark) #graphics {
+	background-image: 
+		radial-gradient(circle at 2px 2px, rgba(255,255,255,0.01) 1px, transparent 0);
+	background-size: 40px 40px;
+}
 </style>

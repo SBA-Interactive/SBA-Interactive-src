@@ -11,7 +11,10 @@
 		{ code: 'pl', label: 'Polski' },
 		{ code: 'gr', label: 'Greek' },
 		{ code: 'zh', label: '简体中文 (国语)' },
-		{ code: 'yue', label: '简体中文 (粤语)' }
+		{ code: 'yue', label: '简体中文 (粤语)' },
+		{ code: 'ja', label: '日本語' },
+		{ code: 'uk', label: 'Українська' },
+		{ code: 'tr', label: 'Türkçe' }
 	];
 
 	let isOpen = $state(false);
