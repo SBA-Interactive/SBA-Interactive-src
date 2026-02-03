@@ -1,0 +1,80 @@
+@reference "tailwindcss";
+@reference "./global.css";
+
+.form-input {
+    @apply w-full px-5 py-3 bg-slate-50 dark:bg-surface-800/50 border-2 border-slate-200 dark:border-surface-700/50 rounded-xl text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:ring-0 outline-none transition-all font-medium;
+    border-color: var(--step-color-light, var(--color-slate-200));
+}
+.form-input:focus {
+    border-color: var(--step-color);
+}
+
+.form-textarea {
+    @apply w-full px-5 py-3 bg-slate-50 dark:bg-surface-800/50 border-2 border-slate-200 dark:border-surface-700/50 rounded-xl text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:ring-0 outline-none transition-all font-medium resize-y;
+}
+.form-textarea:focus {
+    border-color: var(--step-color);
+}
+
+.form-select {
+    @apply px-5 py-3 bg-slate-50 dark:bg-surface-800/50 border-2 border-slate-200 dark:border-surface-700/50 rounded-xl text-slate-900 dark:text-white focus:ring-0 outline-none transition-all font-medium appearance-none cursor-pointer;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 0.5rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+}
+.form-select:focus {
+    border-color: var(--step-color);
+}
+
+.radio-card {
+    @apply cursor-pointer block relative;
+}
+.radio-content {
+    @apply block w-full px-5 py-3 rounded-xl border-2 border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400 font-medium transition-all;
+}
+.radio-card:hover .radio-content {
+    border-color: var(--step-color-light);
+}
+
+input[type="radio"]:checked + .radio-content {
+    border-color: var(--step-color);
+    background-color: color-mix(in srgb, var(--step-color) 10%, transparent);
+    color: var(--step-color);
+}
+
+.radio-pill {
+    @apply cursor-pointer inline-flex relative;
+}
+.radio-pill span {
+    @apply px-5 py-2.5 rounded-full border-2 border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400 font-bold text-sm transition-all bg-white dark:bg-surface-800/30;
+}
+.radio-pill:hover span {
+    border-color: var(--step-color-light);
+}
+
+input[type="radio"]:checked + span {
+    border-color: var(--step-color);
+    background-color: var(--step-color);
+    color: white;
+    box-shadow: 0 10px 15px -3px color-mix(in srgb, var(--step-color) 30%, transparent);
+}
+
+.checkbox-card {
+    @apply w-full px-5 py-3 rounded-xl border-2 border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400 font-medium transition-all text-left bg-transparent relative;
+}
+.checkbox-card:hover {
+    border-color: var(--step-color-light);
+}
+
+.checkbox-card.active, 
+.selected-themed {
+    background-color: var(--step-color) !important;
+    border-color: var(--step-color) !important;
+    color: white !important;
+    font-weight: 700 !important;
+}
+
+.selected-themed-shadow {
+    box-shadow: 0 10px 25px -5px color-mix(in srgb, var(--step-color), transparent 50%) !important;
+}

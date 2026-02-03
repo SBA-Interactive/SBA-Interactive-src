@@ -1,0 +1,187 @@
+ Startup Overview
+*
+  Startup name
+  One-sentence description of what you do
+*
+  What problem does your startup solve?
+*
+  What do you mainly offer?
+*
+Product
+Service
+Product + Service
+Platform / Marketplace
+What makes your solution different from competitors?
+*
+  Target Audience  
+*
+  Primary target audience  
+
+B2C
+B2B
+Both
+  Who are you targeting?  
+*
+Startups
+Small businesses
+Enterprises
+Freelancers
+General consumers
+Developers / technical users
+  Target audience age range  
+*
+  Main geographic market  
+*
+Local
+National
+International
+Biggest pain point of your audience
+*
+  Brand & Style  
+*
+  Describe your brand in 3–5 words  
+
+  Brand personality  (select up to 3)
+*
+Professional
+Friendly
+Bold
+Innovative
+Playful
+Trustworthy
+Premium
+Minimal
+  Preferred visual style  
+*
+Clean / Minimal
+Modern / Tech
+Corporate
+Creative / Artistic
+Fun / Colorful
+  Do you already have branding assets?  
+*
+Yes (logo + guidelines)
+Partial (logo only)
+No
+  Brands or websites you like
+  Website Goals & Strategy  
+*
+  Primary goal of the website  
+
+Generate leads
+Sell products
+Explain the product
+Build credibility
+Attract investors
+  Main action you want users to take  
+*
+Contact us
+Sign up
+Book a demo
+Purchase
+Download
+  Importance of conversion vs branding  
+*
+Mostly branding
+1
+2
+3
+4
+5
+Mostly conversion
+  Pages & Features  
+*
+  Which pages should the site include?  
+
+Home
+About
+Product / Services
+Pricing
+Blog
+Careers
+Contact
+  Special features needed  
+*
+Contact forms
+Booking / calendar
+User accounts
+Payments
+Newsletter signup
+CMS (self-editable content)
+None
+  Number of languages  
+*
+ 
+Odpowiedź na to pytanie jest wymagana
+  Content & Assets
+*
+  Content availability  
+
+All content ready
+Some content ready
+No content yet
+  What do you need help with?  
+*
+Copywriting
+Images / illustrations
+Icons
+Video
+None
+  Do you have social proof?  
+*
+Testimonials
+Case studies
+Press mentions
+None
+Anything important that must be highlighted on the site?  
+  Technical & Compliance  
+*
+Do you already own a domain?  
+
+Yes
+No
+Is this a new site or a redesign?  
+*
+New website
+Redesign
+  SEO required from launch?  
+*
+Yes
+No
+Not sure
+  Compliance requirements  
+*
+GDPR
+Accessibility (WCAG)
+Industry-specific rules
+None
+  Risks & Expectations  
+*
+  Have you worked with a web agency before?  
+
+Yes, positive experience
+Yes, negative experience
+No
+  Main concern about this project  
+*
+Timeline
+Design quality
+Technical complexity
+Communication
+Inne:
+Anything we should avoid or be careful about?  
+Future Plans
+  Do you expect to scale or expand soon?  
+
+Yes
+Maybe
+No
+  Potential future needs  
+Marketing campaigns
+New features
+Rebranding
+Ongoing maintenance
+Analytics & optimization
+  Any additional notes or context  
+Contact information
+Contact information of your group like a discord username of one of your members or a server link,  your group's e-mail if you have one etc.

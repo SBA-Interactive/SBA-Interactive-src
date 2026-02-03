@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://sba-interactive.github.io/sba-interactive/sitemap-index.xml

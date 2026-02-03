@@ -11,6 +11,29 @@
 
     --color-surface-50: #ffffff;
     --color-surface-100: #f8fafc;
+    --color-blue-400: #60a5fa;
+    --color-blue-500: #3b82f6;
+    --color-blue-600: #2563eb;
+    
+    /* Step Colors */
+    --color-rose-500: #f43f5e;
+    --color-rose-600: #e11d48;
+    --color-orange-500: #f97316;
+    --color-orange-600: #ea580c;
+    --color-sky-500: #0ea5e9;
+    --color-sky-600: #0284c7;
+    --color-emerald-500: #10b981;
+    --color-emerald-600: #059669;
+    --color-violet-500: #8b5cf6;
+    --color-violet-600: #7c3aed;
+    --color-cyan-500: #06b6d4;
+    --color-cyan-600: #0891b2;
+    --color-indigo-500: #6366f1;
+    --color-indigo-600: #4f46e5;
+    --color-fuchsia-500: #d946ef;
+    --color-fuchsia-600: #c026d3;
+    --color-lime-500: #84cc16;
+    --color-lime-600: #65a30d;
     --color-surface-200: #f1f5f9;
     --color-surface-300: #e2e8f0;
     --color-surface-400: #94a3b8;
@@ -81,8 +104,19 @@
 
 @layer components {
     .glass-card {
-        @apply bg-white/70 dark:bg-surface-800/50 backdrop-blur-xl border border-white dark:border-surface-700/50 shadow-2xl;
-    }
+    @apply bg-white/70 dark:bg-surface-900/40 backdrop-blur-xl border border-slate-200 dark:border-white/10 shadow-2xl transition-all duration-500;
+}
+
+/* White Theme Specifics */
+:where(.light, .light *) .glass-card {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-color: rgba(0, 0, 0, 0.05);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.05);
+}
+
+.step-content {
+    transition: all 0.4s ease-out;
+}
     
     .section-padding {
         @apply py-20 md:py-32;
