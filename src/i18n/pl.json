@@ -1,5 +1,7 @@
 {
   "read_more": "Czytaj więcej",
+  "Back": "Wstecz",
+  "Next": "Dalej",
   "hero": {
     "pill": "Elitarna Inżynieria Cyfrowa",
     "title_1": "Inżynierujemy",
@@ -234,6 +236,7 @@
     "card_subtitle": "Wymaga świetnej prezentacji"
   },
   "brief": {
+    "step": "Krok",
     "page_title": "Rozpocznij Projekt",
     "page_subtitle": "Opowiedz nam o swoim następnym wielkim pomyśle. Wypełnij poniższy brief, a my zaprojektujemy idealne rozwiązanie cyfrowe dla Ciebie.",
     "section_overview": "Przegląd Startupu",
@@ -309,7 +312,8 @@
     "lbl_pages": "Jakie podstrony powinna zawierać witryna?",
     "opt_page_home": "Strona główna",
     "opt_page_about": "O nas",
-    "opt_page_product_services": "Produkt / Usługi",
+    "opt_page_product": "Produkt",
+    "opt_page_services": "Usługi",
     "opt_page_pricing": "Cennik",
     "opt_page_blog": "Blog",
     "opt_page_careers": "Kariera",
@@ -382,7 +386,21 @@
     "btn_submit": "Wyślij Brief",
     "error_generic": "Coś poszło nie tak. Spróbuj ponownie.",
     "error_network": "Błąd sieci. Sprawdź swoje połączenie.",
+    "error_validation": "Proszę uzupełnić wszystkie pola w Kroku {step}: {title}",
     "success_title": "Brief Otrzymany!",
-    "success_message": "Dziękujemy za podzielenie się swoją wizją. Przeanalizujemy Twoje wymagania i odezwiemy się wkrótce."
+    "success_message": "Dziękujemy za podzielenie się swoją wizją. Przeanalizujemy Twoje wymagania i odezwiemy się wkrótce.",
+    "opt_age_younger": "Młodsza",
+    "opt_age_genz": "18-24 (Pokolenie Z)",
+    "opt_age_mil": "25-40 (Millenialsi)",
+    "opt_age_genx": "41-56 (Pokolenie X)",
+    "opt_age_boomers": "57+ (Boomersi)",
+    "opt_age_all": "Wszystkie grupy wiekowe",
+    "ph_brand_describe": "np. Minimalizm, Eko, Luksus...",
+    "ph_contact": "Email, Discord, Telefon...",
+    "tooltip_seo": "Pozycjonowanie stron pomaga Twojej witrynie zająć wyższe miejsce w wynikach Google.",
+    "tooltip_completed": "Ukończono",
+    "tooltip_required": "Wymagane",
+    "tooltip_todo": "Do zrobienia",
+    "aria_go_to_step": "Przejdź do kroku {step}"
   }
 }

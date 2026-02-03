@@ -235,7 +235,7 @@
         for (let i = 0; i < steps.length; i++) {
              if (!isStepValid(i)) {
                  goToStep(i);
-                 submitError = `Please complete all fields in Step ${i+1}: ${$i18n.t(steps[i].title)}`;
+                 submitError = $i18n.t('brief.error_validation').replace('{step}', (i+1).toString()).replace('{title}', $i18n.t(steps[i].title).replace('Section: ', ''));
                  return;
              }
         }
@@ -332,11 +332,11 @@
                     <div class="flex items-center gap-2 relative z-10">
                         <span class="text-sm font-medium {isActive ? 'text-slate-900 dark:text-white' : ''}">{ $i18n.t(step.title).replace('Section: ', '') }</span>
                         {#if valid}
-                            <span class="text-lg leading-none font-bold text-slate-400 dark:text-white" title="Completed">*</span>
+                            <span class="text-lg leading-none font-bold text-slate-400 dark:text-white" title={$i18n.t('brief.tooltip_completed')}>*</span>
                         {:else if visited}
-                            <span class="text-lg leading-none font-bold text-rose-500" title="Required">*</span>
+                            <span class="text-lg leading-none font-bold text-rose-500" title={$i18n.t('brief.tooltip_required')}>*</span>
                         {:else}
-                            <span class="text-lg leading-none font-bold text-slate-300 dark:text-slate-600" title="To do">*</span>
+                            <span class="text-lg leading-none font-bold text-slate-300 dark:text-slate-600" title={$i18n.t('brief.tooltip_todo')}>*</span>
                         {/if}
                     </div>
                 </button>
@@ -357,7 +357,7 @@
                             class="h-full grow rounded-full transition-all duration-500 {i <= currentStep ? '' : 'bg-slate-200 dark:bg-surface-800'}"
                             style={i <= currentStep ? `background-color: var(--color-${step.color}-500, ${step.color}); box-shadow: 0 0 8px var(--color-${step.color}-500, ${step.color});` : ''}
                             onclick={() => goToStep(i)}
-                            aria-label="Go to step {i + 1}"
+                            aria-label="{$i18n.t('brief.aria_go_to_step').replace('{step}', (i + 1).toString())}"
                         ></button>
                     {/each}
                 </div>
@@ -390,28 +390,28 @@
                                 <div class="group">
                                      <div class="mb-2 flex items-center gap-2">
                                         <label class="block text-sm font-bold text-slate-700 dark:text-slate-300" for="startupName">{$i18n.t('brief.lbl_startup_name')}</label>
-                                        <span class="text-rose-500 text-xl leading-none" title="Required">*</span>
+                                        <span class="text-rose-500 text-xl leading-none" title={$i18n.t('brief.tooltip_required')}>*</span>
                                      </div>
                                      <input type="text" id="startupName" bind:value={formData.startupName} required class="form-input" placeholder={$i18n.t('brief.ph_answer')} />
                                 </div>
                                 <div class="group">
                                     <div class="mb-2 flex items-center gap-2">
                                         <label class="block text-sm font-bold text-slate-700 dark:text-slate-300" for="oneSentenceDesc">{$i18n.t('brief.lbl_description')}</label>
-                                        <span class="text-rose-500 text-xl leading-none" title="Required">*</span>
+                                        <span class="text-rose-500 text-xl leading-none" title={$i18n.t('brief.tooltip_required')}>*</span>
                                      </div>
                                      <input type="text" id="oneSentenceDesc" bind:value={formData.oneSentenceDesc} required class="form-input" placeholder={$i18n.t('brief.ph_answer')} />
                                 </div>
                                 <div class="group">
                                     <div class="mb-2 flex items-center gap-2">
                                         <label class="block text-sm font-bold text-slate-700 dark:text-slate-300" for="problemSolved">{$i18n.t('brief.lbl_problem')}</label>
-                                        <span class="text-rose-500 text-xl leading-none" title="Required">*</span>
+                                        <span class="text-rose-500 text-xl leading-none" title={$i18n.t('brief.tooltip_required')}>*</span>
                                      </div>
                                      <textarea id="problemSolved" bind:value={formData.problemSolved} required rows="3" class="form-textarea" placeholder={$i18n.t('brief.ph_answer')}></textarea>
                                 </div>
                                  <div class="group">
                                      <div class="mb-2 flex items-center gap-2">
                                         <span class="block text-sm font-bold text-slate-700 dark:text-slate-300">{$i18n.t('brief.lbl_offer')}</span>
-                                        <span class="text-rose-500 text-xl leading-none" title="Required">*</span>
+                                        <span class="text-rose-500 text-xl leading-none" title={$i18n.t('brief.tooltip_required')}>*</span>
                                      </div>
                                      <div class="grid md:grid-cols-2 gap-3 pb-1">
                                          {#each ['product', 'service', 'product_service', 'platform'] as opt}
@@ -425,7 +425,7 @@
                                 <div class="group">
                                      <div class="mb-2 flex items-center gap-2">
                                         <label class="block text-sm font-bold text-slate-700 dark:text-slate-300" for="competitorDifference">{$i18n.t('brief.lbl_different')}</label>
-                                        <span class="text-rose-500 text-xl leading-none" title="Required">*</span>
+                                        <span class="text-rose-500 text-xl leading-none" title={$i18n.t('brief.tooltip_required')}>*</span>
                                      </div>
                                      <textarea id="competitorDifference" bind:value={formData.competitorDifference} required rows="3" class="form-textarea" placeholder={$i18n.t('brief.ph_answer')}></textarea>
                                 </div>
@@ -434,7 +434,7 @@
                                 <div class="group">
                                      <div class="mb-2 flex items-center gap-2">
                                         <span class="block text-sm font-bold text-slate-700 dark:text-slate-300">{$i18n.t('brief.lbl_primary_audience')}</span>
-                                        <span class="text-rose-500 text-xl leading-none" title="Required">*</span>
+                                        <span class="text-rose-500 text-xl leading-none" title={$i18n.t('brief.tooltip_required')}>*</span>
                                      </div>
                                      <div class="flex flex-wrap gap-3">
                                          {#each ['b2c', 'b2b', 'both'] as opt}
@@ -448,7 +448,7 @@
                                 <div class="group">
                                      <div class="mb-2 flex items-center gap-2">
                                         <span class="block text-sm font-bold text-slate-700 dark:text-slate-300">{$i18n.t('brief.lbl_targeting')}</span>
-                                        <span class="text-rose-500 text-xl leading-none" title="Required">*</span>
+                                        <span class="text-rose-500 text-xl leading-none" title={$i18n.t('brief.tooltip_required')}>*</span>
                                      </div>
                                      <div class="grid md:grid-cols-2 gap-3">
                                          {#each ['startups', 'small_business', 'enterprises', 'freelancers', 'consumers', 'developers'] as opt}
@@ -462,22 +462,22 @@
                                  <div class="group">
                                      <div class="mb-2 flex items-center gap-2">
                                         <label class="block text-sm font-bold text-slate-700 dark:text-slate-300" for="audienceAge">{$i18n.t('brief.lbl_age_range')}</label>
-                                        <span class="text-rose-500 text-xl leading-none" title="Required">*</span>
+                                        <span class="text-rose-500 text-xl leading-none" title={$i18n.t('brief.tooltip_required')}>*</span>
                                      </div>
                                      <select id="audienceAge" bind:value={formData.audienceAge} class="form-select w-full">
                                         <option value="">{$i18n.t('brief.opt_choose')}</option>
-                                        <option value="younger">Younger</option>
-                                        <option value="gen-z">18-24 (Gen Z)</option>
-                                        <option value="mil">25-40 (Millennials)</option>
-                                        <option value="gen-x">41-56 (Gen X)</option>
-                                        <option value="boomers">57+ (Boomers)</option>
-                                        <option value="all">All ages</option>
+                                        <option value="younger">{$i18n.t('brief.opt_age_younger')}</option>
+                                        <option value="gen-z">{$i18n.t('brief.opt_age_genz')}</option>
+                                        <option value="mil">{$i18n.t('brief.opt_age_mil')}</option>
+                                        <option value="gen-x">{$i18n.t('brief.opt_age_genx')}</option>
+                                        <option value="boomers">{$i18n.t('brief.opt_age_boomers')}</option>
+                                        <option value="all">{$i18n.t('brief.opt_age_all')}</option>
                                      </select>
                                 </div>
                                  <div class="group">
                                      <div class="mb-2 flex items-center gap-2">
                                         <span class="block text-sm font-bold text-slate-700 dark:text-slate-300">{$i18n.t('brief.lbl_geo')}</span>
-                                        <span class="text-rose-500 text-xl leading-none" title="Required">*</span>
+                                        <span class="text-rose-500 text-xl leading-none" title={$i18n.t('brief.tooltip_required')}>*</span>
                                      </div>
                                      <div class="flex flex-wrap gap-3">
                                         {#each ['local', 'national', 'international'] as opt}
@@ -491,7 +491,7 @@
                                 <div class="group">
                                      <div class="mb-2 flex items-center gap-2">
                                         <label class="block text-sm font-bold text-slate-700 dark:text-slate-300" for="biggestPainPoint">{$i18n.t('brief.lbl_pain_point')}</label>
-                                        <span class="text-rose-500 text-xl leading-none" title="Required">*</span>
+                                        <span class="text-rose-500 text-xl leading-none" title={$i18n.t('brief.tooltip_required')}>*</span>
                                      </div>
                                      <textarea id="biggestPainPoint" bind:value={formData.biggestPainPoint} required rows="3" class="form-textarea" placeholder={$i18n.t('brief.ph_answer')}></textarea>
                                 </div>
@@ -500,9 +500,9 @@
                                 <div class="group">
                                      <div class="mb-2 flex items-center gap-2">
                                         <label class="block text-sm font-bold text-slate-700 dark:text-slate-300" for="brandDescribe">{$i18n.t('brief.lbl_brand_words')}</label>
-                                        <span class="text-rose-500 text-xl leading-none" title="Required">*</span>
+                                        <span class="text-rose-500 text-xl leading-none" title={$i18n.t('brief.tooltip_required')}>*</span>
                                      </div>
-                                     <input type="text" id="brandDescribe" bind:value={formData.brandDescribe} list="brandAvailable" required class="form-input" placeholder="e.g. Minimal, Eco-friendly, Luxury..." />
+                                     <input type="text" id="brandDescribe" bind:value={formData.brandDescribe} list="brandAvailable" required class="form-input" placeholder={$i18n.t('brief.ph_brand_describe')} />
                                      <datalist id="brandAvailable">
                                         <option value="Minimal"></option>
                                         <option value="Luxury"></option>
@@ -515,7 +515,7 @@
                                 <div class="group">
                                      <div class="mb-2 flex items-center gap-2">
                                         <span class="block text-sm font-bold text-slate-700 dark:text-slate-300">{$i18n.t('brief.lbl_personality')} ({$i18n.t('brief.lbl_select_3')})</span>
-                                        <span class="text-rose-500 text-xl leading-none" title="Required">*</span>
+                                        <span class="text-rose-500 text-xl leading-none" title={$i18n.t('brief.tooltip_required')}>*</span>
                                      </div>
                                      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
                                          {#each ['professional', 'friendly', 'bold', 'innovative', 'playful', 'trustworthy', 'premium', 'minimal'] as opt}
@@ -529,7 +529,7 @@
                                  <div class="group">
                                      <div class="mb-2 flex items-center gap-2">
                                         <span class="block text-sm font-bold text-slate-700 dark:text-slate-300">{$i18n.t('brief.lbl_visual_style')}</span>
-                                        <span class="text-rose-500 text-xl leading-none" title="Required">*</span>
+                                        <span class="text-rose-500 text-xl leading-none" title={$i18n.t('brief.tooltip_required')}>*</span>
                                      </div>
                                      <div class="grid md:grid-cols-2 gap-3 pb-1">
                                         {#each ['clean_minimal', 'modern_tech', 'corporate', 'creative_artistic', 'fun_colorful'] as opt}
@@ -543,7 +543,7 @@
                                  <div class="group">
                                      <div class="mb-2 flex items-center gap-2">
                                         <span class="block text-sm font-bold text-slate-700 dark:text-slate-300">{$i18n.t('brief.lbl_assets')}</span>
-                                        <span class="text-rose-500 text-xl leading-none" title="Required">*</span>
+                                        <span class="text-rose-500 text-xl leading-none" title={$i18n.t('brief.tooltip_required')}>*</span>
                                      </div>
                                      <div class="flex flex-wrap gap-3">
                                          {#each ['yes_full', 'partial', 'no'] as opt}
@@ -563,7 +563,7 @@
                                 <div class="group">
                                      <div class="mb-2 flex items-center gap-2">
                                         <span class="block text-sm font-bold text-slate-700 dark:text-slate-300">{$i18n.t('brief.lbl_primary_goal')}</span>
-                                        <span class="text-rose-500 text-xl leading-none" title="Required">*</span>
+                                        <span class="text-rose-500 text-xl leading-none" title={$i18n.t('brief.tooltip_required')}>*</span>
                                      </div>
                                      <div class="grid md:grid-cols-2 gap-3 pb-1">
                                          {#each ['generate_leads', 'sell_products', 'explain_product', 'build_credibility', 'attract_investors'] as opt}
@@ -577,7 +577,7 @@
                                  <div class="group">
                                      <div class="mb-2 flex items-center gap-2">
                                         <span class="block text-sm font-bold text-slate-700 dark:text-slate-300">{$i18n.t('brief.lbl_main_action')}</span>
-                                        <span class="text-rose-500 text-xl leading-none" title="Required">*</span>
+                                        <span class="text-rose-500 text-xl leading-none" title={$i18n.t('brief.tooltip_required')}>*</span>
                                      </div>
                                      <div class="flex flex-wrap gap-3">
                                          {#each ['contact_us', 'sign_up', 'book_demo', 'purchase', 'download'] as opt}
@@ -591,7 +591,7 @@
                                  <div class="group">
                                      <div class="mb-2 flex items-center gap-2">
                                         <span class="block text-sm font-bold text-slate-700 dark:text-slate-300">{$i18n.t('brief.lbl_conversion_vs_branding')}</span>
-                                        <span class="text-rose-500 text-xl leading-none" title="Required">*</span>
+                                        <span class="text-rose-500 text-xl leading-none" title={$i18n.t('brief.tooltip_required')}>*</span>
                                      </div>
                                      <div class="flex items-center justify-between gap-4 max-w-xl mx-auto md:mx-0">
                                         <span class="text-xs md:text-sm font-bold text-slate-500 uppercase">{$i18n.t('brief.lbl_mostly_branding')}</span>
@@ -613,7 +613,7 @@
                                 <div class="group">
                                      <div class="mb-2 flex items-center gap-2">
                                         <span class="block text-sm font-bold text-slate-700 dark:text-slate-300">{$i18n.t('brief.lbl_pages')}</span>
-                                        <span class="text-rose-500 text-xl leading-none" title="Required">*</span>
+                                        <span class="text-rose-500 text-xl leading-none" title={$i18n.t('brief.tooltip_required')}>*</span>
                                      </div>
                                      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
                                          {#each ['home', 'about', 'product', 'services', 'pricing', 'blog', 'careers', 'contact'] as opt}
@@ -627,7 +627,7 @@
                                  <div class="group">
                                      <div class="mb-2 flex items-center gap-2">
                                         <span class="block text-sm font-bold text-slate-700 dark:text-slate-300">{$i18n.t('brief.lbl_special_features')}</span>
-                                        <span class="text-rose-500 text-xl leading-none" title="Required">*</span>
+                                        <span class="text-rose-500 text-xl leading-none" title={$i18n.t('brief.tooltip_required')}>*</span>
                                      </div>
                                      <div class="grid md:grid-cols-2 gap-3">
                                          {#each ['contact_forms', 'booking', 'user_accounts', 'payments', 'newsletter', 'cms', 'none'] as opt}
@@ -641,7 +641,7 @@
                                  <div class="group">
                                      <div class="mb-2 flex items-center gap-2">
                                         <label class="block text-sm font-bold text-slate-700 dark:text-slate-300" for="languageCount">{$i18n.t('brief.lbl_languages')}</label>
-                                        <span class="text-rose-500 text-xl leading-none" title="Required">*</span>
+                                        <span class="text-rose-500 text-xl leading-none" title={$i18n.t('brief.tooltip_required')}>*</span>
                                      </div>
                                      <select id="languageCount" bind:value={formData.languageCount} class="form-select w-full md:w-1/2">
                                         <option value="">{$i18n.t('brief.opt_choose')}</option>
@@ -656,7 +656,7 @@
                                 <div class="group">
                                      <div class="mb-2 flex items-center gap-2">
                                         <span class="block text-sm font-bold text-slate-700 dark:text-slate-300">{$i18n.t('brief.lbl_content_ready')}</span>
-                                        <span class="text-rose-500 text-xl leading-none" title="Required">*</span>
+                                        <span class="text-rose-500 text-xl leading-none" title={$i18n.t('brief.tooltip_required')}>*</span>
                                      </div>
                                      <div class="flex flex-wrap gap-3">
                                         {#each ['all_ready', 'some_ready', 'no_content'] as opt}
@@ -670,7 +670,7 @@
                                 <div class="group">
                                      <div class="mb-2 flex items-center gap-2">
                                         <span class="block text-sm font-bold text-slate-700 dark:text-slate-300">{$i18n.t('brief.lbl_need_help')}</span>
-                                        <span class="text-rose-500 text-xl leading-none" title="Required">*</span>
+                                        <span class="text-rose-500 text-xl leading-none" title={$i18n.t('brief.tooltip_required')}>*</span>
                                      </div>
                                      <div class="grid grid-cols-2 gap-3">
                                          {#each ['copywriting', 'images', 'icons', 'video', 'none'] as opt}
@@ -684,7 +684,7 @@
                                  <div class="group">
                                      <div class="mb-2 flex items-center gap-2">
                                         <span class="block text-sm font-bold text-slate-700 dark:text-slate-300">{$i18n.t('brief.lbl_social_proof')}</span>
-                                        <span class="text-rose-500 text-xl leading-none" title="Required">*</span>
+                                        <span class="text-rose-500 text-xl leading-none" title={$i18n.t('brief.tooltip_required')}>*</span>
                                      </div>
                                      <div class="grid grid-cols-2 gap-3">
                                          {#each ['testimonials', 'case_studies', 'press', 'none'] as opt}
@@ -704,7 +704,7 @@
                                 <div class="group">
                                      <div class="mb-2 flex items-center gap-2">
                                         <span class="block text-sm font-bold text-slate-700 dark:text-slate-300">{$i18n.t('brief.lbl_own_domain')}</span>
-                                        <span class="text-rose-500 text-xl leading-none" title="Required">*</span>
+                                        <span class="text-rose-500 text-xl leading-none" title={$i18n.t('brief.tooltip_required')}>*</span>
                                      </div>
                                       <div class="flex gap-4">
                                           <label class="radio-pill cursor-pointer"> 
@@ -720,7 +720,7 @@
                                 <div class="group">
                                      <div class="mb-2 flex items-center gap-2">
                                         <span class="block text-sm font-bold text-slate-700 dark:text-slate-300">{$i18n.t('brief.lbl_new_redesign')}</span>
-                                        <span class="text-rose-500 text-xl leading-none" title="Required">*</span>
+                                        <span class="text-rose-500 text-xl leading-none" title={$i18n.t('brief.tooltip_required')}>*</span>
                                      </div>
                                       <div class="flex gap-4">
                                           <label class="radio-pill cursor-pointer"> <input type="radio" name="proj_type" value="new" bind:group={formData.newOrRedesign} class="sr-only"> <span class="px-5 py-2.5 rounded-full border-2 transition-all font-bold text-sm {formData.newOrRedesign === 'new' ? 'selected-themed selected-themed-shadow' : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400 bg-white dark:bg-surface-800/30'}">{$i18n.t('brief.opt_new_site')}</span> </label>
@@ -730,12 +730,12 @@
                                  <div class="group">
                                      <div class="mb-2 flex items-center gap-2">
                                         <span class="block text-sm font-bold text-slate-700 dark:text-slate-300">{$i18n.t('brief.lbl_seo')}</span>
-                                        <span class="text-rose-500 text-xl leading-none" title="Required">*</span>
+                                        <span class="text-rose-500 text-xl leading-none" title={$i18n.t('brief.tooltip_required')}>*</span>
                                         <div class="group/tooltip relative">
                                             <IconCarbonHelp class="w-4 h-4 text-slate-400 cursor-help" />
-                                            <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 p-2 bg-slate-900 text-white text-xs rounded-lg opacity-0 group-hover/tooltip:opacity-100 transition-opacity pointer-events-none z-10">
-                                                Search Engine Optimization helps your site rank higher on Google.
-                                            </div>
+                                             <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 p-2 bg-slate-900 text-white text-xs rounded-lg opacity-0 group-hover/tooltip:opacity-100 transition-opacity pointer-events-none z-10">
+                                                 {$i18n.t('brief.tooltip_seo')}
+                                             </div>
                                         </div>
                                      </div>
                                       <div class="flex gap-4">
@@ -760,7 +760,7 @@
                                 <div class="group">
                                      <div class="mb-2 flex items-center gap-2">
                                         <span style="color: var(--step-color)" class="block text-sm font-bold">{$i18n.t('brief.lbl_agency_exp')}</span>
-                                        <span class="text-rose-500 text-xl leading-none" title="Required">*</span>
+                                        <span class="text-rose-500 text-xl leading-none" title={$i18n.t('brief.tooltip_required')}>*</span>
                                      </div>
                                      <div class="space-y-2">
                                           <label class="radio-card cursor-pointer group"> 
@@ -780,7 +780,7 @@
                                  <div class="group">
                                      <div class="mb-2 flex items-center gap-2">
                                         <span style="color: var(--step-color)" class="block text-sm font-bold">{$i18n.t('brief.lbl_concerns')}</span>
-                                        <span class="text-rose-500 text-xl leading-none" title="Required">*</span>
+                                        <span class="text-rose-500 text-xl leading-none" title={$i18n.t('brief.tooltip_required')}>*</span>
                                      </div>
                                       <div class="grid md:grid-cols-2 gap-3 mb-3">
                                               {#each ['timeline', 'quality', 'complexity', 'communication'] as opt}
@@ -801,7 +801,7 @@
                                  <div class="group">
                                      <div class="mb-2 flex items-center gap-2">
                                         <span style="color: var(--step-color)" class="block text-sm font-bold opacity-80">{$i18n.t('brief.lbl_scale')}</span>
-                                        <span class="text-rose-500 text-xl leading-none" title="Required">*</span>
+                                        <span class="text-rose-500 text-xl leading-none" title={$i18n.t('brief.tooltip_required')}>*</span>
                                      </div>
                                       <div class="flex gap-4">
                                           <label class="radio-pill cursor-pointer"> <input type="radio" name="scale_up" value="yes" bind:group={formData.scaleExpectation} class="sr-only"> <span class="px-5 py-2.5 rounded-full border-2 transition-all font-bold text-sm {formData.scaleExpectation === 'yes' ? 'selected-themed selected-themed-shadow' : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400 bg-white dark:bg-surface-800/30'}">{$i18n.t('brief.yes')}</span> </label>
@@ -829,10 +829,10 @@
                                 <div class="group">
                                      <div class="mb-2 flex items-center gap-2">
                                         <label style="color: var(--step-color)" class="block text-sm font-bold opacity-80" for="contactInfo">{$i18n.t('brief.lbl_contact_info')}</label>
-                                        <span class="text-rose-500 text-xl leading-none" title="Required">*</span>
+                                        <span class="text-rose-500 text-xl leading-none" title={$i18n.t('brief.tooltip_required')}>*</span>
                                      </div>
                                      <p class="text-xs text-slate-500 mb-2">{$i18n.t('brief.contact_hint')}</p>
-                                     <input type="text" id="contactInfo" bind:value={formData.contactInfo} required class="form-input" placeholder="Email, Discord, Phone..." />
+                                     <input type="text" id="contactInfo" bind:value={formData.contactInfo} required class="form-input" placeholder={$i18n.t('brief.ph_contact')} />
                                 </div>
                             {/if}
                         </div>

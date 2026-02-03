@@ -474,7 +474,21 @@
     "btn_submit": "Submit Brief",
     "error_generic": "Something went wrong. Please try again.",
     "error_network": "Network error. Please check your connection.",
+    "error_validation": "Please complete all fields in Step {step}: {title}",
     "success_title": "Brief Received!",
-    "success_message": "Thank you for sharing your vision. We'll analyze your requirements and get back to you shortly."
+    "success_message": "Thank you for sharing your vision. We'll analyze your requirements and get back to you shortly.",
+    "opt_age_younger": "Younger",
+    "opt_age_genz": "18-24 (Gen Z)",
+    "opt_age_mil": "25-40 (Millennials)",
+    "opt_age_genx": "41-56 (Gen X)",
+    "opt_age_boomers": "57+ (Boomers)",
+    "opt_age_all": "All ages",
+    "ph_brand_describe": "e.g. Minimal, Eco-friendly, Luxury...",
+    "ph_contact": "Email, Discord, Phone...",
+    "tooltip_seo": "Search Engine Optimization helps your site rank higher on Google.",
+    "tooltip_completed": "Completed",
+    "tooltip_required": "Required",
+    "tooltip_todo": "To do",
+    "aria_go_to_step": "Go to step {step}"
   }
 }
