@@ -39,8 +39,10 @@
 
 input[type="radio"]:checked + .radio-content {
     border-color: var(--step-color);
-    background-color: color-mix(in srgb, var(--step-color) 10%, transparent);
-    color: var(--step-color);
+    background-color: var(--step-color);
+    color: white;
+    font-weight: 700;
+    box-shadow: 0 10px 25px -5px color-mix(in srgb, var(--step-color), transparent 50%);
 }
 
 .radio-pill {

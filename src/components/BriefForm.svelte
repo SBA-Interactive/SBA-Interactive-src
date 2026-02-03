@@ -416,8 +416,8 @@
                                      <div class="grid md:grid-cols-2 gap-3 pb-1">
                                          {#each ['product', 'service', 'product_service', 'platform'] as opt}
                                             <label class="radio-card cursor-pointer group">
-                                                <input type="radio" name="offer" value={opt} bind:group={formData.mainOffer} class="sr-only">
-                                                <span class="radio-content block p-4 text-center rounded-xl border-2 transition-all {formData.mainOffer === opt ? `border-${steps[currentStep].color}-500 bg-${steps[currentStep].color}-500 text-white shadow-lg shadow-${steps[currentStep].color}-500/30 font-bold` : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400'}">{$i18n.t(`brief.opt_${opt}`)}</span>
+                                                <input type="radio" name="offer_type" value={opt} bind:group={formData.mainOffer} class="sr-only">
+                                                <span class="radio-content block p-4 text-center rounded-xl border-2 transition-all {formData.mainOffer === opt ? 'selected-themed selected-themed-shadow' : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400'}">{$i18n.t(`brief.opt_${opt}`)}</span>
                                             </label>
                                         {/each}
                                      </div>
@@ -439,8 +439,8 @@
                                      <div class="flex flex-wrap gap-3">
                                          {#each ['b2c', 'b2b', 'both'] as opt}
                                             <label class="radio-pill cursor-pointer">
-                                                <input type="radio" name="audience" value={opt} bind:group={formData.primaryAudience} class="sr-only">
-                                                <span class="px-5 py-2.5 rounded-full border-2 transition-all font-bold text-sm {formData.primaryAudience === opt ? `bg-${steps[currentStep].color}-500 border-${steps[currentStep].color}-500 text-white shadow-lg shadow-${steps[currentStep].color}-500/30` : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400 bg-white dark:bg-surface-800/30'}">{$i18n.t(`brief.opt_${opt}`)}</span>
+                                                <input type="radio" name="primary_audience" value={opt} bind:group={formData.primaryAudience} class="sr-only">
+                                                <span class="px-5 py-2.5 rounded-full border-2 transition-all font-bold text-sm {formData.primaryAudience === opt ? 'selected-themed selected-themed-shadow' : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400 bg-white dark:bg-surface-800/30'}">{$i18n.t(`brief.opt_${opt}`)}</span>
                                             </label>
                                         {/each}
                                      </div>
@@ -452,8 +452,8 @@
                                      </div>
                                      <div class="grid md:grid-cols-2 gap-3">
                                          {#each ['startups', 'small_business', 'enterprises', 'freelancers', 'consumers', 'developers'] as opt}
-                                            <label class="checkbox-card flex items-center justify-center p-3 rounded-xl border-2 cursor-pointer transition-all {formData.targetGroups.includes(opt) ? `border-${steps[currentStep].color}-500 bg-${steps[currentStep].color}-500 text-white shadow-lg shadow-${steps[currentStep].color}-500/30 font-bold` : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400'}">
-                                                <input type="checkbox" class="sr-only" value={opt} bind:group={formData.targetGroups} />
+                                            <label class="checkbox-card flex items-center justify-center p-3 rounded-xl border-2 cursor-pointer transition-all {formData.targetGroups.includes(opt) ? 'selected-themed selected-themed-shadow' : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400'}">
+                                                <input type="checkbox" name="target_groups" class="sr-only" value={opt} bind:group={formData.targetGroups} />
                                                 <span class="text-center">{$i18n.t(`brief.opt_${opt}`)}</span>
                                             </label>
                                         {/each}
@@ -482,8 +482,8 @@
                                      <div class="flex flex-wrap gap-3">
                                         {#each ['local', 'national', 'international'] as opt}
                                             <label class="radio-pill cursor-pointer">
-                                                <input type="radio" name="geo" value={opt} bind:group={formData.geoMarket} class="sr-only">
-                                                <span class="px-5 py-2.5 rounded-full border-2 transition-all font-bold text-sm {formData.geoMarket === opt ? `bg-${steps[currentStep].color}-500 border-${steps[currentStep].color}-500 text-white shadow-lg shadow-${steps[currentStep].color}-500/30` : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400 bg-white dark:bg-surface-800/30'}">{$i18n.t(`brief.opt_${opt}`)}</span>
+                                                <input type="radio" name="geo_market" value={opt} bind:group={formData.geoMarket} class="sr-only">
+                                                <span class="px-5 py-2.5 rounded-full border-2 transition-all font-bold text-sm {formData.geoMarket === opt ? 'selected-themed selected-themed-shadow' : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400 bg-white dark:bg-surface-800/30'}">{$i18n.t(`brief.opt_${opt}`)}</span>
                                             </label>
                                         {/each}
                                      </div>
@@ -519,8 +519,8 @@
                                      </div>
                                      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
                                          {#each ['professional', 'friendly', 'bold', 'innovative', 'playful', 'trustworthy', 'premium', 'minimal'] as opt}
-                                            <label class="checkbox-card flex items-center justify-center p-2 text-xs md:text-sm rounded-lg border-2 cursor-pointer transition-all {formData.brandPersonality.includes(opt) ? `border-${steps[currentStep].color}-500 bg-${steps[currentStep].color}-500 text-white shadow-lg shadow-${steps[currentStep].color}-500/30 font-bold` : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400'}">
-                                                <input type="checkbox" class="sr-only" value={opt} bind:group={formData.brandPersonality} />
+                                            <label class="checkbox-card flex items-center justify-center p-2 text-xs md:text-sm rounded-lg border-2 cursor-pointer transition-all {formData.brandPersonality.includes(opt) ? 'selected-themed selected-themed-shadow' : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400'}">
+                                                <input type="checkbox" name="personality" class="sr-only" value={opt} bind:group={formData.brandPersonality} />
                                                 <span class="text-center">{$i18n.t(`brief.opt_${opt}`)}</span>
                                             </label>
                                         {/each}
@@ -534,8 +534,8 @@
                                      <div class="grid md:grid-cols-2 gap-3 pb-1">
                                         {#each ['clean_minimal', 'modern_tech', 'corporate', 'creative_artistic', 'fun_colorful'] as opt}
                                             <label class="radio-card cursor-pointer group">
-                                                <input type="radio" name="visual" value={opt} bind:group={formData.visualStyle} class="sr-only">
-                                                <span class="radio-content block p-4 text-center rounded-xl border-2 transition-all {formData.visualStyle === opt ? `border-${steps[currentStep].color}-500 bg-${steps[currentStep].color}-500 text-white shadow-lg shadow-${steps[currentStep].color}-500/30 font-bold` : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400'}">{$i18n.t(`brief.opt_${opt}`)}</span>
+                                                <input type="radio" name="visual_style" value={opt} bind:group={formData.visualStyle} class="sr-only">
+                                                <span class="radio-content block p-4 text-center rounded-xl border-2 transition-all {formData.visualStyle === opt ? 'selected-themed selected-themed-shadow' : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400'}">{$i18n.t(`brief.opt_${opt}`)}</span>
                                             </label>
                                         {/each}
                                      </div>
@@ -548,8 +548,8 @@
                                      <div class="flex flex-wrap gap-3">
                                          {#each ['yes_full', 'partial', 'no'] as opt}
                                             <label class="radio-pill cursor-pointer">
-                                                <input type="radio" name="assets" value={opt} bind:group={formData.brandingAssets} class="sr-only">
-                                                <span class="px-5 py-2.5 rounded-full border-2 transition-all font-bold text-sm {formData.brandingAssets === opt ? `bg-${steps[currentStep].color}-500 border-${steps[currentStep].color}-500 text-white shadow-lg shadow-${steps[currentStep].color}-500/30` : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400 bg-white dark:bg-surface-800/30'}">{$i18n.t(`brief.opt_${opt}`)}</span>
+                                                <input type="radio" name="branding_assets" value={opt} bind:group={formData.brandingAssets} class="sr-only">
+                                                <span class="px-5 py-2.5 rounded-full border-2 transition-all font-bold text-sm {formData.brandingAssets === opt ? 'selected-themed selected-themed-shadow' : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400 bg-white dark:bg-surface-800/30'}">{$i18n.t(`brief.opt_${opt}`)}</span>
                                             </label>
                                         {/each}
                                      </div>
@@ -568,8 +568,8 @@
                                      <div class="grid md:grid-cols-2 gap-3 pb-1">
                                          {#each ['generate_leads', 'sell_products', 'explain_product', 'build_credibility', 'attract_investors'] as opt}
                                             <label class="radio-card cursor-pointer group">
-                                                <input type="radio" name="goal" value={opt} bind:group={formData.primaryGoal} class="sr-only">
-                                                <span class="radio-content block p-4 text-center rounded-xl border-2 transition-all {formData.primaryGoal === opt ? `border-${steps[currentStep].color}-500 bg-${steps[currentStep].color}-500 text-white shadow-lg shadow-${steps[currentStep].color}-500/30 font-bold` : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400'}">{$i18n.t(`brief.opt_${opt}`)}</span>
+                                                <input type="radio" name="primary_goal" value={opt} bind:group={formData.primaryGoal} class="sr-only">
+                                                <span class="radio-content block p-4 text-center rounded-xl border-2 transition-all {formData.primaryGoal === opt ? 'selected-themed selected-themed-shadow' : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400'}">{$i18n.t(`brief.opt_${opt}`)}</span>
                                             </label>
                                         {/each}
                                      </div>
@@ -582,8 +582,8 @@
                                      <div class="flex flex-wrap gap-3">
                                          {#each ['contact_us', 'sign_up', 'book_demo', 'purchase', 'download'] as opt}
                                             <label class="radio-pill cursor-pointer">
-                                                <input type="radio" name="action" value={opt} bind:group={formData.mainAction} class="sr-only">
-                                                <span class="px-4 py-2 rounded-full border-2 transition-all font-bold text-sm {formData.mainAction === opt ? `bg-${steps[currentStep].color}-500 border-${steps[currentStep].color}-500 text-white shadow-lg shadow-${steps[currentStep].color}-500/30` : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400 bg-white dark:bg-surface-800/30'}">{$i18n.t(`brief.opt_${opt}`)}</span>
+                                                <input type="radio" name="main_action" value={opt} bind:group={formData.mainAction} class="sr-only">
+                                                <span class="px-4 py-2 rounded-full border-2 transition-all font-bold text-sm {formData.mainAction === opt ? 'selected-themed selected-themed-shadow' : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400 bg-white dark:bg-surface-800/30'}">{$i18n.t(`brief.opt_${opt}`)}</span>
                                             </label>
                                         {/each}
                                      </div>
@@ -597,9 +597,9 @@
                                         <span class="text-xs md:text-sm font-bold text-slate-500 uppercase">{$i18n.t('brief.lbl_mostly_branding')}</span>
                                         <div class="flex gap-2 md:gap-4">
                                             {#each [1, 2, 3, 4, 5] as val}
-                                                <label class="cursor-pointer">
-                                                    <input type="radio" name="scale" value={val} bind:group={formData.conversionBrandingScale} class="sr-only peer">
-                                                     <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-slate-100 dark:bg-surface-700 flex items-center justify-center font-bold transition-all border border-slate-200 dark:border-surface-600 peer-checked:bg-{steps[currentStep].color}-500 peer-checked:text-white peer-checked:scale-110 peer-checked:shadow-xl peer-checked:shadow-{steps[currentStep].color}-500/30 peer-checked:border-transparent">
+                                                <label class="cursor-pointer relative">
+                                                    <input type="radio" name="conversion_scale" value={val} bind:group={formData.conversionBrandingScale} class="sr-only peer">
+                                                     <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-slate-100 dark:bg-surface-700 flex items-center justify-center font-bold transition-all border border-slate-200 dark:border-surface-600 peer-checked:selected-themed peer-checked:scale-110 peer-checked:selected-themed-shadow peer-checked:border-transparent">
                                                         {val}
                                                     </div>
                                                 </label>
@@ -617,8 +617,8 @@
                                      </div>
                                      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
                                          {#each ['home', 'about', 'product', 'services', 'pricing', 'blog', 'careers', 'contact'] as opt}
-                                            <label class="checkbox-card flex items-center justify-center p-2 text-xs md:text-sm rounded-lg border-2 cursor-pointer transition-all {formData.pagesIncluded.includes(opt) ? `border-${steps[currentStep].color}-500 bg-${steps[currentStep].color}-500 text-white shadow-lg shadow-${steps[currentStep].color}-500/30 font-bold` : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400'}">
-                                                <input type="checkbox" class="sr-only" value={opt} bind:group={formData.pagesIncluded} />
+                                            <label class="checkbox-card flex items-center justify-center p-2 text-xs md:text-sm rounded-lg border-2 cursor-pointer transition-all {formData.pagesIncluded.includes(opt) ? 'selected-themed selected-themed-shadow' : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400'}">
+                                                <input type="checkbox" name="pages_included" class="sr-only" value={opt} bind:group={formData.pagesIncluded} />
                                                 <span class="text-center">{$i18n.t(`brief.opt_page_${opt}`)}</span>
                                             </label>
                                         {/each}
@@ -631,8 +631,8 @@
                                      </div>
                                      <div class="grid md:grid-cols-2 gap-3">
                                          {#each ['contact_forms', 'booking', 'user_accounts', 'payments', 'newsletter', 'cms', 'none'] as opt}
-                                            <label class="checkbox-card flex items-center justify-center p-3 rounded-xl border-2 cursor-pointer transition-all {formData.specialFeatures.includes(opt) ? `border-${steps[currentStep].color}-500 bg-${steps[currentStep].color}-500 text-white shadow-lg shadow-${steps[currentStep].color}-500/30 font-bold` : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400'}">
-                                                <input type="checkbox" class="sr-only" value={opt} bind:group={formData.specialFeatures} />
+                                            <label class="checkbox-card flex items-center justify-center p-3 rounded-xl border-2 cursor-pointer transition-all {formData.specialFeatures.includes(opt) ? 'selected-themed selected-themed-shadow' : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400'}">
+                                                <input type="checkbox" name="spec_features" class="sr-only" value={opt} bind:group={formData.specialFeatures} />
                                                 <span class="text-center">{$i18n.t(`brief.opt_feat_${opt}`)}</span>
                                             </label>
                                         {/each}
@@ -661,8 +661,8 @@
                                      <div class="flex flex-wrap gap-3">
                                         {#each ['all_ready', 'some_ready', 'no_content'] as opt}
                                             <label class="radio-pill cursor-pointer">
-                                                <input type="radio" name="content" value={opt} bind:group={formData.contentAvailability} class="sr-only">
-                                                <span class="px-5 py-2.5 rounded-full border-2 transition-all font-bold text-sm {formData.contentAvailability === opt ? `bg-${steps[currentStep].color}-500 border-${steps[currentStep].color}-500 text-white shadow-lg shadow-${steps[currentStep].color}-500/30` : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400 bg-white dark:bg-surface-800/30'}">{$i18n.t(`brief.opt_${opt}`)}</span>
+                                                <input type="radio" name="content_avail" value={opt} bind:group={formData.contentAvailability} class="sr-only">
+                                                <span class="px-5 py-2.5 rounded-full border-2 transition-all font-bold text-sm {formData.contentAvailability === opt ? 'selected-themed selected-themed-shadow' : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400 bg-white dark:bg-surface-800/30'}">{$i18n.t(`brief.opt_${opt}`)}</span>
                                             </label>
                                         {/each}
                                      </div>
@@ -674,8 +674,8 @@
                                      </div>
                                      <div class="grid grid-cols-2 gap-3">
                                          {#each ['copywriting', 'images', 'icons', 'video', 'none'] as opt}
-                                            <label class="checkbox-card flex items-center justify-center p-3 rounded-xl border-2 cursor-pointer transition-all {formData.helpNeeded.includes(opt) ? `border-${steps[currentStep].color}-500 bg-${steps[currentStep].color}-500 text-white shadow-lg shadow-${steps[currentStep].color}-500/30 font-bold` : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400'}">
-                                                <input type="checkbox" class="sr-only" value={opt} bind:group={formData.helpNeeded} />
+                                            <label class="checkbox-card flex items-center justify-center p-3 rounded-xl border-2 cursor-pointer transition-all {formData.helpNeeded.includes(opt) ? 'selected-themed selected-themed-shadow' : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400'}">
+                                                <input type="checkbox" name="help_types" class="sr-only" value={opt} bind:group={formData.helpNeeded} />
                                                 <span class="text-center">{$i18n.t(`brief.opt_help_${opt}`)}</span>
                                             </label>
                                         {/each}
@@ -688,8 +688,8 @@
                                      </div>
                                      <div class="grid grid-cols-2 gap-3">
                                          {#each ['testimonials', 'case_studies', 'press', 'none'] as opt}
-                                            <label class="checkbox-card flex items-center justify-center p-3 rounded-xl border-2 cursor-pointer transition-all {formData.socialProof.includes(opt) ? `border-${steps[currentStep].color}-500 bg-${steps[currentStep].color}-500 text-white shadow-lg shadow-${steps[currentStep].color}-500/30 font-bold` : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400'}">
-                                                <input type="checkbox" class="sr-only" value={opt} bind:group={formData.socialProof} />
+                                            <label class="checkbox-card flex items-center justify-center p-3 rounded-xl border-2 cursor-pointer transition-all {formData.socialProof.includes(opt) ? 'selected-themed selected-themed-shadow' : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400'}">
+                                                <input type="checkbox" name="proof_types" class="sr-only" value={opt} bind:group={formData.socialProof} />
                                                 <span class="text-center">{$i18n.t(`brief.opt_proof_${opt}`)}</span>
                                             </label>
                                         {/each}
@@ -708,12 +708,12 @@
                                      </div>
                                       <div class="flex gap-4">
                                           <label class="radio-pill cursor-pointer"> 
-                                            <input type="radio" value="yes" bind:group={formData.ownDomain} class="sr-only"> 
-                                            <span class="px-5 py-2.5 rounded-full border-2 transition-all font-bold text-sm {formData.ownDomain === 'yes' ? `bg-${steps[currentStep].color}-500 border-${steps[currentStep].color}-500 text-white shadow-lg shadow-${steps[currentStep].color}-500/30` : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400 bg-white dark:bg-surface-800/30'}">{$i18n.t('brief.yes')}</span> 
+                                            <input type="radio" name="has_domain" value="yes" bind:group={formData.ownDomain} class="sr-only"> 
+                                            <span class="px-5 py-2.5 rounded-full border-2 transition-all font-bold text-sm {formData.ownDomain === 'yes' ? 'selected-themed selected-themed-shadow' : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400 bg-white dark:bg-surface-800/30'}">{$i18n.t('brief.yes')}</span> 
                                           </label>
                                           <label class="radio-pill cursor-pointer"> 
-                                            <input type="radio" value="no" bind:group={formData.ownDomain} class="sr-only"> 
-                                            <span class="px-5 py-2.5 rounded-full border-2 transition-all font-bold text-sm {formData.ownDomain === 'no' ? `bg-${steps[currentStep].color}-500 border-${steps[currentStep].color}-500 text-white shadow-lg shadow-${steps[currentStep].color}-500/30` : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400 bg-white dark:bg-surface-800/30'}">{$i18n.t('brief.no')}</span> 
+                                            <input type="radio" name="has_domain" value="no" bind:group={formData.ownDomain} class="sr-only"> 
+                                            <span class="px-5 py-2.5 rounded-full border-2 transition-all font-bold text-sm {formData.ownDomain === 'no' ? 'selected-themed selected-themed-shadow' : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400 bg-white dark:bg-surface-800/30'}">{$i18n.t('brief.no')}</span> 
                                           </label>
                                       </div>
                                 </div>
@@ -723,8 +723,8 @@
                                         <span class="text-rose-500 text-xl leading-none" title="Required">*</span>
                                      </div>
                                       <div class="flex gap-4">
-                                          <label class="radio-pill cursor-pointer"> <input type="radio" value="new" bind:group={formData.newOrRedesign} class="sr-only"> <span class="px-5 py-2.5 rounded-full border-2 transition-all font-bold text-sm {formData.newOrRedesign === 'new' ? `bg-${steps[currentStep].color}-500 border-${steps[currentStep].color}-500 text-white shadow-lg shadow-${steps[currentStep].color}-500/30` : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400 bg-white dark:bg-surface-800/30'}">{$i18n.t('brief.opt_new_site')}</span> </label>
-                                          <label class="radio-pill cursor-pointer"> <input type="radio" value="redesign" bind:group={formData.newOrRedesign} class="sr-only"> <span class="px-5 py-2.5 rounded-full border-2 transition-all font-bold text-sm {formData.newOrRedesign === 'redesign' ? `bg-${steps[currentStep].color}-500 border-${steps[currentStep].color}-500 text-white shadow-lg shadow-${steps[currentStep].color}-500/30` : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400 bg-white dark:bg-surface-800/30'}">{$i18n.t('brief.opt_redesign')}</span> </label>
+                                          <label class="radio-pill cursor-pointer"> <input type="radio" name="proj_type" value="new" bind:group={formData.newOrRedesign} class="sr-only"> <span class="px-5 py-2.5 rounded-full border-2 transition-all font-bold text-sm {formData.newOrRedesign === 'new' ? 'selected-themed selected-themed-shadow' : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400 bg-white dark:bg-surface-800/30'}">{$i18n.t('brief.opt_new_site')}</span> </label>
+                                          <label class="radio-pill cursor-pointer"> <input type="radio" name="proj_type" value="redesign" bind:group={formData.newOrRedesign} class="sr-only"> <span class="px-5 py-2.5 rounded-full border-2 transition-all font-bold text-sm {formData.newOrRedesign === 'redesign' ? 'selected-themed selected-themed-shadow' : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400 bg-white dark:bg-surface-800/30'}">{$i18n.t('brief.opt_redesign')}</span> </label>
                                       </div>
                                 </div>
                                  <div class="group">
@@ -739,17 +739,17 @@
                                         </div>
                                      </div>
                                       <div class="flex gap-4">
-                                          <label class="radio-pill cursor-pointer"> <input type="radio" value="yes" bind:group={formData.seoRequired} class="sr-only"> <span class="px-4 py-2 rounded-full border-2 transition-all font-bold text-sm {formData.seoRequired === 'yes' ? `bg-${steps[currentStep].color}-500 border-${steps[currentStep].color}-500 text-white shadow-lg shadow-${steps[currentStep].color}-500/30` : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400 bg-white dark:bg-surface-800/30'}">{$i18n.t('brief.yes')}</span> </label>
-                                          <label class="radio-pill cursor-pointer"> <input type="radio" value="no" bind:group={formData.seoRequired} class="sr-only"> <span class="px-4 py-2 rounded-full border-2 transition-all font-bold text-sm {formData.seoRequired === 'no' ? `bg-${steps[currentStep].color}-500 border-${steps[currentStep].color}-500 text-white shadow-lg shadow-${steps[currentStep].color}-500/30` : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400 bg-white dark:bg-surface-800/30'}">{$i18n.t('brief.no')}</span> </label>
-                                          <label class="radio-pill cursor-pointer"> <input type="radio" value="unsure" bind:group={formData.seoRequired} class="sr-only"> <span class="px-4 py-2 rounded-full border-2 transition-all font-bold text-sm {formData.seoRequired === 'unsure' ? `bg-${steps[currentStep].color}-500 border-${steps[currentStep].color}-500 text-white shadow-lg shadow-${steps[currentStep].color}-500/30` : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400 bg-white dark:bg-surface-800/30'}">{$i18n.t('brief.unsure')}</span> </label>
+                                          <label class="radio-pill cursor-pointer"> <input type="radio" name="seo_ready" value="yes" bind:group={formData.seoRequired} class="sr-only"> <span class="px-4 py-2 rounded-full border-2 transition-all font-bold text-sm {formData.seoRequired === 'yes' ? 'selected-themed selected-themed-shadow' : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400 bg-white dark:bg-surface-800/30'}">{$i18n.t('brief.yes')}</span> </label>
+                                          <label class="radio-pill cursor-pointer"> <input type="radio" name="seo_ready" value="no" bind:group={formData.seoRequired} class="sr-only"> <span class="px-4 py-2 rounded-full border-2 transition-all font-bold text-sm {formData.seoRequired === 'no' ? 'selected-themed selected-themed-shadow' : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400 bg-white dark:bg-surface-800/30'}">{$i18n.t('brief.no')}</span> </label>
+                                          <label class="radio-pill cursor-pointer"> <input type="radio" name="seo_ready" value="unsure" bind:group={formData.seoRequired} class="sr-only"> <span class="px-4 py-2 rounded-full border-2 transition-all font-bold text-sm {formData.seoRequired === 'unsure' ? 'selected-themed selected-themed-shadow' : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400 bg-white dark:bg-surface-800/30'}">{$i18n.t('brief.unsure')}</span> </label>
                                       </div>
                                 </div>
                                  <div class="group">
                                      <span class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">{$i18n.t('brief.lbl_compliance')}</span>
                                       <div class="flex flex-wrap gap-3">
                                           {#each ['gdpr', 'wcag', 'industry', 'none'] as opt}
-                                             <label class="checkbox-card flex items-center justify-center p-3 rounded-xl border-2 cursor-pointer transition-all {formData.compliance.includes(opt) ? `border-${steps[currentStep].color}-500 bg-${steps[currentStep].color}-500 text-white shadow-lg shadow-${steps[currentStep].color}-500/30 font-bold` : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400'}">
-                                                 <input type="checkbox" class="sr-only" value={opt} bind:group={formData.compliance} />
+                                             <label class="checkbox-card flex items-center justify-center p-3 rounded-xl border-2 cursor-pointer transition-all {formData.compliance.includes(opt) ? 'selected-themed selected-themed-shadow' : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400'}">
+                                                 <input type="checkbox" name="compliance_req" class="sr-only" value={opt} bind:group={formData.compliance} />
                                                  <span class="text-center">{$i18n.t(`brief.opt_comp_${opt}`)}</span>
                                              </label>
                                          {/each}
@@ -764,16 +764,16 @@
                                      </div>
                                      <div class="space-y-2">
                                           <label class="radio-card cursor-pointer group"> 
-                                             <input type="radio" value="yes_pos" bind:group={formData.agencyExperience} class="sr-only"> 
-                                             <span class="radio-content block p-4 text-center rounded-xl border-2 transition-all {formData.agencyExperience === 'yes_pos' ? `border-${steps[currentStep].color}-500 bg-${steps[currentStep].color}-500 text-white shadow-lg shadow-${steps[currentStep].color}-500/30 font-bold` : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400'}">{$i18n.t('brief.opt_exp_pos')}</span> 
+                                             <input type="radio" name="exp_agency" value="yes_pos" bind:group={formData.agencyExperience} class="sr-only"> 
+                                             <span class="radio-content block p-4 text-center rounded-xl border-2 transition-all {formData.agencyExperience === 'yes_pos' ? 'selected-themed selected-themed-shadow' : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400'}">{$i18n.t('brief.opt_exp_pos')}</span> 
                                           </label>
                                           <label class="radio-card cursor-pointer group"> 
-                                             <input type="radio" value="yes_neg" bind:group={formData.agencyExperience} class="sr-only"> 
-                                             <span class="radio-content block p-4 text-center rounded-xl border-2 transition-all {formData.agencyExperience === 'yes_neg' ? `border-${steps[currentStep].color}-500 bg-${steps[currentStep].color}-500 text-white shadow-lg shadow-${steps[currentStep].color}-500/30 font-bold` : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400'}">{$i18n.t('brief.opt_exp_neg')}</span> 
+                                             <input type="radio" name="exp_agency" value="yes_neg" bind:group={formData.agencyExperience} class="sr-only"> 
+                                             <span class="radio-content block p-4 text-center rounded-xl border-2 transition-all {formData.agencyExperience === 'yes_neg' ? 'selected-themed selected-themed-shadow' : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400'}">{$i18n.t('brief.opt_exp_neg')}</span> 
                                           </label>
                                           <label class="radio-card cursor-pointer group"> 
-                                             <input type="radio" value="no" bind:group={formData.agencyExperience} class="sr-only"> 
-                                             <span class="radio-content block p-4 text-center rounded-xl border-2 transition-all {formData.agencyExperience === 'no' ? `border-${steps[currentStep].color}-500 bg-${steps[currentStep].color}-500 text-white shadow-lg shadow-${steps[currentStep].color}-500/30 font-bold` : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400'}">{$i18n.t('brief.opt_exp_no')}</span> 
+                                             <input type="radio" name="exp_agency" value="no" bind:group={formData.agencyExperience} class="sr-only"> 
+                                             <span class="radio-content block p-4 text-center rounded-xl border-2 transition-all {formData.agencyExperience === 'no' ? 'selected-themed selected-themed-shadow' : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400'}">{$i18n.t('brief.opt_exp_no')}</span> 
                                           </label>
                                      </div>
                                 </div>
@@ -784,8 +784,8 @@
                                      </div>
                                       <div class="grid md:grid-cols-2 gap-3 mb-3">
                                               {#each ['timeline', 'quality', 'complexity', 'communication'] as opt}
-                                             <label class="checkbox-card flex items-center justify-center p-3 rounded-xl border-2 cursor-pointer transition-all {formData.mainConcern.includes(opt) ? `border-${steps[currentStep].color}-500 bg-${steps[currentStep].color}-500 text-white shadow-lg shadow-${steps[currentStep].color}-500/30 font-bold` : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400'}">
-                                                 <input type="checkbox" class="sr-only" value={opt} bind:group={formData.mainConcern} />
+                                             <label class="checkbox-card flex items-center justify-center p-3 rounded-xl border-2 cursor-pointer transition-all {formData.mainConcern.includes(opt) ? 'selected-themed selected-themed-shadow' : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400'}">
+                                                 <input type="checkbox" name="concerns" class="sr-only" value={opt} bind:group={formData.mainConcern} />
                                                  <span class="text-center">{$i18n.t(`brief.opt_concern_${opt}`)}</span>
                                              </label>
                                          {/each}
@@ -804,17 +804,17 @@
                                         <span class="text-rose-500 text-xl leading-none" title="Required">*</span>
                                      </div>
                                       <div class="flex gap-4">
-                                          <label class="radio-pill cursor-pointer"> <input type="radio" value="yes" bind:group={formData.scaleExpectation} class="sr-only"> <span class="px-5 py-2.5 rounded-full border-2 transition-all font-bold text-sm {formData.scaleExpectation === 'yes' ? `bg-${steps[currentStep].color}-500 border-${steps[currentStep].color}-500 text-white shadow-lg shadow-${steps[currentStep].color}-500/30` : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400 bg-white dark:bg-surface-800/30'}">{$i18n.t('brief.yes')}</span> </label>
-                                          <label class="radio-pill cursor-pointer"> <input type="radio" value="maybe" bind:group={formData.scaleExpectation} class="sr-only"> <span class="px-5 py-2.5 rounded-full border-2 transition-all font-bold text-sm {formData.scaleExpectation === 'maybe' ? `bg-${steps[currentStep].color}-500 border-${steps[currentStep].color}-500 text-white shadow-lg shadow-${steps[currentStep].color}-500/30` : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400 bg-white dark:bg-surface-800/30'}">{$i18n.t('brief.maybe')}</span> </label>
-                                          <label class="radio-pill cursor-pointer"> <input type="radio" value="no" bind:group={formData.scaleExpectation} class="sr-only"> <span class="px-5 py-2.5 rounded-full border-2 transition-all font-bold text-sm {formData.scaleExpectation === 'no' ? `bg-${steps[currentStep].color}-500 border-${steps[currentStep].color}-500 text-white shadow-lg shadow-${steps[currentStep].color}-500/30` : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400 bg-white dark:bg-surface-800/30'}">{$i18n.t('brief.no')}</span> </label>
+                                          <label class="radio-pill cursor-pointer"> <input type="radio" name="scale_up" value="yes" bind:group={formData.scaleExpectation} class="sr-only"> <span class="px-5 py-2.5 rounded-full border-2 transition-all font-bold text-sm {formData.scaleExpectation === 'yes' ? 'selected-themed selected-themed-shadow' : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400 bg-white dark:bg-surface-800/30'}">{$i18n.t('brief.yes')}</span> </label>
+                                          <label class="radio-pill cursor-pointer"> <input type="radio" name="scale_up" value="maybe" bind:group={formData.scaleExpectation} class="sr-only"> <span class="px-5 py-2.5 rounded-full border-2 transition-all font-bold text-sm {formData.scaleExpectation === 'maybe' ? 'selected-themed selected-themed-shadow' : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400 bg-white dark:bg-surface-800/30'}">{$i18n.t('brief.maybe')}</span> </label>
+                                          <label class="radio-pill cursor-pointer"> <input type="radio" name="scale_up" value="no" bind:group={formData.scaleExpectation} class="sr-only"> <span class="px-5 py-2.5 rounded-full border-2 transition-all font-bold text-sm {formData.scaleExpectation === 'no' ? 'selected-themed selected-themed-shadow' : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400 bg-white dark:bg-surface-800/30'}">{$i18n.t('brief.no')}</span> </label>
                                       </div>
                                 </div>
                                 <div class="group">
                                      <span style="color: var(--step-color)" class="block text-sm font-bold opacity-80 mb-2">{$i18n.t('brief.lbl_future_needs')}</span>
                                      <div class="grid md:grid-cols-2 gap-3">
                                          {#each ['marketing', 'features', 'rebranding', 'maintenance', 'analytics'] as opt}
-                                            <label class="checkbox-card flex items-center justify-center p-3 rounded-xl border-2 cursor-pointer transition-all {formData.futureNeeds.includes(opt) ? `border-${steps[currentStep].color}-500 bg-${steps[currentStep].color}-500 text-white shadow-lg shadow-${steps[currentStep].color}-500/30 font-bold` : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400'}">
-                                                <input type="checkbox" class="sr-only" value={opt} bind:group={formData.futureNeeds} />
+                                            <label class="checkbox-card flex items-center justify-center p-3 rounded-xl border-2 cursor-pointer transition-all {formData.futureNeeds.includes(opt) ? 'selected-themed selected-themed-shadow' : 'border-slate-200 dark:border-surface-700/50 text-slate-600 dark:text-slate-400'}">
+                                                <input type="checkbox" name="fut_needs" class="sr-only" value={opt} bind:group={formData.futureNeeds} />
                                                 <span class="text-center">{$i18n.t(`brief.opt_fut_${opt}`)}</span>
                                             </label>
                                         {/each}
