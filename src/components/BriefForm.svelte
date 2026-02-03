@@ -282,7 +282,7 @@
     }
 </script>
 
-<div class="brief-container max-w-7xl mx-auto px-4 py-8 md:py-12 flex flex-col lg:flex-row gap-8 relative mb-100">
+<div class="brief-container max-w-7xl mx-auto px-4 py-8 md:py-12 flex flex-col lg:flex-row gap-8 relative mb-24">
     
     {#if submitSuccess}
         <div class="glass-card p-12 rounded-3xl text-center border-emerald-500/30 bg-emerald-500/5 w-full max-w-3xl mx-auto">
@@ -363,13 +363,12 @@
                 </div>
             </div>
 
-            <form onsubmit={handleSubmit} bind:this={formElement} class="relative min-h-[600px] perspective-1000">
+            <form onsubmit={handleSubmit} bind:this={formElement} class="grid grid-cols-1 grid-rows-1 perspective-1000">
                 
                 {#key currentStep}
                     <div 
-                        class="absolute inset-0 w-full step-content"
+                        class="col-start-1 row-start-1 w-full step-content"
                     >
-                    <!-- Animation wrapper hack to keep layout stable during transition? Or absolute positioning handles it -->
                     <div 
                          in:fly={{ x: 50 * direction, opacity: 0, duration: 400, delay: 150, easing: quintOut }}
                         out:fly={{ x: -50 * direction, opacity: 0, duration: 300, easing: quintOut }}
