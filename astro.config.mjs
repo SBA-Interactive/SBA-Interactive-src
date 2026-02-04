@@ -8,7 +8,7 @@ import Icons from 'unplugin-icons/vite';
 // https://astro.build/config
 export default defineConfig({
     site: 'https://sba-interactive.github.io',
-    base: '/sba-interactive',
+    // base: '/sba-interactive',
     output: 'static',
     integrations: [svelte(), sitemap()],
     vite: {
