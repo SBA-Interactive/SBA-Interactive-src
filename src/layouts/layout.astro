@@ -16,10 +16,10 @@ const {
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
-    <!-- Google tag (gtag.js) -->
-    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-HL7XPCF8EJ"></script>
-    <script is:inline>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-HL7XPCF8EJ');</script>
-    <meta name="google-site-verification" content="rmWHg9Fjfw_SjUJ77HLOw8mNXZRjyNHpmZvWViNUjME" />
+    <script type="application/ld+json">
+      {"@context":"https://schema.org","@type":"ProfessionalService","name":"SBA Interactive","url":"https://sba-interactive.github.io","logo":"https://sba-interactive.github.ioimages/hero.webp","image":"https://sba-interactive.github.ioimages/hero.webp","description":"Premium web development and digital architecture services specializing in high-performance WordPress and custom React solutions.","address":{"@type":"PostalAddress","streetAddress":"Mazowieckie Technikum Innowacji","addressLocality":"Plock","addressCountry":"PL"},"contactPoint":[{"@type":"ContactPoint","email":"hello@sbainteractive.com","contactType":"customer service","availableLanguage":["English","Polish","German","Spanish","French","Italian","Greek","Chinese"]},{"@type":"ContactPoint","email":"help@sbainteractive.com","contactType":"technical support"}],"sameAs":["https://github.com/SBA-Interactive"],"priceRange":"$$$"}
+    </script>
+
     <meta name="description" content={description} />
     <meta name="robots" content="index, follow" />
     
@@ -46,8 +46,16 @@ const {
     <meta name="twitter:description" content="We engineer digital dominance. From high-converting landing pages to complex SaaS platforms." />
     <meta property="twitter:url" content={Astro.url} />
     <meta name="twitter:image" content={new URL('images/hero.webp', Astro.site)} />
-    <meta name="twitter:image:alt" content="SBA Interactive - Elite Digital Engineering" />
-    
+    <meta name="twitter:image:alt" content="SBA Interactive - Elite Digital Engineering" />    
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:site" content="@SBAInteractive" />
+    <meta property="twitter:creator" content="@SBAInteractive" />
+    <meta property="twitter:url" content={Astro.url} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={new URL('images/hero.webp', Astro.site)} />
+    <meta property="twitter:image:alt" content="SBA Interactive Banner" />
+
     <!-- Pinterest Rich Pins -->
     <meta property="og:rich_attachment" content="true" />
     <meta name="pinterest-rich-pin" content="true" />
@@ -80,14 +88,19 @@ const {
     <link rel="alternate" hreflang="zh" href="https://sba-interactive.github.io/sba-interactive?lang=zh" />
     <link rel="alternate" hreflang="x-default" href="https://sba-interactive.github.io/sba-interactive?lang=en" />
 
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:site" content="@SBAInteractive" />
-    <meta property="twitter:creator" content="@SBAInteractive" />
-    <meta property="twitter:url" content={Astro.url} />
-    <meta property="twitter:title" content={title} />
-    <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={new URL('images/hero.webp', Astro.site)} />
-    <meta property="twitter:image:alt" content="SBA Interactive Banner" />
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-58VDBLT8');
+    </script>
+    <!-- End Google Tag Manager -->
+    <!-- Google Tag (gtag.js) -->
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-HL7XPCF8EJ"></script>
+    <script is:inline>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-HL7XPCF8EJ');</script>
+    <meta name="google-site-verification" content="rmWHg9Fjfw_SjUJ77HLOw8mNXZRjyNHpmZvWViNUjME" />
+    <!-- End Google Tag (gtag.js) -->
 
     <link rel="canonical" href={Astro.url} />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
@@ -96,10 +109,6 @@ const {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
-    
-    <script type="application/ld+json">
-      {"@context":"https://schema.org","@type":"ProfessionalService","name":"SBA Interactive","url":"https://sba-interactive.github.io","logo":"https://sba-interactive.github.ioimages/hero.webp","image":"https://sba-interactive.github.ioimages/hero.webp","description":"Premium web development and digital architecture services specializing in high-performance WordPress and custom React solutions.","address":{"@type":"PostalAddress","streetAddress":"Mazowieckie Technikum Innowacji","addressLocality":"Plock","addressCountry":"PL"},"contactPoint":[{"@type":"ContactPoint","email":"hello@sbainteractive.com","contactType":"customer service","availableLanguage":["English","Polish","German","Spanish","French","Italian","Greek","Chinese"]},{"@type":"ContactPoint","email":"help@sbainteractive.com","contactType":"technical support"}],"sameAs":["https://github.com/SBA-Interactive"],"priceRange":"$$$"}
-    </script>
 
     <script>
       (() => {
@@ -134,11 +143,14 @@ const {
     <meta name="generator" content={Astro.generator} />
   </head>
   <body class="min-h-screen flex flex-col">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-58VDBLT8"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
     <Header client:load />
     <main class="flex-grow"><slot /></main>
-    <div class="sr-only" aria-hidden="true">
-      creative agency marketing seo building websites specialized wordpress custom react digital solutions
-    </div>
+    <div class="sr-only" aria-hidden="true">creative agency marketing seo building websites specialized wordpress custom react digital solutions</div>
     <Footer client:visible />
   </body>
 </html>

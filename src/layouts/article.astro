@@ -146,11 +146,14 @@ const {
     <meta name="generator" content={Astro.generator} />
   </head>
   <body class="min-h-screen flex flex-col">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-58VDBLT8"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+     
     <Header client:load />
     <main class="flex-grow"><slot /></main>
-    <div class="sr-only" aria-hidden="true">
-      creative agency marketing seo building websites specialized wordpress custom react digital solutions
-    </div>
+    <div class="sr-only" aria-hidden="true">creative agency marketing seo building websites specialized wordpress custom react digital solutions</div>
     <Footer client:visible />
   </body>
 </html>
