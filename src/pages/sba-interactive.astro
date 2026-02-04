@@ -1,0 +1,31 @@
+---
+import Layout from '../layouts/layout.astro';
+return Astro.redirect('/sba-interactive/', 301);
+---
+
+<Layout 
+  title="SBA Interactive" 
+  description="SBA Interactive - Wordpress, Web Development, and Digital Marketing Services - Creative Agency"
+  ogType="product"
+  ogPrice="From $999"
+>
+  <script>
+    window.location.href = '/sba-interactive/';
+  </script>
+  
+  <noscript>
+    <meta http-equiv="refresh" content="0; url=/sba-interactive/" />
+  </noscript>
+  
+  <div class="min-h-screen flex items-center justify-center">
+    <div class="text-center">
+      <h1 class="text-2xl font-bold mb-4">Redirecting...</h1>
+      <p>If you are not redirected automatically, <a href="/sba-interactive/" class="text-primary-600 hover:text-primary-700 underline">click here</a>.</p>
+    </div>
+  </div>
+  <div class="sr-only">
+    <p>
+        {website}*100+{websites}*100+{wordpress}*100+{webdevelopment}*100+{seo}*100+{digitalmarketing}*100
+    </p>
+  </div>
+</Layout>
