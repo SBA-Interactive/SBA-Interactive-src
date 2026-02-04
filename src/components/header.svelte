@@ -22,7 +22,7 @@
 <header class="sticky top-0 z-50 w-full border-b border-surface-200/50 bg-surface-50/80 backdrop-blur-md dark:border-surface-800/50 dark:bg-surface-900/80 transition-colors duration-300">
 	<div class="container mx-auto px-4 h-16 flex items-center justify-between">
 
-		<a href="" class="flex items-center gap-2 text-xl font-bold tracking-tight">
+		<a href="/" class="flex items-center gap-2 text-xl font-bold tracking-tight">
 			<span class="bg-gradient-to-r from-primary-700 to-primary-500 dark:from-primary-500 dark:to-primary-300 bg-clip-text text-transparent">SBA</span>
 			<span class="hidden sm:inline text-surface-900 dark:text-surface-100">Interactive</span>
 		</a>

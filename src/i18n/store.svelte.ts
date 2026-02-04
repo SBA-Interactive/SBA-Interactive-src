@@ -12,29 +12,29 @@ import uk from './uk.json';
 import tr from './tr.json';
 
 type TranslationSchema = typeof en;
-
 const translationsMap: Record<string, TranslationSchema> = { en, pl, de, es, fr, it, gr, zh, yue, ja, uk, tr };
 
 function getNestedValue(obj: any, path: string): string {
     return path.split('.').reduce((prev, curr) => prev && prev[curr], obj) || path;
 }
 
+// 1. Keep the state reactive
 let currentLang = $state('en');
 const listeners = new Set<(lang: string) => void>();
 
 export const i18n = {
     get lang() { return currentLang; },
     
-    setLang(lang: 'en' | 'pl' | 'de' | 'es' | 'fr' | 'it' | 'gr' | 'zh' | 'yue' | 'ja' | 'uk' | 'tr') {
+    setLang(lang: keyof typeof translationsMap) {
         currentLang = lang;
         listeners.forEach(cb => cb(lang));
 
         if (typeof document !== 'undefined') { document.documentElement.lang = lang; }
-
         if (typeof localStorage !== 'undefined') { localStorage.setItem('sba_lang', lang); }
     },
 
     t(key: string): string {
+        // Accessing currentLang here is reactive
         const translations = translationsMap[currentLang] || en;
         const value = getNestedValue(translations, key);
         
@@ -47,7 +47,11 @@ export const i18n = {
     },
 
     subscribe(fn: (value: { lang: string, t: (key: string) => string }) => void) {
-        const update = () => fn({ lang: currentLang, t: i18n.t });
+        const update = () => fn({ 
+            get lang() { return currentLang; }, 
+            t: (key: string) => i18n.t(key) 
+        });
+        
         listeners.add(update);
         update();
         return () => listeners.delete(update);
@@ -56,7 +60,11 @@ export const i18n = {
 
 if (typeof localStorage !== 'undefined') {
     const saved = localStorage.getItem('sba_lang');
-    if (saved && saved in translationsMap) { currentLang = saved as any; }
+    if (saved && saved in translationsMap) { currentLang = saved; }
 }
 
-if (typeof document !== 'undefined') { document.documentElement.lang = currentLang; }
+if (typeof document !== 'undefined') { 
+    $effect.root(() => {
+        document.documentElement.lang = currentLang;
+    });
+}
