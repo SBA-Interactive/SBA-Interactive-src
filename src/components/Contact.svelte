@@ -286,7 +286,7 @@
 								</div>
 
 								<a 
-									href={`${base}/brief`} 
+									href={`${base}brief`} 
 									class="group flex items-start gap-4 p-3 rounded-2xl bg-amber-100 dark:bg-amber-400/20 border-2 border-amber-300 dark:border-amber-500/30 hover:border-amber-400 dark:hover:border-amber-500/50 hover:bg-amber-100 dark:hover:bg-amber-900/30 transition-all"
 								>
 									<div class="w-10 h-10 rounded-xl bg-amber-400 dark:bg-amber-500 flex items-center justify-center shrink-0 shadow-lg shadow-amber-500/30">

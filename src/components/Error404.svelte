@@ -50,7 +50,7 @@
         <!-- Actions -->
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a 
-                href={`${base}/`}
+                href={`${base}`}
                 class="group flex items-center gap-3 px-8 py-4 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-2xl font-black text-lg hover:scale-105 active:scale-95 transition-all shadow-xl shadow-slate-900/20 dark:shadow-white/10"
             >
                 <IconCarbonHome class="w-5 h-5" />
@@ -58,7 +58,7 @@
             </a>
             
             <a 
-                href={`${base}/brief`}
+                href={`${base}brief/`}
                 class="group flex items-center gap-3 px-8 py-4 bg-white dark:bg-surface-800 text-slate-900 dark:text-white border-2 border-slate-200 dark:border-white/10 rounded-2xl font-black text-lg hover:border-primary-500 dark:hover:border-primary-500 transition-all hover:text-primary-600 dark:hover:text-primary-400"
             >
                 <IconCarbonRocket class="w-5 h-5" />
