@@ -188,9 +188,14 @@
 
     function goToStep(index: number) {
         if (index < 0 || index >= steps.length) return;
+
+        if (window.innerWidth < 1024 || (window.innerHeight > 900 && window.scrollY > 380)) {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
         direction = index > currentStep ? 1 : -1;
         currentStep = index;
-        // Reactivity fix: Create new Set to ensure Svelte 5 updates state
+
         const newVisited = new Set(stepsVisited);
         newVisited.add(index);
         stepsVisited = newVisited;
