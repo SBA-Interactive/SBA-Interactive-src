@@ -44,9 +44,10 @@
 				<h3 class="text-xl font-bold mb-4 text-slate-900 dark:text-white">{$i18n.t('privacy.contact_title')}</h3>
 				<p class="text-slate-600 dark:text-slate-400 mb-6">{$i18n.t('privacy.contact_text')}</p>
 				<a href="mailto:privacy@sbainteractive.com" class="text-primary-600 font-bold hover:underline">privacy@sbainteractive.com</a>
-				<input id="consent_functional" type="checkbox" checked disabled /><label for="consent_functional">Functional (Strictly Necessary) Cookies</label>
-				<input id="consent_performance" type="checkbox" checked /><label for="consent_performance">Performance Cookies</label>
-				<input id="consent_targeting" type="checkbox" /><label for="consent_targeting">Targeting Cookies</label>
+				<br><br><br>
+				<input id="consent_functional" type="checkbox" checked disabled /><label for="consent_functional">Functional (Strictly Necessary) Cookies</label><br>
+				<input id="consent_performance" type="checkbox" checked /><label for="consent_performance">Performance Cookies</label><br>
+				<input id="consent_targeting" type="checkbox" /><label for="consent_targeting">Targeting Cookies</label><br>
 				<button type="button" class="button" id="consent_save">Save Cookie Settings</button>
 			</div>
 		</div>
