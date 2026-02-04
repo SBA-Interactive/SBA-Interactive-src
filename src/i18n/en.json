@@ -490,5 +490,13 @@
     "tooltip_required": "Required",
     "tooltip_todo": "To do",
     "aria_go_to_step": "Go to step {step}"
+  },
+  "error_404": {
+    "pill": "Error 404",
+    "title_1": "Lost in the",
+    "title_2": "Digital Void?",
+    "subtitle": "The page you're looking for has either moved to a higher dimension or was never engineered. Let's get you back to civilization.",
+    "btn_home": "Back to Reality",
+    "btn_project": "Start a Project"
   }
 }

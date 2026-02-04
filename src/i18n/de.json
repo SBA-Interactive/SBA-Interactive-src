@@ -402,5 +402,13 @@
     "tooltip_required": "Erforderlich",
     "tooltip_todo": "Noch zu erledigen",
     "aria_go_to_step": "Zu Schritt {step} gehen"
+  },
+  "error_404": {
+    "pill": "Fehler 404",
+    "title_1": "Verloren im",
+    "title_2": "digitalen Nichts?",
+    "subtitle": "Die Seite, die Sie suchen, ist entweder in eine höhere Dimension umgezogen oder wurde nie entwickelt. Lassen Sie uns Sie zurück in die Zivilisation bringen.",
+    "btn_home": "Zurück zur Realität",
+    "btn_project": "Projekt starten"
   }
 }

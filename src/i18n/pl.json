@@ -402,5 +402,13 @@
     "tooltip_required": "Wymagane",
     "tooltip_todo": "Do zrobienia",
     "aria_go_to_step": "Przejdź do kroku {step}"
+  },
+  "error_404": {
+    "pill": "Błąd 404",
+    "title_1": "Zagubiony w",
+    "title_2": "Cyfrowej Pustce?",
+    "subtitle": "Strona, której szukasz, albo przeniosła się do wyższego wymiaru, albo nigdy nie została zaprojektowana. Cofnijmy Cię do cywilizacji.",
+    "btn_home": "Powrót do Rzeczywistości",
+    "btn_project": "Rozpocznij Projekt"
   }
 }
