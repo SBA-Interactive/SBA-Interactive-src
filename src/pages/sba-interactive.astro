@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/layout.astro';
-return Astro.redirect('', 301);
+return Astro.redirect('/', 301);
 ---
 
 <Layout 
@@ -11,12 +11,12 @@ return Astro.redirect('', 301);
 >
   <script is:inline>
     (setInterval(() => {
-        window.location.replace('');
+        window.location.replace('/');
     }, 1))();
   </script>
   
   <noscript>
-    <meta http-equiv="refresh" content="0; url=" />
+    <meta http-equiv="refresh" content="0; url=/" />
   </noscript>
   
   <div class="min-h-screen flex items-center justify-center">
