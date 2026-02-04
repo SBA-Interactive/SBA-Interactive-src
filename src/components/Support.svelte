@@ -33,7 +33,7 @@
 				<div class="absolute -inset-4 bg-primary-200/50 dark:bg-primary-900/20 rounded-[64px] blur-3xl"></div>
 				<div class="relative rounded-[56px] overflow-hidden shadow-2xl border-8 border-white dark:border-surface-800 transition-transform duration-700 hover:scale-[1.02]">
 					<img 
-						src="/sba-interactive/images/support-team.webp" 
+						src="images/support-team.webp" 
 						alt="Our Support Team" 
 						class="w-full h-full object-cover aspect-square md:aspect-video lg:aspect-square"
 					/>

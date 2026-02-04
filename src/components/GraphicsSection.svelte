@@ -77,7 +77,7 @@
 			<div bind:this={imageContainer} class="relative order-2 lg:order-1">
 				<div class="relative rounded-[64px] overflow-hidden shadow-2xl border-[12px] border-white dark:border-white/5 group transition-transform duration-700 hover:scale-[1.01]">
 					<img 
-						src="/sba-interactive/images/graphics_lifestyle.png" 
+						src="images/graphics_lifestyle.png" 
 						alt="Premium Visual Identity" 
 						class="w-full h-full object-cover aspect-square md:aspect-[4/3] lg:aspect-square group-hover:scale-110 transition-transform duration-1000"
 					/>

@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/layout.astro';
-return Astro.redirect('/sba-interactive/#support', 301);
+return Astro.redirect('#support', 301);
 ---
 
 <Layout 
@@ -10,17 +10,19 @@ return Astro.redirect('/sba-interactive/#support', 301);
   ogPrice="Included"
 >
   <script is:inline>
-    window.location.href = '/sba-interactive/#support';
+    (setInterval(() => {
+        window.location.replace('#support');
+    }, 1))();
   </script>
-  
+
   <noscript>
-    <meta http-equiv="refresh" content="0; url=/sba-interactive/#support" />
+    <meta http-equiv="refresh" content="15; url=#support" />
   </noscript>
   
   <div class="min-h-screen flex items-center justify-center">
     <div class="text-center">
       <h1 class="text-2xl font-bold mb-4">Redirecting to Support...</h1>
-      <p>If you are not redirected automatically, <a href="/sba-interactive/#support" class="text-primary-600 hover:text-primary-700 underline">click here</a>.</p>
+      <p>If you are not redirected automatically, <a href="#support" class="text-primary-600 hover:text-primary-700 underline">click here</a>.</p>
     </div>
   </div>
     <div class="sr-only">

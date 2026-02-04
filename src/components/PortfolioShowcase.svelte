@@ -9,37 +9,37 @@
 
 	const items = $derived([
 		{
-			image: '/sba-interactive/images/pizza-template.webp',
+			image: 'images/pizza-template.webp',
 			title: i18n.t('showcase.pizza_title'),
 			desc: i18n.t('showcase.pizza_desc'),
 			color: 'bg-emerald-100 dark:bg-teal-950'
 		},
 		{
-			image: '/sba-interactive/images/blog-template.webp',
+			image: 'images/blog-template.webp',
 			title: i18n.t('showcase.blog_title'),
 			desc: i18n.t('showcase.blog_desc'),
 			color: 'bg-indigo-100 dark:bg-indigo-950'
 		},
 		{
-			image: '/sba-interactive/images/shop-template.webp',
+			image: 'images/shop-template.webp',
 			title: i18n.t('showcase.shop_title'),
 			desc: i18n.t('showcase.shop_desc'),
 			color: 'bg-blue-100 dark:bg-slate-600'
 		},
 		{
-			image: '/sba-interactive/images/saas-dashboard.webp',
+			image: 'images/saas-dashboard.webp',
 			title: i18n.t('showcase.saas_title'),
 			desc: i18n.t('showcase.saas_desc'),
 			color: 'bg-blue-200 dark:bg-slate-950'
 		},
 		{
-			image: '/sba-interactive/images/nonprofit-organisation.webp',
+			image: 'images/nonprofit-organisation.webp',
 			title: i18n.t('showcase.npo_title'),
 			desc: i18n.t('showcase.npo_desc'),
 			color: 'bg-lime-100 dark:bg-green-950'
 		},
 		{
-			image: '/sba-interactive/images/luxury-hotel.webp',
+			image: 'images/luxury-hotel.webp',
 			title: i18n.t('showcase.hotel_title'),
 			desc: i18n.t('showcase.hotel_desc'),
 			color: 'bg-slate-300 dark:bg-slate-900'

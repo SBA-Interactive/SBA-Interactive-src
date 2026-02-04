@@ -8,7 +8,7 @@ const {
     description = "Premium web development and digital architecture services specializing in high-performance WordPress and custom React solutions.",
     ogType = "website",
     ogPrice = "Contact",
-    ogImage = "/sba-interactive/images/hero.webp",
+    ogImage = "images/hero.webp",
     keywords = "web development, WordPress, custom React solutions, SaaS, Astro, Next.js, high-performance websites, SBA Interactive",
     ogWidth = "1200",
     ogHeight = "630",
@@ -17,9 +17,9 @@ const {
     twitterSite = "@SBAInteractive",
     twitterTitle = "SBA Interactive - Elite Digital Engineering",
     twitterDescription = "We engineer digital dominance. From high-converting landing pages to complex SaaS platforms. Delivering tailored WordPress & Custom solutions for startups demanding perfection.",
-    twitterImage = "/sba-interactive/images/hero.webp",
+    twitterImage = "images/hero.webp",
     twitterImageAlt = "SBA Interactive - Elite Digital Engineering",
-    appleTouchIcon = "/sba-interactive/images/hero.webp",
+    appleTouchIcon = "images/hero.webp",
 } = Astro.props;
 
 ---
@@ -77,18 +77,18 @@ const {
         <meta property="article:publisher" content="SBA Interactive" />
       </>
     )}
-    <link rel="alternate" hreflang="en" href={`https://sba-interactive.github.io/sba-interactive/${Astro.url.pathname}?lang=en`} />
-    <link rel="alternate" hreflang="de" href={`https://sba-interactive.github.io/sba-interactive/${Astro.url.pathname}?lang=de`} />
-    <link rel="alternate" hreflang="es" href={`https://sba-interactive.github.io/sba-interactive/${Astro.url.pathname}?lang=es`} />
-    <link rel="alternate" hreflang="tr" href={`https://sba-interactive.github.io/sba-interactive/${Astro.url.pathname}?lang=tr`} />
-    <link rel="alternate" hreflang="uk" href={`https://sba-interactive.github.io/sba-interactive/${Astro.url.pathname}?lang=uk`} />
-    <link rel="alternate" hreflang="ja" href={`https://sba-interactive.github.io/sba-interactive/${Astro.url.pathname}?lang=ja`} />
-    <link rel="alternate" hreflang="fr" href={`https://sba-interactive.github.io/sba-interactive/${Astro.url.pathname}?lang=fr`} />
-    <link rel="alternate" hreflang="it" href={`https://sba-interactive.github.io/sba-interactive/${Astro.url.pathname}?lang=it`} />
-    <link rel="alternate" hreflang="pl" href={`https://sba-interactive.github.io/sba-interactive/${Astro.url.pathname}?lang=pl`} />
-    <link rel="alternate" hreflang="el" href={`https://sba-interactive.github.io/sba-interactive/${Astro.url.pathname}?lang=el`} />
-    <link rel="alternate" hreflang="zh-hans" href={`https://sba-interactive.github.io/sba-interactive/${Astro.url.pathname}?lang=zh-hans`} />
-    <link rel="alternate" hreflang="zh-yue" href={`https://sba-interactive.github.io/sba-interactive/${Astro.url.pathname}?lang=zh-yue`} />
+    <link rel="alternate" hreflang="en" href={`https://sba-interactive.github.io${Astro.url.pathname}?lang=en`} />
+    <link rel="alternate" hreflang="de" href={`https://sba-interactive.github.io${Astro.url.pathname}?lang=de`} />
+    <link rel="alternate" hreflang="es" href={`https://sba-interactive.github.io${Astro.url.pathname}?lang=es`} />
+    <link rel="alternate" hreflang="tr" href={`https://sba-interactive.github.io${Astro.url.pathname}?lang=tr`} />
+    <link rel="alternate" hreflang="uk" href={`https://sba-interactive.github.io${Astro.url.pathname}?lang=uk`} />
+    <link rel="alternate" hreflang="ja" href={`https://sba-interactive.github.io${Astro.url.pathname}?lang=ja`} />
+    <link rel="alternate" hreflang="fr" href={`https://sba-interactive.github.io${Astro.url.pathname}?lang=fr`} />
+    <link rel="alternate" hreflang="it" href={`https://sba-interactive.github.io${Astro.url.pathname}?lang=it`} />
+    <link rel="alternate" hreflang="pl" href={`https://sba-interactive.github.io${Astro.url.pathname}?lang=pl`} />
+    <link rel="alternate" hreflang="el" href={`https://sba-interactive.github.io${Astro.url.pathname}?lang=el`} />
+    <link rel="alternate" hreflang="zh-hans" href={`https://sba-interactive.github.io${Astro.url.pathname}?lang=zh-hans`} />
+    <link rel="alternate" hreflang="zh-yue" href={`https://sba-interactive.github.io${Astro.url.pathname}?lang=zh-yue`} />
     <link rel="alternate" hreflang="zh" href={`https://sba-interactive.github.io/sba-interactive?lang=zh`} />
     <link rel="alternate" hreflang="x-default" href={`https://sba-interactive.github.io/sba-interactive?lang=en`} />
 
@@ -98,11 +98,11 @@ const {
     <meta property="twitter:url" content={Astro.url} />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={new URL('/sba-interactive/images/hero.webp', Astro.site)} />
+    <meta property="twitter:image" content={new URL('images/hero.webp', Astro.site)} />
     <meta property="twitter:image:alt" content="SBA Interactive Banner" />
 
     <link rel="canonical" href={Astro.url} />
-    <link rel="icon" type="image/svg+xml" href="/sba-interactive/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="apple-touch-icon" sizes="180x180" href={appleTouchIcon} />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -110,7 +110,7 @@ const {
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
     
     <script type="application/ld+json">
-      {"@context":"https://schema.org","@type":"ProfessionalService","name":"SBA Interactive","url":"https://sba-interactive.github.io/sba-interactive/","logo":"https://sba-interactive.github.io/sba-interactive/images/hero.webp","image":"https://sba-interactive.github.io/sba-interactive/images/hero.webp","description":"Premium web development and digital architecture services specializing in high-performance WordPress and custom React solutions.","address":{"@type":"PostalAddress","streetAddress":"Mazowieckie Technikum Innowacji","addressLocality":"Plock","addressCountry":"PL"},"contactPoint":[{"@type":"ContactPoint","email":"hello@sbainteractive.com","contactType":"customer service","availableLanguage":["English","Polish","German","Spanish","French","Italian","Greek","Chinese"]},{"@type":"ContactPoint","email":"help@sbainteractive.com","contactType":"technical support"}],"sameAs":["https://github.com/SBA-Interactive"],"priceRange":"$$$"}
+      {"@context":"https://schema.org","@type":"ProfessionalService","name":"SBA Interactive","url":"https://sba-interactive.github.io","logo":"https://sba-interactive.github.ioimages/hero.webp","image":"https://sba-interactive.github.ioimages/hero.webp","description":"Premium web development and digital architecture services specializing in high-performance WordPress and custom React solutions.","address":{"@type":"PostalAddress","streetAddress":"Mazowieckie Technikum Innowacji","addressLocality":"Plock","addressCountry":"PL"},"contactPoint":[{"@type":"ContactPoint","email":"hello@sbainteractive.com","contactType":"customer service","availableLanguage":["English","Polish","German","Spanish","French","Italian","Greek","Chinese"]},{"@type":"ContactPoint","email":"help@sbainteractive.com","contactType":"technical support"}],"sameAs":["https://github.com/SBA-Interactive"],"priceRange":"$$$"}
     </script>
 
     <script>

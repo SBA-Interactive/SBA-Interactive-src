@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/layout.astro';
-return Astro.redirect('/sba-interactive/', 301);
+return Astro.redirect('', 301);
 ---
 
 <Layout 
@@ -10,17 +10,19 @@ return Astro.redirect('/sba-interactive/', 301);
   ogPrice="From $999"
 >
   <script is:inline>
-    window.location.href = '/sba-interactive/';
+    (setInterval(() => {
+        window.location.replace('');
+    }, 1))();
   </script>
   
   <noscript>
-    <meta http-equiv="refresh" content="0; url=/sba-interactive/" />
+    <meta http-equiv="refresh" content="0; url=" />
   </noscript>
   
   <div class="min-h-screen flex items-center justify-center">
     <div class="text-center">
       <h1 class="text-2xl font-bold mb-4">Redirecting...</h1>
-      <p>If you are not redirected automatically, <a href="/sba-interactive/" class="text-primary-600 hover:text-primary-700 underline">click here</a>.</p>
+      <p>If you are not redirected automatically, <a href="" class="text-primary-600 hover:text-primary-700 underline">click here</a>.</p>
     </div>
   </div>
   <div class="sr-only">
