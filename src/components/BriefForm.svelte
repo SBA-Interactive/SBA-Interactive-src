@@ -249,7 +249,7 @@
 		submitError = '';
 
 		try {
-			const response = await fetch('https://sbaint.letsstartup.eu/contact?type=longassbrief', {
+			const response = await fetch('https://sbaint.letsstartup.eu/contact?type=brief', {
 				method: 'POST',
 				headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
 				body: JSON.stringify(formData)
@@ -285,6 +285,18 @@
     function getStepOut(i: number) {
         return { duration: 200, opacity: 0, easing: quintOut }; // fast fade out
     }
+
+    let isMobile = $state(false);
+
+    $effect(() => {
+        if (typeof window !== 'undefined') {
+            const mq = window.matchMedia('(max-width: 1023px)');
+            isMobile = mq.matches;
+            const handler = (e: MediaQueryListEvent) => isMobile = e.matches;
+            mq.addEventListener('change', handler);
+            return () => mq.removeEventListener('change', handler);
+        }
+    });
 </script>
 
 <div class="brief-container max-w-7xl mx-auto px-4 py-8 md:py-12 flex flex-col lg:flex-row gap-8 relative mb-24">
@@ -375,8 +387,8 @@
                         class="col-start-1 row-start-1 w-full step-content"
                     >
                     <div 
-                         in:fly={{ x: 50 * direction, opacity: 0, duration: 400, delay: 150, easing: quintOut }}
-                        out:fly={{ x: -50 * direction, opacity: 0, duration: 300, easing: quintOut }}
+                         in:fly={{ x: isMobile ? 0 : 50 * direction, y: isMobile ? 50 : 0, opacity: 0, duration: 400, delay: 150, easing: quintOut }}
+                        out:fly={{ x: isMobile ? 0 : -50 * direction, y: isMobile ? -50 : 0, opacity: 0, duration: 300, easing: quintOut }}
                     >
                         <div class="glass-card p-6 md:p-10 rounded-3xl border-2 transition-all duration-500 {stepColors[steps[currentStep].color]}"
                         style="--step-color: var(--color-{steps[currentStep].color}-500, {steps[currentStep].color}); --step-color-dark: color-mix(in srgb, var(--color-{steps[currentStep].color}-500, {steps[currentStep].color}), black 25%);">

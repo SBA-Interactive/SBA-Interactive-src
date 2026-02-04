@@ -25,7 +25,7 @@
 	let submitSuccess = $state(false);
 	let submitError = $state('');
 
-	const FORM_ACTION_URL = 'https://sbaint.letsstartup.eu/contact?type=quick'; // Replace with actual URL
+	const FORM_ACTION_URL = 'https://sbaint.letsstartup.eu/contact?type=quickcontact';
 
 	async function handleSubmit(e: Event) {
 		e.preventDefault();
