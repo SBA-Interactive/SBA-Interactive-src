@@ -1,5 +1,14 @@
 {
   "read_more": "閱讀更多",
+  "cookies": {
+    "title": "我哋尊重你嘅隱私",
+    "description": "我哋使用 Cookie 嚟增強你嘅瀏覽體驗、投放個性化廣告或內容，並分析我哋嘅流量。點擊「全部接受」，即表示你同意我哋使用 Cookie。",
+    "accept": "全部接受",
+    "decline": "全部拒絕",
+    "manage_title": "管理 Cookie 同意",
+    "manage_desc": "你可以隨時更改你嘅 Cookie 偏好。撤回同意將會清除你嘅選擇並重置跟踪設置。",
+    "revoke": "撤回所有同意"
+  },
   "hero": {
     "pill": "顶尖数字工程",
     "title_1": "我哋打造",

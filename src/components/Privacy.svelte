@@ -40,15 +40,38 @@
 				<p>{$i18n.t('privacy.s4_text')}</p>
 			</section>
 
-			<div class="mt-16 p-8 bg-slate-100 dark:bg-surface-800 rounded-3xl border border-slate-200 dark:border-surface-700">
+			<div class="mt-16 p-10 bg-slate-50 dark:bg-white/5 rounded-[40px] border border-slate-200 dark:border-white/10 shadow-xl relative overflow-hidden group">
+				<div class="absolute -top-24 -right-24 w-64 h-64 bg-primary-500/5 rounded-full blur-3xl"></div>
+				
+				<div class="relative z-10 text-center md:text-left">
+					<h3 class="text-3xl font-black mb-4 text-slate-900 dark:text-white tracking-tight">{$i18n.t('cookies.manage_title')}</h3>
+					<p class="text-slate-500 dark:text-slate-400 text-lg font-medium mb-10 max-w-2xl">{$i18n.t('cookies.manage_desc')}</p>
+					
+					<button 
+						type="button" 
+						onclick={() => {
+							localStorage.removeItem('cookie-consent');
+							if (typeof window !== 'undefined' && (window as any).gtag) {
+								(window as any).gtag('consent', 'update', {
+									'analytics_storage': 'denied',
+									'ad_storage': 'denied',
+									'ad_user_data': 'denied',
+									'ad_personalization': 'denied'
+								});
+							}
+							window.location.reload();
+						}}
+						class="px-10 py-5 rounded-[24px] bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-black hover:scale-105 active:scale-95 transition-all shadow-2xl shadow-black/10 text-lg"
+					>
+						{$i18n.t('cookies.revoke')}
+					</button>
+				</div>
+			</div>
+
+			<div class="mt-12 p-8 bg-slate-100 dark:bg-surface-800 rounded-3xl border border-slate-200 dark:border-surface-700">
 				<h3 class="text-xl font-bold mb-4 text-slate-900 dark:text-white">{$i18n.t('privacy.contact_title')}</h3>
 				<p class="text-slate-600 dark:text-slate-400 mb-6">{$i18n.t('privacy.contact_text')}</p>
 				<a href="mailto:privacy@sbainteractive.com" class="text-primary-600 font-bold hover:underline">privacy@sbainteractive.com</a>
-				<br><br><br>
-				<input id="consent_functional" type="checkbox" checked disabled /><label for="consent_functional">Functional (Strictly Necessary) Cookies</label><br>
-				<input id="consent_performance" type="checkbox" checked /><label for="consent_performance">Performance Cookies</label><br>
-				<input id="consent_targeting" type="checkbox" /><label for="consent_targeting">Targeting Cookies</label><br>
-				<button type="button" class="button" id="consent_save">Save Cookie Settings</button>
 			</div>
 		</div>
 	</div>

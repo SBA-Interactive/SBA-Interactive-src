@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import Header from "../components/header.svelte";
 import Footer from "../components/footer.svelte";
+import CookieConsent from "../components/CookieConsent.svelte";
 
 const { 
   title = "SBA Interactive", 
@@ -88,6 +89,31 @@ const {
     <link rel="alternate" hreflang="zh" href="https://sba-interactive.github.io/sba-interactive?lang=zh" />
     <link rel="alternate" hreflang="x-default" href="https://sba-interactive.github.io/sba-interactive?lang=en" />
 
+    <!-- Base Consent Mode -->
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      
+      const storedConsent = localStorage.getItem('cookie-consent');
+      if (storedConsent) {
+        const prefs = JSON.parse(storedConsent);
+        gtag('consent', 'default', {
+          'ad_storage': prefs.marketing ? 'granted' : 'denied',
+          'ad_user_data': prefs.marketing ? 'granted' : 'denied',
+          'ad_personalization': prefs.marketing ? 'granted' : 'denied',
+          'analytics_storage': prefs.analytics ? 'granted' : 'denied'
+        });
+      } else {
+        gtag('consent', 'default', {
+          'ad_storage': 'denied',
+          'ad_user_data': 'denied',
+          'ad_personalization': 'denied',
+          'analytics_storage': 'denied',
+          'wait_for_update': 500
+        });
+      }
+    </script>
+
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -98,7 +124,7 @@ const {
     <!-- End Google Tag Manager -->
     <!-- Google Tag (gtag.js) -->
     <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-HL7XPCF8EJ"></script>
-    <script is:inline>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-HL7XPCF8EJ');</script>
+    <script is:inline>gtag('js', new Date()); gtag('config', 'G-HL7XPCF8EJ');</script>
     <meta name="google-site-verification" content="rmWHg9Fjfw_SjUJ77HLOw8mNXZRjyNHpmZvWViNUjME" />
     <!-- End Google Tag (gtag.js) -->
 
@@ -152,5 +178,6 @@ const {
     <main class="flex-grow"><slot /></main>
     <div class="sr-only" aria-hidden="true">creative agency marketing seo building websites specialized wordpress custom react digital solutions</div>
     <Footer client:visible />
+    <CookieConsent client:load />
   </body>
 </html>

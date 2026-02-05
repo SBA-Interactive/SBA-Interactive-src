@@ -1,5 +1,14 @@
 {
   "read_more": "Mehr lesen",
+  "cookies": {
+    "title": "Wir respektieren Ihre Privatsphäre",
+    "description": "Wir verwenden Cookies, um Ihr Surferlebnis zu verbessern, personalisierte Anzeigen oder Inhalte bereitzustellen und unseren Datenverkehr zu analysieren. Durch Klicken auf „Alle akzeptieren“ stimmen Sie unserer Verwendung von Cookies zu.",
+    "accept": "Alle akzeptieren",
+    "decline": "Alle ablehnen",
+    "manage_title": "Cookie-Einwilligung verwalten",
+    "manage_desc": "Sie können Ihre Cookie-Einstellungen jederzeit ändern. Der Widerruf der Einwilligung löscht Ihre Auswahl und setzt die Tracking-Einstellungen zurück.",
+    "revoke": "Alle Einwilligungen widerrufen"
+  },
   "hero": {
     "pill": "Elite Digitale Entwicklung",
     "title_1": "Wir entwerfen",

@@ -1,5 +1,14 @@
 {
   "read_more": "Leggi di più",
+  "cookies": {
+    "title": "Rispettiamo la tua privacy",
+    "description": "Utilizziamo i cookie per migliorare la tua esperienza di navigazione, servire annunci o contenuti personalizzati e analizzare il nostro traffico. Facendo clic su \"Accetta tutto\", acconsenti al nostro utilizzo dei cookie.",
+    "accept": "Accetta tutto",
+    "decline": "Rifiuta tutto",
+    "manage_title": "Gestisci il consenso ai cookie",
+    "manage_desc": "Puoi cambiare le tue preferenze sui cookie in qualsiasi momento. La revoca del consenso cancellerà la tua scelta e resetterà le impostazioni di tracciamento.",
+    "revoke": "Revoca tutto il consenso"
+  },
   "hero": {
     "pill": "Ingegneria Digitale d'Élite",
     "title_1": "Ingegnerizziamo",

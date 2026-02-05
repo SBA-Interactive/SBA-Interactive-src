@@ -1,5 +1,14 @@
 {
   "read_more": "Czytaj więcej",
+  "cookies": {
+    "title": "Szanujemy Twoją prywatność",
+    "description": "Używamy plików cookie, aby poprawić komfort przeglądania, wyświetlać spersonalizowane reklamy lub treści oraz analizować nasz ruch. Klikając „Akceptuj wszystko”, wyrażasz zgodę na używanie przez nas plików cookie.",
+    "accept": "Akceptuj wszystko",
+    "decline": "Odrzuć wszystko",
+    "manage_title": "Zarządzaj zgodą na pliki cookie",
+    "manage_desc": "W każdej chwili możesz zmienić swoje preferencje dotyczące plików cookie. Wycofanie zgody spowoduje wyczyszczenie wyboru i zresetowanie ustawień śledzenia.",
+    "revoke": "Wycofaj wszystkie zgody"
+  },
   "Back": "Wstecz",
   "Next": "Dalej",
   "hero": {

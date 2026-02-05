@@ -116,9 +116,17 @@
 					{$i18n.t('graphics.title_3')}
 				</h2>
 				
-				<p class="text-slate-600 dark:text-slate-400 text-2xl mb-16 leading-tight font-medium max-w-lg">
+				<p class="text-slate-600 dark:text-slate-400 text-2xl mb-12 leading-tight font-medium max-w-lg">
 					{$i18n.t('graphics.subtitle')}
 				</p>
+
+				<div class="flex gap-4 mb-16">
+					<div class="w-16 h-[2px] bg-slate-200 dark:bg-surface-800 self-center"></div>
+					<a href="#contact" class="group flex items-center gap-4 text-xl font-black text-slate-900 dark:text-white">
+						{$i18n.t('services.btn_build')}
+						<span class="w-12 h-12 rounded-full border-2 border-slate-200 dark:border-surface-800 flex items-center justify-center group-hover:bg-primary-600 group-hover:border-primary-600 group-hover:text-white transition-all">→</span>
+					</a>
+				</div>
 
 				<div class="space-y-6">
 					{#each benefits as benefit, i}

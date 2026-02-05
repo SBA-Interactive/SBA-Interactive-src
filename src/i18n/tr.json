@@ -1,5 +1,14 @@
 {
-  "read_more": "Daha Fazla Oku",
+  "read_more": "Daha fazla oku",
+  "cookies": {
+    "title": "Gizliliğinize saygı duyuyoruz",
+    "description": "Gezinme deneyiminizi geliştirmek, kişiselleştirilmiş reklamlar veya içerik sunmak ve trafiğimizi analiz etmek için çerezleri kullanıyoruz. \"Tümünü Kabul Et\" düğmesine tıklayarak çerez kullanımımıza izin vermiş olursunuz.",
+    "accept": "Tümünü Kabul Et",
+    "decline": "Tümünü Reddet",
+    "manage_title": "Çerez İznini Yönet",
+    "manage_desc": "Çerez tercihlerinizi istediğiniz zaman değiştirebilirsiniz. İzni geri çekmek seçiminizi temizleyecek ve izleme ayarlarını sıfırlayacaktır.",
+    "revoke": "Tüm İzni Geri Çek"
+  },
   "hero": {
     "pill": "Elit Dijital Mühendislik",
     "title_1": "Biz",

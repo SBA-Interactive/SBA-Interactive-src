@@ -73,7 +73,7 @@
 	function fadeIn(node: HTMLElement, delay = 0) {
 		const stop = inView(node, () => {
 			animate(node, 
-				{ transform: ['translateY(20px)', 'translateY(0px)'], opacity: [0, 1] }, 
+				{ y: [20, 0], opacity: [0, 1] }, 
 				{ duration: 0.4, delay, easing: "ease-out" }
 			);
 		}, { margin: "0px 0px -2% 0px" });
@@ -99,12 +99,21 @@
 
 <section id="pricing" bind:this={section} class="section-padding bg-surface-50 dark:bg-slate-950 transition-colors duration-500">
 	<div class="container mx-auto px-4">
-		<div bind:this={header} class="text-center max-w-3xl mx-auto mb-20 text-balance">
-			<div class="text-primary-600 font-black uppercase tracking-[0.4em] text-sm mb-6">{$i18n.t('pricing.pill')}</div>
-			<h2 class="text-5xl md:text-7xl font-black mb-8 leading-[0.9]">{$i18n.t('pricing.title_1')} <span class="bg-gradient-to-r from-primary-600 to-indigo-600 bg-clip-text text-transparent italic">{$i18n.t('pricing.title_2')}</span></h2>
-			<p class="text-xl text-slate-500 dark:text-slate-400 font-medium">
-				{$i18n.t('pricing.subtitle')}
-			</p>
+		<div bind:this={header} class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-12 mb-20">
+			<div class="max-w-3xl">
+				<div class="text-primary-600 font-black uppercase tracking-[0.4em] text-sm mb-6">{$i18n.t('pricing.pill')}</div>
+				<h2 class="text-5xl md:text-7xl font-black mb-8 leading-[0.9]">{$i18n.t('pricing.title_1')} <span class="bg-gradient-to-r from-primary-600 to-indigo-600 bg-clip-text text-transparent italic">{$i18n.t('pricing.title_2')}</span></h2>
+				<p class="text-xl text-slate-500 dark:text-slate-400 font-medium">
+					{$i18n.t('pricing.subtitle')}
+				</p>
+			</div>
+			<div class="flex gap-4">
+				<div class="w-16 h-[2px] bg-slate-200 dark:bg-surface-800 self-center"></div>
+				<a href="#contact" class="group flex items-center gap-4 text-xl font-black text-slate-900 dark:text-white">
+					{$i18n.t('services.btn_build')}
+					<span class="w-12 h-12 rounded-full border-2 border-slate-200 dark:border-surface-800 flex items-center justify-center group-hover:bg-primary-600 group-hover:border-primary-600 group-hover:text-white transition-all">→</span>
+				</a>
+			</div>
 		</div>
 
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">

@@ -1,5 +1,14 @@
 {
   "read_more": "Leer más",
+  "cookies": {
+    "title": "Respetamos su privacidad",
+    "description": "Utilizamos cookies para mejorar su experiencia de navegación, servir anuncios o contenidos personalizados y analizar nuestro tráfico. Al hacer clic en \"Aceptar todo\", usted consiente nuestro uso de cookies.",
+    "accept": "Aceptar todo",
+    "decline": "Rechazar todo",
+    "manage_title": "Gestionar el consentimiento de cookies",
+    "manage_desc": "Puede cambiar sus preferencias de cookies en cualquier momento. Revocar el consentimiento borrará su elección y restablecerá la configuración de seguimiento.",
+    "revoke": "Revocar todo el consentimiento"
+  },
   "hero": {
     "pill": "Ingeniería Digital de Élite",
     "title_1": "Ingeniamos",

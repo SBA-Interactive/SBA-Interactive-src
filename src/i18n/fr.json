@@ -1,5 +1,14 @@
 {
   "read_more": "Lire la suite",
+  "cookies": {
+    "title": "Nous respectons votre vie privée",
+    "description": "Nous utilisons des cookies pour améliorer votre expérience de navigation, diffuser des publicités ou des contenus personnalisés et analyser notre trafic. En cliquant sur « Tout accepter », vous consentez à notre utilisation des cookies.",
+    "accept": "Tout accepter",
+    "decline": "Tout refuser",
+    "manage_title": "Gérer le consentement aux cookies",
+    "manage_desc": "Vous pouvez modifier vos préférences en matière de cookies à tout moment. La révocation du consentement effacera votre choix et réinitialisera les paramètres de suivi.",
+    "revoke": "Révoquer tout consentement"
+  },
   "hero": {
     "pill": "Ingénierie Numérique d'Élite",
     "title_1": "Nous Ingénions",

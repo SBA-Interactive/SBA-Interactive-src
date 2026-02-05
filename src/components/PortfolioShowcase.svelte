@@ -71,15 +71,24 @@
 
 <section id="showcase" bind:this={section} class="section-padding bg-white dark:bg-surface-950 transition-colors duration-500 overflow-hidden">
 	<div class="container mx-auto px-4">
-		<div bind:this={header} class="max-w-4xl mb-24">
-			<!-- <div class="text-primary-600 font-black uppercase tracking-[0.4em] text-sm mb-6">{$i18n.t('showcase.pill')}</div> -->
-			<h2 class="text-6xl md:text-9xl font-black mb-10 leading-[0.8] tracking-tighter text-slate-900 dark:text-white">
-				{$i18n.t('showcase.title_1')} <br/>
-				<span class="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent">{$i18n.t('showcase.title_2')}</span>
-			</h2>
-			<p class="text-2xl text-slate-500 dark:text-slate-400 leading-tight font-medium max-w-2xl">
-				{$i18n.t('showcase.subtitle')}
-			</p>
+		<div bind:this={header} class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-12 mb-24">
+			<div class="max-w-4xl">
+				<!-- <div class="text-primary-600 font-black uppercase tracking-[0.4em] text-sm mb-6">{$i18n.t('showcase.pill')}</div> -->
+				<h2 class="text-6xl md:text-9xl font-black mb-10 leading-[0.8] tracking-tighter text-slate-900 dark:text-white">
+					{$i18n.t('showcase.title_1')} <br/>
+					<span class="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent">{$i18n.t('showcase.title_2')}</span>
+				</h2>
+				<p class="text-2xl text-slate-500 dark:text-slate-400 leading-tight font-medium max-w-2xl">
+					{$i18n.t('showcase.subtitle')}
+				</p>
+			</div>
+			<div class="flex gap-4">
+				<div class="w-16 h-[2px] bg-slate-200 dark:bg-surface-800 self-center"></div>
+				<a href="#contact" class="group flex items-center gap-4 text-xl font-black text-slate-900 dark:text-white">
+					{$i18n.t('services.btn_build')}
+					<span class="w-12 h-12 rounded-full border-2 border-slate-200 dark:border-surface-800 flex items-center justify-center group-hover:bg-primary-600 group-hover:border-primary-600 group-hover:text-white transition-all">→</span>
+				</a>
+			</div>
 		</div>
 
 		<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

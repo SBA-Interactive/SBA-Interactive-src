@@ -88,9 +88,17 @@
 					{$i18n.t('features.title_1')} <br/> {$i18n.t('features.title_2')} <br/> 
 					<span class="bg-gradient-to-r from-primary-600 via-primary-400 to-primary-600 dark:from-primary-400 dark:via-white dark:to-primary-400 bg-clip-text text-transparent italic">{$i18n.t('features.title_3')}</span>
 				</h2>
-				<p class="text-slate-600 dark:text-slate-400 text-2xl mb-16 leading-tight font-medium max-w-lg">
+				<p class="text-slate-600 dark:text-slate-400 text-2xl mb-12 leading-tight font-medium max-w-lg">
 					{$i18n.t('features.subtitle')}
 				</p>
+
+				<div class="flex gap-4 mb-16">
+					<div class="w-16 h-[2px] bg-slate-200 dark:bg-surface-800 self-center"></div>
+					<a href="#contact" class="group flex items-center gap-4 text-xl font-black text-slate-900 dark:text-white">
+						{$i18n.t('services.btn_build')}
+						<span class="w-12 h-12 rounded-full border-2 border-slate-200 dark:border-surface-800 flex items-center justify-center group-hover:bg-primary-600 group-hover:border-primary-600 group-hover:text-white transition-all">→</span>
+					</a>
+				</div>
 				
 				<div class="grid grid-cols-2 gap-8">
 					<div class="p-8 bg-white dark:bg-white/[0.03] border border-slate-200 dark:border-white/10 rounded-[32px] backdrop-blur-xl group hover:border-primary-500/50 transition-all shadow-lg dark:shadow-none">

@@ -1,5 +1,14 @@
 {
   "read_more": "阅读更多",
+  "cookies": {
+    "title": "我们尊重您的隐私",
+    "description": "我们使用 Cookie 来增强您的浏览体验、投放个性化广告或内容并分析我们的流量。点击“全部接受”，即表示您同意我们使用 Cookie。",
+    "accept": "全部接受",
+    "decline": "全部拒绝",
+    "manage_title": "管理 Cookie 同意",
+    "manage_desc": "您可以随时更改您的 Cookie 偏好。撤销同意将清除您的选择并重置跟踪设置。",
+    "revoke": "撤销所有同意"
+  },
   "hero": {
     "pill": "顶尖数字工程",
     "title_1": "我们工程化",

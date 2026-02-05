@@ -1,5 +1,14 @@
 {
   "read_more": "Read More",
+  "cookies": {
+    "title": "We respect your privacy",
+    "description": "We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking \"Accept All\", you consent to our use of cookies.",
+    "accept": "Accept All",
+    "decline": "Decline All",
+    "manage_title": "Manage Cookie Consent",
+    "manage_desc": "You can change your cookie preferences at any time. Revoking consent will clear your choice and reset the tracking settings.",
+    "revoke": "Revoke All Consent"
+  },
   "Back": "Back",
   "Next": "Next",
   "hero": {

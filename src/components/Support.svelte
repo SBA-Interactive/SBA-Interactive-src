@@ -63,6 +63,14 @@
 					{$i18n.t('support.subtitle')}
 				</p>
 
+				<div class="flex gap-4 mb-16">
+					<div class="w-16 h-[2px] bg-slate-200 dark:bg-surface-800 self-center"></div>
+					<a href="#contact" class="group flex items-center gap-4 text-xl font-black text-slate-900 dark:text-white">
+						{$i18n.t('services.btn_build')}
+						<span class="w-12 h-12 rounded-full border-2 border-slate-200 dark:border-surface-800 flex items-center justify-center group-hover:bg-primary-600 group-hover:border-primary-600 group-hover:text-white transition-all">→</span>
+					</a>
+				</div>
+
 				<div class="grid sm:grid-cols-2 gap-8 mb-12">
 					<div class="p-8 rounded-[32px] bg-white dark:bg-surface-800 shadow-xl shadow-black/[0.02]">
 						<div class="w-14 h-14 rounded-2xl bg-primary-50 dark:bg-primary-900/20 flex items-center justify-center text-primary-600 mb-6">
@@ -80,13 +88,7 @@
 					</div>
 				</div>
 
-				<a 
-					href="#contact" 
-					class="inline-flex items-center gap-4 py-6 px-10 rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-xl font-black transition-transform hover:scale-105"
-				>
-					{$i18n.t('support.btn')}
-					<span>→</span>
-				</a>
+
 			</div>
 		</div>
 	</div>
