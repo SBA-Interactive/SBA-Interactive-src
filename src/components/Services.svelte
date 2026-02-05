@@ -27,7 +27,7 @@
 			bg: 'bg-[var(--color-pastel-blue)] dark:bg-[var(--color-pastel-blue-dark)]'
 		},
 		{
-			id: 'custom',
+			id: 'custom-solutions',
 			slug: 'custom-solutions',
 			icon: IconCarbonCode,
 			title: i18n.t('services.card_custom_title'),
@@ -165,7 +165,7 @@
 							<div class="progress-bar h-full bg-primary-500 w-0 group-[.focal-active]:w-full transition-all duration-400"></div>
 						</div>
 						<div class="w-1/2">
-							<a href={`${baseUrl}/services/${service.id}`} class="group font-semibold flex items-center gap-4 text-xl text-blue-500 dark:text-blue-400 hover:text-cyan-600 dark:hover:text-cyan-200 leading-relaxed tracking-widest">{$i18n.t('read_more')}</a>
+							<a href={`${baseUrl}articles/${service.id}`} class="group font-semibold flex items-center gap-4 text-xl text-blue-500 dark:text-blue-400 hover:text-cyan-600 dark:hover:text-cyan-200 leading-relaxed tracking-widest">{$i18n.t('read_more')}</a>
 						</div>
 					</div>
 				</div>

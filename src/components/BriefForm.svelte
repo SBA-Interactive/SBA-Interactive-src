@@ -249,7 +249,7 @@
 		submitError = '';
 
 		try {
-			const response = await fetch('https://sbaint.letsstartup.eu/contact?type=brief', {
+			const response = await fetch('https://sbaint.letsstartup.eu/contact?type=longassbrief', {
 				method: 'POST',
 				headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
 				body: JSON.stringify(formData)

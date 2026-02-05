@@ -1,0 +1,2 @@
+dist/images/graphics_lifestyle.png filter=lfs diff=lfs merge=lfs -text
+public/images/graphics_lifestyle.png filter=lfs diff=lfs merge=lfs -text
