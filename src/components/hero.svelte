@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { animate, stagger } from 'motion';
 	import IconCarbonSettings from 'virtual:icons/carbon/settings';
 	import IconCarbonCode from 'virtual:icons/carbon/code';
 	import IconCarbonDevelopment from 'virtual:icons/carbon/development';
@@ -13,6 +14,7 @@
 			scrollY = window.scrollY;
 		};
 		window.addEventListener('scroll', handleScroll, { passive: true });
+
 		return () => window.removeEventListener('scroll', handleScroll);
 	});
 </script>
@@ -74,7 +76,7 @@
 
 
 			<div class="lg:col-span-5 grid gap-5">
-				<div class="glass-card p-6 rounded-[32px] flex items-center gap-5 transition-all duration-300 cursor-default border border-white/40 dark:border-white/5">
+				<div class="glass-card p-6 rounded-[32px] flex items-center gap-5 transition-all duration-300 cursor-default border border-white/40 dark:border-white/5 hover:scale-105 hover:-translate-y-2 hover:shadow-2xl">
 					<div class="w-14 h-14 rounded-[20px] bg-blue-50 dark:bg-blue-900/80 flex items-center justify-center text-blue-600 dark:text-blue-400 shrink-0">
 						<IconCarbonSettings class="w-7 h-7" />
 					</div>
@@ -84,7 +86,7 @@
 					</div>
 				</div>
 
-				<div class="glass-card p-6 rounded-[32px] flex items-center gap-5 transition-all duration-300 cursor-default border border-white/40 dark:border-white/5">
+				<div class="glass-card p-6 rounded-[32px] flex items-center gap-5 transition-all duration-300 cursor-default border border-white/40 dark:border-white/5 hover:scale-105 hover:-translate-y-2 hover:shadow-2xl">
 					<div class="w-14 h-14 rounded-[20px] bg-purple-50 dark:bg-purple-900/20 flex items-center justify-center text-purple-600 dark:text-purple-400 shrink-0">
 						<IconCarbonCode class="w-7 h-7" />
 					</div>
@@ -94,7 +96,7 @@
 					</div>
 				</div>
 
-				<div class="glass-card p-6 rounded-[32px] flex items-center gap-5 transition-all duration-300 cursor-default border border-white/40 dark:border-white/5">
+				<div class="glass-card p-6 rounded-[32px] flex items-center gap-5 transition-all duration-300 cursor-default border border-white/40 dark:border-white/5 hover:scale-105 hover:-translate-y-2 hover:shadow-2xl">
 					<div class="w-14 h-14 rounded-[20px] bg-emerald-50 dark:bg-emerald-900/20 flex items-center justify-center text-emerald-600 dark:text-emerald-400 shrink-0">
 						<IconCarbonDevelopment class="w-7 h-7" />
 					</div>

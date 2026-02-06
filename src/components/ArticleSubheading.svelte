@@ -2,7 +2,7 @@
     const { 
         id,
         title,
-        textColor = 'white'
+        textColor = 'slate-800 dark:text-slate-100'
     } = $props();
 </script>
 

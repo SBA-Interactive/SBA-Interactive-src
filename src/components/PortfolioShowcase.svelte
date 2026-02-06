@@ -47,31 +47,33 @@
 	]);
 
 	onMount(() => {
-		// Header animation
+		// Header animation with staggered children
 		if (header) {
+			const headerChildren = header.children;
 			inView(header, () => {
-				animate(header, 
-					{ y: [30, 0], opacity: [0, 1] }, 
-					{ duration: 0.8, easing: "ease-out" }
+				header.style.opacity = '1';
+				animate(Array.from(headerChildren), 
+					{ y: [30, 0], opacity: [0, 1] } as any, 
+					{ delay: stagger(0.12), duration: 0.8, easing: [0.22, 1, 0.36, 1] }
 				);
-			}, { margin: "-10% 0px -10% 0px" });
+			}, { amount: 0.2 });
 		}
 
 		// Cards animation with stagger
 		if (section) {
 			inView(section, () => {
 				animate(showcaseCards, 
-					{ y: [50, 0], opacity: [0, 1] }, 
-					{ delay: stagger(0.1), duration: 0.8, easing: "ease-out" }
+					{ y: [40, 0], opacity: [0, 1] } as any, 
+					{ delay: stagger(0.1, { start: 0.2 }), duration: 0.8, easing: [0.22, 1, 0.36, 1] }
 				);
-			}, { margin: "-5% 0px -5% 0px" });
+			}, { amount: 0.1 });
 		}
 	});
 </script>
 
 <section id="showcase" bind:this={section} class="section-padding bg-white dark:bg-surface-950 transition-colors duration-500 overflow-hidden">
 	<div class="container mx-auto px-4">
-		<div bind:this={header} class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-12 mb-24">
+		<div bind:this={header} class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-12 mb-24 opacity-0">
 			<div class="max-w-4xl">
 				<!-- <div class="text-primary-600 font-black uppercase tracking-[0.4em] text-sm mb-6">{$i18n.t('showcase.pill')}</div> -->
 				<h2 class="text-6xl md:text-9xl font-black mb-10 leading-[0.8] tracking-tighter text-slate-900 dark:text-white">

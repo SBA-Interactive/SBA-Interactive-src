@@ -29,7 +29,7 @@
         <p>{i18n.t('article_design.section1_p2')}</p>
 
         <figure>
-            <img src={`${baseUrl}images/graphics_lifestyle.png`} alt="UI/UX Design Process and Visual Identity" class="w-full rounded-3xl my-12 shadow-2xl">
+            <img src={`${baseUrl}images/graphics_lifestyle.png`} alt="UI/UX Design Process and Visual Identity" class="rounded-3xl my-12 shadow-2xl">
         </figure>
 
         <section aria-labelledby="why-wordpress-heading" class="mb-12">
@@ -66,7 +66,7 @@
 
     <!-- OUR SOLUTION: Dark Section -->
     <ArticleDarkSection id="our-solution-heading" title={i18n.t('article_design.section2_title')}>
-        <ArticleSubheading id="solution-tagline" title={i18n.t('article_design.section2_h3')} />
+        <ArticleSubheading id="solution-tagline" title={i18n.t('article_design.section2_h3')} textColor="white" />
         
         <p class="text-xl md:text-2xl text-center !text-primary-400 font-semibold !mb-10 max-w-3xl mx-auto">
             {i18n.t('article_design.section2_p1')}
@@ -124,7 +124,7 @@
         <p>{i18n.t('article_design.section4_p2')}</p>
 
         <figure>
-            <img src={scalableImage.src} alt="Scalable Infrastructure Visualization" class="w-full rounded-3xl my-12 shadow-2xl">
+            <img src={scalableImage.src} alt="Scalable Infrastructure Visualization" class="rounded-3xl my-12 shadow-2xl">
         </figure>
     </ArticleSection>
 

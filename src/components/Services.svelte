@@ -74,23 +74,25 @@
 	]);
 
 	onMount(() => {
-		// Header animation
+		// Header animation with staggered children
 		if (header) {
+			const headerChildren = header.querySelectorAll(':scope > div');
 			inView(header, () => {
-				animate(header, 
-					{ y: [30, 0], opacity: [0, 1] }, 
-					{ duration: 0.8, easing: [0.22, 1, 0.36, 1] }
+				header.style.opacity = '1';
+				animate(Array.from(headerChildren), 
+					{ y: [30, 0], opacity: [0, 1] } as any, 
+					{ delay: stagger(0.1), duration: 0.8, easing: [0.22, 1, 0.36, 1] }
 				);
-			}, { margin: "-10% 0px -10% 0px" });
+			}, { amount: 0.2 });
 		}
 
-		// Cards entrance animation
+		// Cards entrance animation with better stagger
 		inView(section, () => {
 			animate(serviceCards, 
-				{ y: [30, 0], opacity: [0, 1] }, 
-				{ delay: stagger(0.1), duration: 0.6, easing: "ease-out" }
+				{ y: [40, 0], opacity: [0, 1] } as any, 
+				{ delay: stagger(0.08, { start: 0.1 }), duration: 0.7, easing: [0.22, 1, 0.36, 1] }
 			);
-		}, { margin: "-10% 0px -10% 0px" });
+		}, { amount: 0.1 });
 
 		// Focal active effect on scroll
 		serviceCards.forEach((card) => {
@@ -98,7 +100,7 @@
 				inView(card, ({ target }) => {
 					target.classList.add('focal-active');
 					return () => target.classList.remove('focal-active');
-				}, { margin: "-40% 0px -40% 0px" });
+				}, { amount: 0.6 }); // Trigger when 60% in view
 			}
 		});
 	});
@@ -124,7 +126,7 @@
 
 <section id="services" bind:this={section} class="section-padding bg-slate-50 dark:bg-surface-950 transition-colors duration-500 relative">
 	<div class="container mx-auto px-4 relative z-10">
-		<div bind:this={header} class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-12 mb-24">
+		<div bind:this={header} class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-12 mb-24 opacity-0">
 			<div class="max-w-3xl">
 				<div class="text-primary-600 font-black uppercase tracking-[0.4em] text-sm mb-6">{$i18n.t('services.pill')}</div>
 				<h2 class="text-6xl md:text-8xl font-black mb-8 leading-[0.85] tracking-tight text-slate-900 dark:text-white">

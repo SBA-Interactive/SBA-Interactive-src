@@ -80,3 +80,10 @@ input[type="radio"]:checked + span {
 .selected-themed-shadow {
     box-shadow: 0 10px 25px -5px color-mix(in srgb, var(--step-color), transparent 50%) !important;
 }
+
+.selected-themed-gradient {
+    background: linear-gradient(135deg, var(--step-color), var(--step-color-dark)) !important;
+    color: white !important;
+    font-weight: 700 !important;
+}
+

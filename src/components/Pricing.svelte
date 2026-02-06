@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { animate, inView } from 'motion';
+	import { animate, inView, stagger } from 'motion';
 	import IconCarbonCheckmarkFilled from 'virtual:icons/carbon/checkmark-filled';
 	import { i18n } from '../i18n/store.svelte.ts';
 
@@ -73,10 +73,10 @@
 	function fadeIn(node: HTMLElement, delay = 0) {
 		const stop = inView(node, () => {
 			animate(node, 
-				{ y: [20, 0], opacity: [0, 1] }, 
-				{ duration: 0.4, delay, easing: "ease-out" }
+				{ y: [30, 0], opacity: [0, 1] } as any, 
+				{ duration: 0.7, delay, easing: [0.22, 1, 0.36, 1] }
 			);
-		}, { margin: "0px 0px -2% 0px" });
+		}, { amount: 0.1 });
 
 		return {
 			destroy() {
@@ -87,19 +87,21 @@
 
 	onMount(() => {
 		if (header) {
+			const headerChildren = header.children;
 			inView(header, () => {
-				animate(header, 
-					{ transform: ['translateY(20px)', 'translateY(0px)'], opacity: [0, 1] }, 
-					{ duration: 0.4, easing: "ease-out" }
+				header.style.opacity = '1';
+				animate(Array.from(headerChildren), 
+					{ y: [30, 0], opacity: [0, 1] } as any, 
+					{ delay: stagger(0.12), duration: 0.8, easing: [0.22, 1, 0.36, 1] }
 				);
-			}, { margin: "-5% 0px -5% 0px" });
+			}, { amount: 0.2 });
 		}
 	});
 </script>
 
 <section id="pricing" bind:this={section} class="section-padding bg-surface-50 dark:bg-slate-950 transition-colors duration-500">
 	<div class="container mx-auto px-4">
-		<div bind:this={header} class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-12 mb-20">
+		<div bind:this={header} class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-12 mb-20 opacity-0">
 			<div class="max-w-3xl">
 				<div class="text-primary-600 font-black uppercase tracking-[0.4em] text-sm mb-6">{$i18n.t('pricing.pill')}</div>
 				<h2 class="text-5xl md:text-7xl font-black mb-8 leading-[0.9]">{$i18n.t('pricing.title_1')} <span class="bg-gradient-to-r from-primary-600 to-indigo-600 bg-clip-text text-transparent italic">{$i18n.t('pricing.title_2')}</span></h2>

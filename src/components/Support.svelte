@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { animate, inView } from 'motion';
+	import { animate, inView, stagger } from 'motion';
 	import { i18n } from '../i18n/store.svelte.ts';
 	import IconCarbonChat from 'virtual:icons/carbon/chat';
 	import IconCarbonEventSchedule from 'virtual:icons/carbon/event-schedule';
@@ -11,16 +11,25 @@
 
 	onMount(() => {
 		if (section && content && imageContainer) {
+			const elements = content.children;
+			
 			inView(section, () => {
-				animate(content, 
-					{ x: [-50, 0], opacity: [0, 1] }, 
-					{ duration: 1, easing: "ease-out" }
+				// Show containers immediately
+				content.style.opacity = '1';
+				imageContainer.style.opacity = '1';
+
+				// Animate text elements with stagger
+				animate(Array.from(elements), 
+					{ y: [40, 0], opacity: [0, 1] } as any, 
+					{ delay: stagger(0.1, { start: 0.05 }), duration: 0.8, easing: [0.22, 1, 0.36, 1] }
 				);
+				
+				// Animate image with a slight spring feel
 				animate(imageContainer, 
-					{ scale: [0.9, 1], opacity: [0, 1] }, 
-					{ duration: 1.2, easing: [0.16, 1, 0.3, 1] }
+					{ scale: [0.9, 1], opacity: [0, 1] } as any, 
+					{ delay: 0.15, duration: 1, easing: [0.16, 1, 0.3, 1] }
 				);
-			}, { margin: "-20% 0px -20% 0px" });
+			}, { amount: 0.1 });
 		}
 	});
 </script>
@@ -29,7 +38,7 @@
 	<div class="container mx-auto px-4">
 		<div class="flex flex-col lg:flex-row items-center gap-20">
 			<!-- Image Side -->
-			<div bind:this={imageContainer} class="relative w-full lg:w-1/2">
+			<div bind:this={imageContainer} class="relative w-full lg:w-1/2 opacity-0">
 				<div class="absolute -inset-4 bg-primary-200/50 dark:bg-primary-900/20 rounded-[64px] blur-3xl"></div>
 				<div class="relative rounded-[56px] overflow-hidden shadow-2xl border-8 border-white dark:border-surface-800 transition-transform duration-700 hover:scale-[1.02]">
 					<img 
@@ -53,7 +62,7 @@
 			</div>
 
 			<!-- Content Side -->
-			<div bind:this={content} class="w-full lg:w-1/2">
+			<div bind:this={content} class="w-full lg:w-1/2 opacity-0">
 				<div class="text-primary-600 font-black uppercase tracking-[0.4em] text-sm mb-6">{$i18n.t('support.pill')}</div>
 				<h2 class="text-6xl md:text-8xl font-black mb-8 leading-[0.85] tracking-tight text-slate-900 dark:text-white">
 					{$i18n.t('support.title_1')} <br/>

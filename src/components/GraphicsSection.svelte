@@ -36,30 +36,33 @@
 
 	onMount(() => {
 		if (content) {
+			const contentChildren = content.children;
 			inView(content, () => {
-				animate(content, 
-					{ y: [30, 0], opacity: [0, 1] }, 
-					{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }
+				content.style.opacity = '1';
+				animate(Array.from(contentChildren), 
+					{ y: [30, 0], opacity: [0, 1] } as any, 
+					{ delay: stagger(0.12), duration: 0.8, easing: [0.22, 1, 0.36, 1] }
 				);
-			}, { margin: "-10% 0px -10% 0px" });
+			}, { amount: 0.2 });
 		}
 
 		if (imageContainer) {
 			inView(imageContainer, () => {
+				imageContainer.style.opacity = '1';
 				animate(imageContainer, 
-					{ scale: [0.95, 1], opacity: [0, 1] }, 
-					{ duration: 1, ease: "ease-out" }
+					{ scale: [0.9, 1], opacity: [0, 1] } as any, 
+					{ delay: 0.2, duration: 1, easing: [0.16, 1, 0.3, 1] }
 				);
-			}, { margin: "-10% 0px -10% 0px" });
+			}, { amount: 0.2 });
 		}
 
 		if (cards.length > 0) {
 			inView(section, () => {
 				animate(cards, 
-					{ y: [20, 0], opacity: [0, 1] }, 
-					{ delay: stagger(0.1), duration: 0.6, ease: "ease-out" }
+					{ y: [30, 0], opacity: [0, 1] } as any, 
+					{ delay: stagger(0.1, { start: 0.4 }), duration: 0.6, easing: "ease-out" }
 				);
-			});
+			}, { amount: 0.1 });
 		}
 	});
 </script>
@@ -74,7 +77,7 @@
 		<div class="grid lg:grid-cols-2 gap-20 items-center">
 			
 			<!-- Image Side -->
-			<div bind:this={imageContainer} class="relative order-2 lg:order-1">
+			<div bind:this={imageContainer} class="relative order-2 lg:order-1 opacity-0">
 				<div class="relative rounded-[64px] overflow-hidden shadow-2xl border-[12px] border-white dark:border-white/5 group transition-transform duration-700 hover:scale-[1.01]">
 					<img 
 						src="images/graphics_lifestyle.png" 
@@ -102,7 +105,7 @@
 			</div>
 
 			<!-- Content Side -->
-			<div bind:this={content} class="order-1 lg:order-2">
+			<div bind:this={content} class="order-1 lg:order-2 opacity-0">
 				<div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-rose-500/10 dark:bg-rose-500/5 border border-rose-500/20 text-rose-600 dark:text-rose-400 text-sm font-black mb-8 tracking-widest uppercase">
 					<span class="w-2 h-2 rounded-full bg-rose-500"></span>
 					{$i18n.t('graphics.pill')}

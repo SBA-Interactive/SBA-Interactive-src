@@ -40,24 +40,26 @@
 	]);
 
 	onMount(() => {
-		// Animate text content
+		// Animate text content with stagger
 		if (textContent) {
+			const textChildren = textContent.children;
 			inView(textContent, () => {
-				animate(textContent, 
-					{ y: [30, 0], opacity: [0, 1] }, 
-					{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }
+				textContent.style.opacity = '1';
+				animate(Array.from(textChildren), 
+					{ y: [30, 0], opacity: [0, 1] } as any, 
+					{ delay: stagger(0.12), duration: 0.8, easing: [0.22, 1, 0.36, 1] }
 				);
-			}, { margin: "-10% 0px -10% 0px" });
+			}, { amount: 0.2 });
 		}
 
 		// Animate cards with stagger
 		if (section) {
 			inView(section, () => {
 				animate(cards, 
-					{ y: [30, 0], opacity: [0, 1] }, 
-					{ delay: stagger(0.1), duration: 0.6, ease: "ease-out" }
+					{ y: [40, 0], opacity: [0, 1] } as any, 
+					{ delay: stagger(0.1, { start: 0.2 }), duration: 0.7, easing: [0.22, 1, 0.36, 1] }
 				);
-			}, { margin: "-10% 0px -10% 0px" });
+			}, { amount: 0.1 });
 		}
 
 		// Animate tech stack
@@ -65,9 +67,9 @@
 			inView(techStack, () => {
 				animate(techStack, 
 					{ y: [30, 0], opacity: [0, 1] }, 
-					{ duration: 0.8, delay: 0.4, ease: "ease-out" }
+					{ duration: 0.8, delay: 0.4, easing: [0.22, 1, 0.36, 1] }
 				);
-			}, { margin: "-10% 0px -10% 0px" });
+			}, { amount: 0.2 });
 		}
 	});
 </script>
@@ -79,7 +81,7 @@
 
 	<div class="container mx-auto px-4 relative z-10">
 		<div class="grid lg:grid-cols-2 gap-24 items-center">
-			<div bind:this={textContent}>
+			<div bind:this={textContent} class="opacity-0">
 				<div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-primary-500/10 dark:bg-white/5 border border-primary-500/20 dark:border-white/10 text-primary-600 dark:text-primary-400 text-sm font-black mb-8 tracking-widest uppercase shadow-xl dark:shadow-2xl">
 					<span class="w-2 h-2 rounded-full bg-primary-500"></span>
 					{$i18n.t('features.pill')}

@@ -1,9 +1,30 @@
 <script lang='ts'>
+    import { onMount } from 'svelte';
+    import { animate, stagger } from 'motion';
     const { title, date, children } = $props();
+
+    let titleContainer: HTMLElement;
+    let contentContainer: HTMLElement;
+
+    onMount(() => {
+        if (titleContainer) {
+            animate(titleContainer, 
+                { y: [30, 0], opacity: [0, 1] } as any, 
+                { duration: 0.8, easing: [0.22, 1, 0.36, 1] }
+            );
+        }
+
+        if (contentContainer) {
+            animate(contentContainer, 
+                { y: [20, 0], opacity: [0, 1] } as any, 
+                { delay: 0.2, duration: 1, easing: [0.22, 1, 0.36, 1] }
+            );
+        }
+    });
 </script>
 
 <div class="container">
-    <div class="title-container glass-card mb-12 relative overflow-hidden group">
+    <div bind:this={titleContainer} class="title-container glass-card mb-12 relative overflow-hidden group opacity-0">
         <div class="absolute inset-0 pastel-gradient opacity-10 group-hover:opacity-20 transition-opacity duration-700"></div>
         <div class="relative z-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 w-full">
             <h1 class="m-0 text-3xl md:text-5xl font-heading tracking-tight leading-tight drop-shadow-sm">{@html title}</h1>
@@ -14,7 +35,7 @@
         </div>
     </div>
     
-    <div class="content relative pl-10 md:pl-16">
+    <div bind:this={contentContainer} class="content relative pl-0 md:pl-16 opacity-0">
         <div class="absolute left-0 top-4 bottom-4 w-1.5 bg-gradient-to-b from-primary-400 via-secondary-400 to-primary-500/20 hidden md:block rounded-full shadow-[0_0_30px_rgba(14,165,233,0.8),0_0_60px_rgba(14,165,233,0.4)]"></div>
         {@render children()}
     </div>
@@ -55,7 +76,7 @@ h1 {
 }
 
 :global(.content img) {
-    @apply shadow-[0_60px_100px_-20px_rgba(0,0,0,0.4)] transition-all duration-700 hover:scale-[1.03] rounded-[3.5rem] border border-slate-200 dark:border-white/5;
+    @apply block mx-auto max-w-full lg:max-w-4xl shadow-[0_60px_100px_-20px_rgba(0,0,0,0.4)] transition-all duration-700 hover:scale-[1.03] rounded-[3.5rem] border border-slate-200 dark:border-white/5;
 }
 
 :global(.cta-btn) {

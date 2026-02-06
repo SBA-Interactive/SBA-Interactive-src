@@ -391,7 +391,9 @@
                         out:fly={{ x: isMobile ? 0 : -50 * direction, y: isMobile ? -50 : 0, opacity: 0, duration: 300, easing: quintOut }}
                     >
                         <div class="glass-card p-6 md:p-10 rounded-3xl border-2 transition-all duration-500 {stepColors[steps[currentStep].color]}"
-                        style="--step-color: var(--color-{steps[currentStep].color}-500, {steps[currentStep].color}); --step-color-dark: color-mix(in srgb, var(--color-{steps[currentStep].color}-500, {steps[currentStep].color}), black 25%);">
+                        style="--step-color: var(--color-{steps[currentStep].color}-500, {steps[currentStep].color}); 
+                               --step-color-dark: color-mix(in srgb, var(--color-{steps[currentStep].color}-500, {steps[currentStep].color}), black 25%);
+                               --step-color-light: color-mix(in srgb, var(--color-{steps[currentStep].color}-500, {steps[currentStep].color}), white 70%);">
                         <div class="flex items-center gap-4 mb-8">
                             <span class="text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-linear-to-br {titleGradients[steps[currentStep].color]} opacity-80">
                                 {currentStep + 1}
@@ -609,19 +611,21 @@
                                         <span class="block text-sm font-bold text-slate-700 dark:text-slate-300">{$i18n.t('brief.lbl_conversion_vs_branding')}</span>
                                         <span class="text-rose-500 text-xl leading-none" title={$i18n.t('brief.tooltip_required')}>*</span>
                                      </div>
-                                     <div class="flex items-center justify-between gap-4 max-w-xl mx-auto md:mx-0">
-                                        <span class="text-xs md:text-sm font-bold text-slate-500 uppercase">{$i18n.t('brief.lbl_mostly_branding')}</span>
-                                        <div class="flex gap-2 md:gap-4">
+                                     <div class="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-4 max-w-2xl mx-auto md:mx-0 py-6">
+                                        <span class="text-xs md:text-sm font-bold text-slate-500 uppercase order-1 md:order-1 text-center md:text-left opacity-70">{$i18n.t('brief.lbl_mostly_branding')}</span>
+                                        <div class="flex gap-2 md:gap-4 order-2 md:order-2 items-center">
                                             {#each [1, 2, 3, 4, 5] as val}
-                                                <label class="cursor-pointer relative">
-                                                    <input type="radio" name="conversion_scale" value={val} bind:group={formData.conversionBrandingScale} class="sr-only peer">
-                                                     <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-slate-100 dark:bg-surface-700 flex items-center justify-center font-bold transition-all border border-slate-200 dark:border-surface-600 peer-checked:selected-themed peer-checked:scale-110 peer-checked:selected-themed-shadow peer-checked:border-transparent">
+                                                {@const isSelected = formData.conversionBrandingScale === val}
+                                                <label class="cursor-pointer relative transition-all duration-500 {isSelected ? 'scale-110 z-10' : 'scale-80 opacity-40 hover:opacity-80'}">
+                                                    <input type="radio" name="conversion_scale" value={val} bind:group={formData.conversionBrandingScale} class="sr-only">
+                                                     <div class="w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center font-black transition-all border-2 {isSelected ? 'border-transparent shadow-2xl' : 'border-slate-200 dark:border-surface-700 bg-slate-50 dark:bg-surface-800'}"
+                                                          style={isSelected ? `background: linear-gradient(135deg, var(--step-color), var(--step-color-dark)) !important; color: white !important; box-shadow: 0 15px 30px -10px color-mix(in srgb, var(--step-color), transparent 30%);` : `color: var(--step-color);`}>
                                                         {val}
                                                     </div>
                                                 </label>
                                             {/each}
                                         </div>
-                                        <span class="text-xs md:text-sm font-bold text-slate-500 uppercase">{$i18n.t('brief.lbl_mostly_conversion')}</span>
+                                        <span class="text-xs md:text-sm font-bold text-slate-500 uppercase order-3 md:order-3 text-center md:text-right opacity-70">{$i18n.t('brief.lbl_mostly_conversion')}</span>
                                      </div>
                                 </div>
 

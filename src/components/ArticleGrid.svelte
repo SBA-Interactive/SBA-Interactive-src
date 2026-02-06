@@ -11,7 +11,7 @@
             <span class="text-primary-500 font-bold mb-2 block text-2xl group-hover:scale-110 transition-transform duration-300">
                 {(i + 1).toString().padStart(2, '0')}
             </span>
-            <p class="m-0 text-base leading-relaxed">{item}</p>
+            <p class="m-0 text-base leading-relaxed text-slate-700 dark:text-slate-300">{item}</p>
         </div>
     {/each}
 </div>

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { animate, inView } from 'motion';
+	import { animate, inView, stagger } from 'motion';
 	import IconCarbonSend from 'virtual:icons/carbon/send';
 	import IconCarbonUser from 'virtual:icons/carbon/user';
 	import IconCarbonEmail from 'virtual:icons/carbon/email';
@@ -57,14 +57,27 @@
 		}
 	}
 
+	let header: HTMLElement;
+
 	onMount(() => {
+		if (header) {
+			const headerChildren = header.children;
+			inView(header, () => {
+				header.style.opacity = '1';
+				animate(Array.from(headerChildren), 
+					{ y: [30, 0], opacity: [0, 1] } as any, 
+					{ delay: stagger(0.12), duration: 0.8, easing: [0.22, 1, 0.36, 1] }
+				);
+			}, { amount: 0.2 });
+		}
+
 		if (mainCard) {
 			inView(mainCard, () => {
 				animate(mainCard, 
-					{ y: [40, 0], opacity: [0, 1], scale: [0.97, 1] }, 
-					{ duration: 0.9, easing: "ease-out" }
+					{ y: [40, 0], opacity: [0, 1], scale: [0.98, 1] } as any, 
+					{ delay: 0.2, duration: 0.9, easing: [0.22, 1, 0.36, 1] }
 				);
-			}, { margin: "0px 0px -10% 0px" });
+			}, { amount: 0.1 });
 		}
 	});
 </script>
@@ -84,7 +97,7 @@
 	<div class="container mx-auto px-4">
 		
 		<!-- Header -->
-		<div class="text-center mb-12 md:mb-16">
+		<div bind:this={header} class="text-center mb-12 md:mb-16 opacity-0">
 			<div class="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-primary-500/10 dark:bg-primary-500/20 text-primary-600 dark:text-primary-400 text-xs font-black uppercase tracking-[0.3em] mb-8 border border-primary-500/20 dark:border-primary-500/30 backdrop-blur-md">
 				<span class="relative flex h-2 w-2">
 					<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-400 opacity-75"></span>
@@ -92,10 +105,10 @@
 				</span>
 				{$i18n.t('quick_contact.pill')}
 			</div>
-			<h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter leading-[0.9] mb-6">
+			<h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter leading-[0.9] mb-6">
 				<span class="text-slate-900 dark:text-white">{$i18n.t('quick_contact.title_1')}</span><br/>
 				<span class="bg-linear-to-r from-primary-500 via-secondary-500 to-primary-600 bg-clip-text text-transparent italic">{$i18n.t('quick_contact.title_2')}</span>
-			</h1>
+			</h2>
 			<p class="text-lg md:text-xl text-slate-500 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed font-medium">
 				{$i18n.t('quick_contact.subtitle')}
 			</p>
