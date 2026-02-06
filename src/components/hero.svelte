@@ -23,10 +23,14 @@
 
 	<div class="absolute inset-0 -z-10 bg-white dark:bg-surface-950 overflow-hidden">
 
-        <div 
-            class="absolute inset-0 w-full h-full bg-cover bg-center opacity-20 dark:opacity-60 pointer-events-none z-0" 
-            style="background-image: url({typeof heroBg === 'string' ? heroBg : heroBg.src});"
-        ></div>
+		<img 
+			src={typeof heroBg === 'string' ? heroBg : heroBg.src}
+			alt=""
+			class="absolute inset-0 w-full h-full object-cover object-center opacity-20 dark:opacity-60 pointer-events-none z-0"
+			loading="eager"
+			fetchpriority="high"
+			aria-hidden="true"
+		/>
         
         <!-- Pastel gradient overlay -->
         <div class="absolute inset-0 pastel-gradient"></div>

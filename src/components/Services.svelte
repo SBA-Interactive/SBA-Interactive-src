@@ -167,7 +167,7 @@
 							<div class="progress-bar h-full bg-primary-500 w-0 group-[.focal-active]:w-full transition-all duration-400"></div>
 						</div>
 						<div class="w-1/2">
-							<a href={`${baseUrl}articles/${service.id}`} class="group font-semibold flex items-center gap-4 text-xl text-blue-500 dark:text-blue-400 hover:text-cyan-600 dark:hover:text-cyan-200 leading-relaxed tracking-widest">{$i18n.t('read_more')}</a>
+							<a href={`${baseUrl}articles/${service.id}`} class="group font-semibold flex items-center gap-4 text-xl text-blue-500 dark:text-blue-400 hover:text-cyan-600 dark:hover:text-cyan-200 leading-relaxed tracking-widest">{$i18n.t('read_more')}<span aria-hidden="false" class="sr-only"> Read more about {service.title} ~ <span aria-hidden="true">Author: SBA INTERACTIVE</span></span> </a>
 						</div>
 					</div>
 				</div>

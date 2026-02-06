@@ -7,6 +7,7 @@
 	import IconCarbonImageSearch from 'virtual:icons/carbon/image-search';
     import IconCarbonInventoryManagement from 'virtual:icons/carbon/inventory-management';
     import IconCarbonMoney from 'virtual:icons/carbon/money';
+    import lifestyleImg from '../assets/images/graphics_lifestyle.png';
 
 	let section: HTMLElement;
 	let content: HTMLElement;
@@ -80,9 +81,10 @@
 			<div bind:this={imageContainer} class="relative order-2 lg:order-1 opacity-0">
 				<div class="relative rounded-[64px] overflow-hidden shadow-2xl border-[12px] border-white dark:border-white/5 group transition-transform duration-700 hover:scale-[1.01]">
 					<img 
-						src="images/graphics_lifestyle.png" 
+						src={typeof lifestyleImg === 'string' ? lifestyleImg : lifestyleImg.src} 
 						alt="Premium Visual Identity" 
 						class="w-full h-full object-cover aspect-square md:aspect-[4/3] lg:aspect-square group-hover:scale-110 transition-transform duration-1000"
+						loading="lazy"
 					/>
 					
 					<!-- Overlay Glass Card -->

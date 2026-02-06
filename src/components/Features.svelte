@@ -88,7 +88,7 @@
 				</div>
 				<h2 class="text-6xl md:text-8xl font-black mb-10 leading-[0.85] tracking-tighter text-slate-900 dark:text-white">
 					{$i18n.t('features.title_1')} <br/> {$i18n.t('features.title_2')} <br/> 
-					<span class="bg-gradient-to-r from-primary-600 via-primary-400 to-primary-600 dark:from-primary-400 dark:via-white dark:to-primary-400 bg-clip-text text-transparent italic">{$i18n.t('features.title_3')}</span>
+					<span class="inline-block bg-gradient-to-r from-primary-600 via-primary-400 to-primary-600 dark:from-primary-400 dark:via-white dark:to-primary-400 bg-clip-text text-transparent italic py-4 -my-4 px-2 -mx-2">{$i18n.t('features.title_3')}</span>
 				</h2>
 				<p class="text-slate-600 dark:text-slate-400 text-2xl mb-12 leading-tight font-medium max-w-lg">
 					{$i18n.t('features.subtitle')}

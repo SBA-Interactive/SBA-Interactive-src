@@ -4,6 +4,7 @@
 	import { i18n } from '../i18n/store.svelte.ts';
 	import IconCarbonChat from 'virtual:icons/carbon/chat';
 	import IconCarbonEventSchedule from 'virtual:icons/carbon/event-schedule';
+	import supportTeamImg from '../assets/images/support-team.webp';
 
 	let section: HTMLElement;
 	let content: HTMLElement;
@@ -42,9 +43,10 @@
 				<div class="absolute -inset-4 bg-primary-200/50 dark:bg-primary-900/20 rounded-[64px] blur-3xl"></div>
 				<div class="relative rounded-[56px] overflow-hidden shadow-2xl border-8 border-white dark:border-surface-800 transition-transform duration-700 hover:scale-[1.02]">
 					<img 
-						src="images/support-team.webp" 
+						src={typeof supportTeamImg === 'string' ? supportTeamImg : supportTeamImg.src} 
 						alt="Our Support Team" 
 						class="w-full h-full object-cover aspect-square md:aspect-video lg:aspect-square"
+						loading="lazy"
 					/>
 				</div>
 				<!-- Floating Stat -->
@@ -66,7 +68,7 @@
 				<div class="text-primary-600 font-black uppercase tracking-[0.4em] text-sm mb-6">{$i18n.t('support.pill')}</div>
 				<h2 class="text-6xl md:text-8xl font-black mb-8 leading-[0.85] tracking-tight text-slate-900 dark:text-white">
 					{$i18n.t('support.title_1')} <br/>
-					<span class="bg-gradient-to-r from-emerald-500 to-primary-600 bg-clip-text text-transparent italic">{$i18n.t('support.title_2')}</span>
+					<span class="block pr-4 pb-6 bg-linear-to-r from-emerald-500 to-primary-600 bg-clip-text text-transparent italic">{$i18n.t('support.title_2')}</span>
 				</h2>
 				<p class="text-2xl text-slate-500 dark:text-slate-400 leading-tight font-medium max-w-xl mb-12">
 					{$i18n.t('support.subtitle')}

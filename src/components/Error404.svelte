@@ -39,7 +39,7 @@
         <!-- Title -->
         <h1 class="text-5xl sm:text-7xl md:text-8xl font-black tracking-tighter leading-[0.8] mb-8">
             <span class="text-slate-900 dark:text-white">{$i18n.t('error_404.title_1')}</span><br/>
-            <span class="bg-linear-to-r from-primary-500 via-secondary-500 to-primary-600 bg-clip-text text-transparent italic">{$i18n.t('error_404.title_2')}</span>
+            <span class="inline-block pb-5 pr-4 bg-linear-to-r from-primary-500 via-secondary-500 to-primary-600 bg-clip-text text-transparent italic">{$i18n.t('error_404.title_2')}</span>
         </h1>
 
         <!-- Subtitle -->
