@@ -14,7 +14,7 @@
 	let imageContainer: HTMLElement;
 	let cards: HTMLElement[] = $state([]);
 
-	const benefits = [
+	const benefits = $derived([
 		{
 			title: i18n.t('graphics.benefit_1_title'),
 			description: i18n.t('graphics.benefit_1_desc'),
@@ -33,7 +33,7 @@
 			icon: IconCarbonImageSearch,
 			color: 'text-amber-500'
 		}
-	];
+	]);
 
 	onMount(() => {
 		if (content) {
