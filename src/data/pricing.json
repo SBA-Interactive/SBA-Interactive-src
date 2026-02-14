@@ -1,0 +1,63 @@
+{
+  "plans": [
+    {
+      "id": "wordpress",
+      "nameKey": "pricing.plan_starter_name",
+      "price": "999",
+      "descriptionKey": "pricing.plan_starter_desc",
+      "featureKeys": [
+        "pricing.plan_starter_f1",
+        "pricing.plan_starter_f2",
+        "pricing.plan_starter_f3",
+        "pricing.plan_starter_f4",
+        "pricing.plan_starter_f5"
+      ],
+      "isPopular": false
+    },
+    {
+      "id": "custom_web",
+      "nameKey": "pricing.plan_pro_name",
+      "price": "2499",
+      "descriptionKey": "pricing.plan_pro_desc",
+      "featureKeys": [
+        "pricing.plan_pro_f1",
+        "pricing.plan_pro_f2",
+        "pricing.plan_pro_f3",
+        "pricing.plan_pro_f4",
+        "pricing.plan_pro_f5",
+        "pricing.plan_pro_f6"
+      ],
+      "isPopular": true
+    },
+    {
+      "id": "advanced",
+      "nameKey": "pricing.plan_advanced_name",
+      "price": "4999",
+      "descriptionKey": "pricing.plan_advanced_desc",
+      "featureKeys": [
+        "pricing.plan_advanced_f1",
+        "pricing.plan_advanced_f2",
+        "pricing.plan_advanced_f3",
+        "pricing.plan_advanced_f4",
+        "pricing.plan_advanced_f5",
+        "pricing.plan_advanced_f6"
+      ],
+      "isPopular": false
+    },
+    {
+      "id": "bespoke",
+      "nameKey": "pricing.plan_custom_name",
+      "price": "9999",
+      "descriptionKey": "pricing.plan_custom_desc",
+      "featureKeys": [
+        "pricing.plan_custom_f1",
+        "pricing.plan_custom_f2",
+        "pricing.plan_custom_f3",
+        "pricing.plan_custom_f4",
+        "pricing.plan_custom_f5",
+        "pricing.plan_custom_f6"
+      ],
+      "isPopular": false
+    }
+  ]
+}

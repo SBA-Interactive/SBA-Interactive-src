@@ -1,0 +1,35 @@
+---
+import Layout from '../layouts/layout.astro';
+import DynamicRenderer from '../components/DynamicRenderer.svelte';
+import settings from '../data/settings.json';
+
+export async function getStaticPaths() {
+  const pages = import.meta.glob('../data/pages/*.json');
+  const paths = [];
+
+  for (const path in pages) {
+    const data: any = await pages[path]();
+    const slug = path.split('/').pop()?.replace('.json', '');
+    
+    // Skip index as it's handled by index.astro
+    if (slug === 'index') continue;
+
+    paths.push({
+      params: { slug },
+      props: { pageData: data, slug },
+    });
+  }
+
+  return paths;
+}
+
+const { pageData, slug } = Astro.props;
+const { sections, title, description } = pageData;
+---
+
+<Layout 
+	title={`${settings.siteName} | ${title}`}
+	description={description || settings.siteDescription}
+>
+	<DynamicRenderer client:load initialSections={sections} slug={slug} />
+</Layout>

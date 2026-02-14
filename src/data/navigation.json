@@ -1,0 +1,9 @@
+{
+  "links": [
+    { "labelKey": "header.nav_wp", "url": "/#services" },
+    { "labelKey": "header.nav_custom", "url": "/#solutions" },
+    { "labelKey": "header.nav_showcase", "url": "/#showcase" },
+    { "labelKey": "header.nav_pricing", "url": "/pricing" },
+    { "labelKey": "header.nav_contact", "url": "/#contact" }
+  ]
+}

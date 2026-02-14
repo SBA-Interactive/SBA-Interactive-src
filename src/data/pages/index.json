@@ -1,0 +1,21 @@
+{
+  "title": "Home",
+  "permalink": "/",
+  "sections": [
+    { "type": "hero", "enabled": true },
+    { "type": "ticker", "enabled": true },
+    { "type": "features", "enabled": true },
+    { "type": "divider", "color": "violet", "bgClass": "bg-slate-50 dark:bg-slate-950" },
+    { "type": "services", "enabled": true },
+    { "type": "divider", "color": "orange", "bgClass": "bg-slate-50 dark:bg-surface-950" },
+    { "type": "portfolio", "enabled": true },
+    { "type": "divider", "color": "rose", "bgClass": "bg-white dark:bg-surface-950" },
+    { "type": "graphics", "enabled": true },
+    { "type": "divider", "color": "pink", "bgClass": "bg-white dark:bg-slate-950" },
+    { "type": "pricing", "enabled": true },
+    { "type": "divider", "color": "cyan", "bgClass": "bg-white dark:bg-slate-950" },
+    { "type": "support", "enabled": true },
+    { "type": "divider", "color": "green", "bgClass": "bg-slate-50 dark:bg-surface-900" },
+    { "type": "contact", "enabled": true }
+  ]
+}

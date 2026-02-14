@@ -1,0 +1,40 @@
+{
+  "items": [
+    {
+      "image": "images/pizza-template.webp",
+      "titleKey": "showcase.pizza_title",
+      "descKey": "showcase.pizza_desc",
+      "color": "bg-emerald-100 dark:bg-teal-950"
+    },
+    {
+      "image": "images/blog-template.webp",
+      "titleKey": "showcase.blog_title",
+      "descKey": "showcase.blog_desc",
+      "color": "bg-indigo-100 dark:bg-indigo-950"
+    },
+    {
+      "image": "images/shop-template.webp",
+      "titleKey": "showcase.shop_title",
+      "descKey": "showcase.shop_desc",
+      "color": "bg-blue-100 dark:bg-slate-600"
+    },
+    {
+      "image": "images/saas-dashboard.webp",
+      "titleKey": "showcase.saas_title",
+      "descKey": "showcase.saas_desc",
+      "color": "bg-blue-200 dark:bg-slate-950"
+    },
+    {
+      "image": "images/nonprofit-organisation.webp",
+      "titleKey": "showcase.npo_title",
+      "descKey": "showcase.npo_desc",
+      "color": "bg-lime-100 dark:bg-green-950"
+    },
+    {
+      "image": "images/luxury-hotel.webp",
+      "titleKey": "showcase.hotel_title",
+      "descKey": "showcase.hotel_desc",
+      "color": "bg-slate-300 dark:bg-slate-900"
+    }
+  ]
+}

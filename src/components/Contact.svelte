@@ -120,7 +120,7 @@
 				<div class="grid lg:grid-cols-[1fr_1.2fr]">
 					
 					<!-- LEFT SIDE: Direct Contact Info -->
-					<div class="p-8 md:p-12 lg:p-14 bg-linear-to-br from-primary-600 via-primary-700 to-primary-800 text-white flex flex-col justify-center relative overflow-hidden">
+					<div class="order-2 lg:order-1 p-8 md:p-12 lg:p-14 bg-linear-to-br from-primary-600 via-primary-700 to-primary-800 text-white flex flex-col justify-center relative overflow-hidden">
 						<!-- Decorative overlay -->
 						<div class="absolute top-0 left-0 w-full h-full bg-linear-to-br from-white/10 to-transparent pointer-events-none"></div>
 						<div class="absolute -bottom-20 -right-20 w-64 h-64 rounded-full bg-white/5 blur-3xl"></div>
@@ -150,17 +150,6 @@
 									</div>
 									<IconCarbonArrowRight class="w-5 h-5 text-primary-200 group-hover:translate-x-1 transition-transform" />
 								</a>
-<!-- 
-								<a href="tel:+48213742067" class="flex items-center gap-4 p-4 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/10 hover:bg-white/20 hover:border-white/20 transition-all group">
-									<div class="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center shrink-0">
-										<IconCarbonPhone class="w-6 h-6" />
-									</div>
-									<div class="flex-1 min-w-0">
-										<div class="text-xs font-bold text-primary-100/70 uppercase tracking-wider mb-1">{$i18n.t('contact.call_label')}</div>
-										<div class="font-bold">+48 213 742 067</div>
-									</div>
-									<IconCarbonArrowRight class="w-5 h-5 text-primary-200 group-hover:translate-x-1 transition-transform" />
-								</a> -->
 
 								<div class="flex items-center gap-4 p-4 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/10">
 									<div class="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center shrink-0">
@@ -172,22 +161,11 @@
 									</div>
 								</div>
 							</div>
-
-							<!-- Response Time Badge
-							<div class="mt-8 flex items-center gap-4">
-								<div class="w-14 h-14 rounded-full bg-emerald-500 flex items-center justify-center shadow-lg shadow-emerald-500/30">
-									<span class="text-2xl">⚡</span>
-								</div>
-								<div>
-									<div class="text-2xl font-black">24</div>
-									<div class="text-xs font-bold text-primary-100/70 uppercase tracking-wider">{$i18n.t('quick_contact.response_time')}</div>
-								</div>
-							</div> -->
 						</div>
 					</div>
 
 					<!-- RIGHT SIDE: Contact Form -->
-					<div class="p-8 md:p-12 lg:p-14 bg-white dark:bg-surface-900 flex flex-col justify-center">
+					<div class="order-1 lg:order-2 p-8 md:p-12 lg:p-14 bg-white dark:bg-surface-900 flex flex-col justify-center">
 						
 						{#if submitSuccess}
 							<div class="text-center py-8">
@@ -200,6 +178,37 @@
 								<p class="text-slate-500 dark:text-slate-400 text-lg">{$i18n.t('quick_contact.success_message')}</p>
 							</div>
 						{:else}
+							<div class="mb-10">
+								<a 
+									href={`${base}brief`} 
+									class="group flex items-start gap-4 p-3 rounded-2xl bg-amber-100 dark:bg-amber-400/20 border-2 border-amber-300 dark:border-amber-500/30 hover:border-amber-400 dark:hover:border-amber-500/50 hover:bg-amber-100 dark:hover:bg-amber-900/30 transition-all"
+								>
+									<div class="w-10 h-10 rounded-xl bg-amber-400 dark:bg-amber-500 flex items-center justify-center shrink-0 shadow-lg shadow-amber-500/30">
+										<IconCarbonWarning class="w-6 h-6 text-red-800" />
+									</div>
+									<div class="flex-1 min-w-0">
+										<div class="underline decoration-2 decoration-solid decoration-amber-700 text-xl font-black text-amber-900 dark:text-amber-300 text-center uppercase tracking-wider mb-1">
+											{$i18n.t('quick_contact.brief_warning_label')}
+										</div>
+										<div class="text-amber-700 dark:text-amber-200/80 font-medium text-md leading-relaxed">
+											{$i18n.t('quick_contact.brief_warning_text')}
+										</div>
+									</div>
+									<div class="flex items-center gap-2 shrink-0 self-center">
+										<IconCarbonDocument class="w-5 h-5 text-amber-700 dark:text-amber-400" />
+										<IconCarbonArrowRight class="w-5 h-5 text-amber-700 dark:text-amber-400 group-hover:translate-x-1 transition-transform" />
+									</div>
+								</a>
+
+								<div class="flex items-center gap-4 mt-8">
+									<div class="flex-1 h-px bg-linear-to-r from-transparent via-slate-300 dark:via-slate-700 to-slate-300 dark:to-slate-700"></div>
+									<div class="px-4 py-2 rounded-full bg-slate-100 dark:bg-surface-800 border border-slate-200 dark:border-white/10">
+										<span class="text-xs font-black text-slate-500 dark:text-slate-400 uppercase tracking-[0.2em]">{$i18n.t('quick_contact.or')}</span>
+									</div>
+									<div class="flex-1 h-px bg-linear-to-l from-transparent via-slate-300 dark:via-slate-700 to-slate-300 dark:to-slate-700"></div>
+								</div>
+							</div>
+
 							<form onsubmit={handleSubmit} class="space-y-5">
 								
 								<!-- Name Field -->
@@ -289,36 +298,6 @@
 										{isSubmitting ? $i18n.t('quick_contact.sending') : $i18n.t('quick_contact.submit')}
 									</span>
 								</button>
-
-								<div class="flex items-center gap-4 pt-2">
-									<div class="flex-1 h-px bg-linear-to-r from-transparent via-slate-300 dark:via-slate-700 to-slate-300 dark:to-slate-700"></div>
-									<div class="px-4 py-2 rounded-full bg-slate-100 dark:bg-surface-800 border border-slate-200 dark:border-white/10">
-										<span class="text-xs font-black text-slate-500 dark:text-slate-400 uppercase tracking-[0.2em]">{$i18n.t('quick_contact.or')}</span>
-									</div>
-									<div class="flex-1 h-px bg-linear-to-l from-transparent via-slate-300 dark:via-slate-700 to-slate-300 dark:to-slate-700"></div>
-								</div>
-
-								<a 
-									href={`${base}brief`} 
-									class="group flex items-start gap-4 p-3 rounded-2xl bg-amber-100 dark:bg-amber-400/20 border-2 border-amber-300 dark:border-amber-500/30 hover:border-amber-400 dark:hover:border-amber-500/50 hover:bg-amber-100 dark:hover:bg-amber-900/30 transition-all"
-								>
-									<div class="w-10 h-10 rounded-xl bg-amber-400 dark:bg-amber-500 flex items-center justify-center shrink-0 shadow-lg shadow-amber-500/30">
-										<IconCarbonWarning class="w-6 h-6 text-red-800" />
-									</div>
-									<div class="flex-1 min-w-0">
-										<div class="underline decoration-2 decoration-solid decoration-amber-700 text-xl font-black text-amber-900 dark:text-amber-300 text-center uppercase tracking-wider mb-1">
-											{$i18n.t('quick_contact.brief_warning_label')}
-										</div>
-										<div class="text-amber-700 dark:text-amber-200/80 font-medium text-md leading-relaxed">
-											{$i18n.t('quick_contact.brief_warning_text')}
-										</div>
-									</div>
-									<div class="flex items-center gap-2 shrink-0 self-center">
-										<IconCarbonDocument class="w-5 h-5 text-amber-700 dark:text-amber-400" />
-										<IconCarbonArrowRight class="w-5 h-5 text-amber-700 dark:text-amber-400 group-hover:translate-x-1 transition-transform" />
-									</div>
-								</a>
-
 							</form>
 						{/if}
 					</div>
