@@ -6,8 +6,8 @@ define('DB_USER', 'sba_user');
 define('DB_PASS', 'sba_password');
 
 // Email configuration
-define('ADMIN_EMAIL', 'contact@sbainteractive.com');
-define('EMAIL_FROM', 'no-reply@sbainteractive.com');
+define('ADMIN_EMAIL', 'contact@sbaint.eu');
+define('EMAIL_FROM', 'no-reply@sbaint.eu');
 define('EMAIL_SUBJECT_PREFIX', '[SBA Interactive] ');
 
 // Error reporting (disable in production)

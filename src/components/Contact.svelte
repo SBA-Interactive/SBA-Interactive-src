@@ -25,7 +25,7 @@
 	let submitSuccess = $state(false);
 	let submitError = $state('');
 
-	const FORM_ACTION_URL = 'https://sbaint.letsstartup.eu/contact?type=quickcontact';
+	const FORM_ACTION_URL = LETSSTARTUP_ENDPOINT;
 
 	async function handleSubmit(e: Event) {
 		e.preventDefault();
@@ -140,13 +140,13 @@
 
 							<!-- Contact Info Cards -->
 							<div class="space-y-4">
-								<a href="mailto:contact@sbainteractive.com" class="flex items-center gap-4 p-4 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/10 hover:bg-white/20 hover:border-white/20 transition-all group">
+								<a href="mailto:contact@sbaint.eu" class="flex items-center gap-4 p-4 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/10 hover:bg-white/20 hover:border-white/20 transition-all group">
 									<div class="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center shrink-0">
 										<IconCarbonEmail class="w-6 h-6" />
 									</div>
 									<div class="flex-1 min-w-0">
 										<div class="text-xs font-bold text-primary-100/70 uppercase tracking-wider mb-1">{$i18n.t('contact.email_label')}</div>
-										<div class="font-bold truncate">contact@sbainteractive.com</div>
+										<div class="font-bold truncate">contact@sbaint.eu</div>
 									</div>
 									<IconCarbonArrowRight class="w-5 h-5 text-primary-200 group-hover:translate-x-1 transition-transform" />
 								</a>

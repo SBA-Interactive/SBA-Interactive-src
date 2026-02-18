@@ -8,6 +8,7 @@
     import IconCarbonArrowRight from 'virtual:icons/carbon/arrow-right';
     import IconCarbonArrowLeft from 'virtual:icons/carbon/arrow-left';
     import IconCarbonHelp from 'virtual:icons/carbon/help';
+  import { LETSSTARTUP_ENDPOINT } from '../formConfig.ts';
 
 	let formElement = $state<HTMLFormElement>();
 	let isSubmitting = $state(false);
@@ -249,7 +250,7 @@
 		submitError = '';
 
 		try {
-			const response = await fetch('https://sbaint.letsstartup.eu/contact?type=longassbrief', {
+			const response = await fetch(LETSSTARTUP_ENDPOINT, {
 				method: 'POST',
 				headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
 				body: JSON.stringify(formData)

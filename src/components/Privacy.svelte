@@ -71,7 +71,7 @@
 			<div class="mt-12 p-8 bg-slate-100 dark:bg-surface-800 rounded-3xl border border-slate-200 dark:border-surface-700">
 				<h3 class="text-xl font-bold mb-4 text-slate-900 dark:text-white">{$i18n.t('privacy.contact_title')}</h3>
 				<p class="text-slate-600 dark:text-slate-400 mb-6">{$i18n.t('privacy.contact_text')}</p>
-				<a href="mailto:privacy@sbainteractive.com" class="text-primary-600 font-bold hover:underline">privacy@sbainteractive.com</a>
+				<a href="mailto:privacy@sbaint.eu" class="text-primary-600 font-bold hover:underline">privacy@sbaint.eu</a>
 			</div>
 		</div>
 	</div>
