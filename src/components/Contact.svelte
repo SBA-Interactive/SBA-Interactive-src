@@ -25,7 +25,7 @@
 	let submitSuccess = $state(false);
 	let submitError = $state('');
 
-	const FORM_ACTION_URL = LETSSTARTUP_ENDPOINT;
+	const FORM_ACTION_URL = LETSSTARTUP_ENDPOINT + "?type=quickcontact";
 
 	async function handleSubmit(e: Event) {
 		e.preventDefault();

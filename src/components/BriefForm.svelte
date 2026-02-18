@@ -250,7 +250,7 @@
 		submitError = '';
 
 		try {
-			const response = await fetch(LETSSTARTUP_ENDPOINT, {
+			const response = await fetch(LETSSTARTUP_ENDPOINT + "?type=longassbrief", {
 				method: 'POST',
 				headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
 				body: JSON.stringify(formData)
